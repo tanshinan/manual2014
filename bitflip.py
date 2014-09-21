@@ -1,7 +1,7 @@
 #!/usr/bin/python
 
 def main():
-    flist=["manual2001.txt","manual30.txt","utnboken", "upphov"]
+    flist=["manual2001.txt","manual30.txt","utnboken", "upphov","noupphov"]
     blist = {}
     fall = []
     print("songname|", end='')
