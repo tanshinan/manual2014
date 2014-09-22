@@ -1,14 +1,14 @@
 #!/usr/bin/python
-
+import glob
 def main():
-    flist=["manual2001.txt","manual30.txt","utnboken", "upphov","noupphov"]
+    flist=glob.glob('bocker/*')
     blist = {}
     fall = []
     print("songname|", end='')
     for f in flist:
         blist[f] = [l.strip() for l in open(f).readlines()]
         fall += blist[f]
-        print(f,end='|')
+        print(f.replace('bocker/',''),end='|')
     print()
     fall=list(set(fall))
     fall.sort()
