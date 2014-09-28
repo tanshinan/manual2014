@@ -1,0 +1,4 @@
+;;; xindy style file
+(define-attributes (("gobble" "default")))
+(markup-locref  :open "\mygobble{" :close "}" :attr "gobble")
+(markup-locclass-list :open "\hspace*{10pt}" :sep "")
