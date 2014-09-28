@@ -1,14 +1,17 @@
 \documentclass[a6paper,fontsize=10pt,twoside,openright]{scrbook}
 \usepackage[a6paper,top=1cm,bottom=1.9cm,left=1cm,right=1cm,footskip=1cm,headsep=0.2cm]{geometry}
 \usepackage[swedish]{babel}
-\usepackage{graphicx,tocloft,metalogo,makeidx,titletoc,fontspec,titlesec,eso-pic,scrpage2,anyfontsize,lipsum,microtype}
+\usepackage{graphicx,tocloft,metalogo,titletoc,fontspec,titlesec,eso-pic,scrpage2,anyfontsize,microtype}
+\usepackage[columns=1]{idxlayout}
 
 %\usepackage{showframe}
-\vbadness=10001
+\usepackage{makeidx}
 \makeindex
 
+\setlength{\parindent}{0pt}
+
 %% eso-pic for background on chapter pages %%
-\newcommand\BackgroundPic{\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{chapter.pdf}}
+\newcommand\BackgroundPic{\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{elements/chapter.pdf}}
 
 %% scrpage2 pagestyling %%
 \pagestyle{scrheadings}
@@ -36,7 +39,7 @@
   \newpage
   \ohead{\textsc{\scriptsize\leftmark}}
   \ofoot[\pagemark]{\scriptsize\pagemark}
-  \cfoot{\centering\includegraphics[keepaspectratio]{footelement.pdf}}
+  \cfoot{\centering\includegraphics[keepaspectratio]{elements/footelement.pdf}}
 }
 \makeatletter
 \renewcommand\chapter{\if@openright\cleardoublepage\else\clearpage\fi
@@ -50,9 +53,12 @@
 \makeatother
 
 %% Command for songs %%
-\newcommand{\visa}[2]{
+\newcommand{\visa}[1]{
   \index{#1}
-  \index{#2}
+  \section{#1}
+}
+\newcommand{\fvisa}[2]{
+  \index{#1}\index{#2}
   \section{#1}
 }
 
@@ -66,10 +72,19 @@
 \renewcommand{\thechapter}{}
 \renewcommand{\thesection}{}
 
+\makeatletter
+\renewenvironment{theindex}
+                 {{\noindent\small\textrm{\textbf{TITEL och FÖRSTARADEN REGISTER}}\vspace*{10pt}\newline\par\textbf{\normalsize Symboler}\par}
+                   \@mkboth{\MakeUppercase\indexname}
+                           {\MakeUppercase\indexname}
+                           \let\item\@idxitem}
+                 {}
+\makeatother
+
 \begin{document}
-\vspace*{7cm}
+\vspace*{6.5cm}
 \hspace*{1cm}
-\includegraphics[keepaspectratio,width=7cm]{logo.pdf}
+\includegraphics[keepaspectratio,width=7cm]{elements/logo.pdf}
 \clearpage
 \noindent Denna manualen tillhör:
 \ohead{\textsc{\scriptsize\leftmark}}
@@ -79,17 +94,15 @@
 \clearpage
 \null
 \vfill
-    {\noindent\centering
-      
+    {\noindent\centering 
       Logotyp: Jens Bohlin\\
       Producerad med \XeTeX\\
       Tryckår: 2014\\
       Tryckeri: ?\par
     }
 \cleardoublepage
-\cfoot{\centering\includegraphics[keepaspectratio]{footelement.pdf}}
-    {\noindent\large\textrm{\textbf{FÖRORD}}\vspace*{10pt}}\\
-    \indent\lipsum[1-4]
+\cfoot{\centering\includegraphics[keepaspectratio]{elements/footelement.pdf}}
+    {\noindent\large\textrm{\textbf{FÖRORD}}\vspace*{10pt}}
 %% begin toc on odd page and style the title %%
 \cleardoublepage
 \renewcommand{\contentsname}{\vspace{-2.1cm}\large\textrm{INNEHÅLL}\vspace{-1.2cm}}
@@ -99,37 +112,8 @@
 \renewcommand{\leftmark}{}
 
 \chapterpage{Av tradition}{Av tradition}
-%% \fancyhead[RO,LE]{\textsc{\scriptsize\leftmark}}
-
-\section{DU GAMLA, DU FRIA}
-Du gamla, Du fria, Du fjällhöga nord\\
-Du tysta, Du glädjerika sköna!\\
-Jag hälsar Dig, vänaste land uppå jord,\\
-/: Din sol, Din himmel, Dina ängder gröna. :/\\
-\\
-Du tronar på minnen från fornstora dar,\\
-då ärat Ditt namn flög över jorden.\\
-Jag vet att Du är och Du blir vad du var.\\
-/: Ja, jag vill leva jag vill dö i Norden. :/\\
-\\
-Jag städs vill dig tjäna mitt älskade land,\\
-din trohet till döden vill jag svära.\\
-Din rätt, skall jag värna, med håg och med hand,\\
-/: din fana, högt den bragderika bära. :/\\
-\\
-Med Gud skall jag kämpa, för hem och för härd,\\
-för Sverige, den kära fosterjorden.\\
-Jag byter Dig ej, mot allt i en värld\\
-/: Nej, jag vill leva jag vill dö i Norden. :/\\
-\\
-{\footnotesize\textit{
-    Text: Richard Dybeck, 1844\\
-    \\
-    Sveriges nationalsång av tradition sedan 1866.\\
-    De två sista verserna sjungs sällan.
-}}
-\clearpage
-\section{SVERIGES FLAGGA}
+\input{songs/du_gamla_du_fria.tex}
+\visa{SVERIGES FLAGGA}
 Flamma stolt mot dunkla skyar\\
 lik en glimt av sommarens sol!\\
 Över Sveriges skogar, berg och byar,\\
@@ -153,17 +137,7 @@ Han skall bära stark vårt fria svenska folk\\
     Musik: Hugo Alfvén
 }}
 \chapterpage{Datavetarvisor}{Datavetarvisor}
-\visa{THE BASIC SONG}{10 LET oss nu fatta i våra glas}
-{\footnotesize\textit{Melodi: Mors lilla Olle}}\\
-\texttt{10 LET oss nu fatta i våra glas\\
-  20 INPUT en klunk utav det som där has\\
-  30 IF du fått nog THEN till 50 min vän\\
-  40 ELSE GOTO-baka till 10 igen\\
-  50 END\\
-}
-\\
-{\footnotesize\textit{Inledande radnummer sjungs ej. I övrigt följs kommandon, ex drick vid "INPUT en klunk..."}}
-\clearpage
+\input{songs/the_basic_song.tex}
 \chapterpage{Snapsvisor}{Snapsvisor}
 \chapterpage{Ölvisor}{Ölvisor}
 \chapterpage{Vinvisor}{Vinvisor}
@@ -173,7 +147,12 @@ Han skall bära stark vårt fria svenska folk\\
 \chapterpage{Visor på Svenska}{Visor på\\Svenska}
 \chapterpage{Osvenska visor}{Osvenska visor}
 \chapterpage{Register}{Register}
-\backmatter
-\renewcommand\indexname{}
+\cfoot{}
+\newgeometry{top=1cm,bottom=1.2cm,left=1cm,right=1cm,footskip=0pt,headsep=0.2cm}
+\small
 \printindex
+\cleardoublepage
+\null
+\newpage
+\null
 \end{document}
