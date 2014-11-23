@@ -1,0 +1,37 @@
+\begin{theindex}
+  \providecommand*\lettergroupDefault[1]{}
+  \providecommand*\lettergroup[1]{%
+      \par\textbf{#1}\par
+      \nopagebreak
+  }
+
+  \lettergroupDefault{default}
+  \item \texttt  {10 LET oss nu fatta i våra glas}, 25
+
+  \indexspace
+
+  \lettergroup{D}
+  \item DU GAMLA, DU FRIA, 16
+
+  \indexspace
+
+  \lettergroup{O}
+  \item O, GAMLA KLANG- OCH JUBELTID, 18
+
+  \indexspace
+
+  \lettergroup{S}
+  \item Sjungom studentens lyckliga dag, 17
+  \item STUDENTSÅNGEN, 17
+
+  \indexspace
+
+  \lettergroup{T}
+  \item \texttt  {THE BASIC SONG}, 25
+
+  \indexspace
+
+  \lettergroup{U}
+  \item UNDER SVEA BANÈR, 20
+
+\end{theindex}

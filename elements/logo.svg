@@ -14,7 +14,7 @@
    id="svg3055"
    version="1.1"
    inkscape:version="0.48.5 r10040"
-   sodipodi:docname="New document 3">
+   sodipodi:docname="logo.svg">
   <defs
      id="defs3057">
     <clipPath
@@ -34,10 +34,10 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.4"
-     inkscape:cx="305.55029"
-     inkscape:cy="146.67659"
+     inkscape:cx="299.08715"
+     inkscape:cy="285.97033"
      inkscape:document-units="px"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="g3282"
      showgrid="false"
      inkscape:snap-bbox="true"
      inkscape:snap-bbox-edge-midpoints="true"
@@ -49,7 +49,8 @@
      inkscape:window-height="1174"
      inkscape:window-x="0"
      inkscape:window-y="12"
-     inkscape:window-maximized="0" />
+     inkscape:window-maximized="0"
+     inkscape:bbox-nodes="true" />
   <metadata
      id="metadata3060">
     <rdf:RDF>
@@ -58,7 +59,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -110,33 +111,45 @@
             <path
                id="path3284"
                style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-               d="m 0,0 c -1.644,0.352 -3.861,1.438 -4.654,2.232 -0.263,0.263 -0.541,1.006 -0.802,1.703 -0.372,0.994 -0.506,0.955 -0.51,2.36 -0.004,1.355 0.113,1.609 0.402,2.338 1.172,2.955 4.821,5.701 9.158,6.759 2.36,0.576 5.453,0.258 7.187,-0.639 0.207,-0.107 0.287,-0.22 0.307,-0.198 0.02,0.021 0.076,11.017 0.125,24.434 L 11.196,63.491 13.514,63.4 c 4.303,-0.168 6.528,-0.957 8.658,-3.076 1.835,-1.826 3.04,-4.294 3.606,-7.212 0.27,-1.395 0.324,-5.427 0.138,-5.995 -0.111,-0.34 -0.162,0.058 -0.174,0.624 -0.032,1.552 -0.634,4.123 -1.256,5.855 -1.208,3.364 -3.483,5.765 -6.406,6.567 -0.398,0.109 -1.297,0.227 -1.999,0.261 l -1.276,0.063 -0.08,-8.784 C 14.681,46.872 14.752,36 14.751,27.646 14.751,11.168 14.715,10.77 14.067,8.344 13.252,5.297 11.267,2.676 8.683,1.299 7.825,0.842 5.967,0.238 4.799,0.015 3.637,-0.207 1.377,-0.278 0.277,-0.043 L 0,0 z"
-               inkscape:connector-curvature="0" />
+               d="M 0,0 C -3.5958537,1.0069626 -5.8863689,2.2093512 -5.966,6.295 -5.97,7.65 -5.0407134,10.085625 -3.4667193,11.654506 -1.6949526,13.420517 -0.743,14.334 3.594,15.392 c 2.36,0.576 5.453,0.258 7.187,-0.639 0.207,-0.107 0.287,-0.22 0.307,-0.198 0.02,0.021 0.076,11.017 0.125,24.434 L 11.196,63.491 13.514,63.4 c 4.303,-0.168 6.528,-0.957 8.658,-3.076 1.835,-1.826 3.04,-4.294 3.606,-7.212 0.27,-1.395 0.324,-5.427 0.138,-5.995 -0.111,-0.34 -0.162,0.058 -0.174,0.624 -0.032,1.552 -0.634,4.123 -1.256,5.855 -1.208,3.364 -3.483,5.765 -6.406,6.567 -0.398,0.109 -1.297,0.227 -1.999,0.261 l -1.276,0.063 -0.08,-8.784 C 14.681,46.872 14.752,36 14.751,27.646 14.751,11.168 14.715,10.77 14.067,8.344 13.252,5.297 11.267,2.676 8.683,1.299 7.825,0.842 5.967,0.238 4.799,0.015 3.637,-0.207 1.377,-0.278 0.277,-0.043 z"
+               inkscape:connector-curvature="0"
+               sodipodi:nodetypes="ccsccccccccccccccscccccc" />
           </g>
         </g>
       </g>
     </g>
     <text
        xml:space="preserve"
-       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"
-       x="131.36008"
-       y="316.44589"
-       id="text3090"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan3092"
-         x="131.36008"
-         y="316.44589">Datavetares sångbok</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"
-       x="663.62878"
-       y="316.38724"
+       style="font-size:22.13624001px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"
+       x="842.82324"
+       y="312.16809"
        id="text3090-7"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan3092-8"
-         x="663.62878"
-         y="316.38724">V. 9001</tspan></text>
+         x="842.82324"
+         y="312.16809" /></text>
+    <text
+       xml:space="preserve"
+       style="font-size:22.00083542px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"
+       x="132.19843"
+       y="308.30069"
+       id="text3090-7-8"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3092-8-7"
+         x="132.19843"
+         y="308.30069">SVERIGES DATAVETARES SÅNGBOK</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:22.04747963px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"
+       x="664.95654"
+       y="308.29999"
+       id="text3090-7-8-5"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3092-8-7-1"
+         x="664.95654"
+         y="308.29999">V11111011111</tspan></text>
   </g>
 </svg>

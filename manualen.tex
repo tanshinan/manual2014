@@ -1,17 +1,23 @@
 \documentclass[a6paper,fontsize=10pt,twoside,openright]{scrbook}
 \usepackage[a6paper,top=1cm,bottom=1.9cm,left=1cm,right=1cm,footskip=1cm,headsep=0.2cm]{geometry}
 \usepackage[swedish]{babel}
-\usepackage{graphicx,tocloft,metalogo,titletoc,fontspec,titlesec,eso-pic,scrpage2,anyfontsize,microtype}
+\usepackage{graphicx,tocloft,metalogo,titletoc,fontspec,titlesec,eso-pic,scrpage2,anyfontsize,microtype,array,marvosym,mdframed,textcomp,amssymb}
 \usepackage[columns=1]{idxlayout}
+
+\usepackage[htt]{hyphenat}
+
+\usepackage{setspace}
+\renewcommand{\baselinestretch}{0.98} 
 
 %\usepackage{showframe}
 \usepackage{makeidx}
 \makeindex
 
-\setlength{\parindent}{0pt}
+\let\oldemptyset\emptyset
+\let\emptyset\varnothing
 
 %% eso-pic for background on chapter pages %%
-\newcommand\BackgroundPic{\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{elements/chapter.pdf}}
+\newcommand\BackgroundPic{\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{elements/chapter2.pdf}}
 
 %% scrpage2 pagestyling %%
 \pagestyle{scrheadings}
@@ -22,31 +28,53 @@
 \let\ps@empty\ps@scrheadings
 \makeatother
 
+\newcommand{\rpt}{
+        \raisebox{.2ex}{:}
+        \hspace*{-0.5ex}\raisebox{-.4ex}{\rule{.1ex}{2.5ex}\,\rule{.1ex}{2.5ex}}}
+
+\newcommand{\revrpt}{
+        \raisebox{-.4ex}{\rule{.1ex}{2.5ex}\,\rule{.1ex}{2.5ex}}
+        \hspace*{-0.5ex}\raisebox{.2ex}{: }}
+
 %% chapter and section styling %%
-\titleformat{\chapter}[hang]{}{}{0pt}{\centering\fontsize{40}{70}\selectfont\chapterfont}
+\titleformat{\chapter}[hang]{}{}{0pt}{\centering\fontsize{20}{70}\selectfont\chapterfont\texttt}
 \titleformat{\section}[hang]{}{}{0pt}{\textbf}
-\titlespacing*{\section}{0pt}{10pt}{1pt}
+\titlespacing*{\section}{0pt}{0pt}{0pt}
 \titlecontents{chapter}[0em]{\addvspace{3pt}}{\contentslabel{}}{}
               {\titlerule*[0.4pc]{.}\contentspage}
 \newfontfamily\chapterfont[]{ChopinScript}
 
 %% Command for chapter page, will remove foot and head %%
 \newcommand{\chapterpage}[2]{
+  \newpage
+  \null
   \cleardoublepage
-  \AddToShipoutPicture*{\BackgroundPic}
+  %\AddToShipoutPicture*{\BackgroundPic}
   \chapter[#1]{#2}
   \renewcommand{\leftmark}{#1}
   \newpage
   \ohead{\textsc{\scriptsize\leftmark}}
   \ofoot[\pagemark]{\scriptsize\pagemark}
-  \cfoot{\centering\includegraphics[keepaspectratio]{elements/footelement.pdf}}
+  %\cfoot{\centering\includegraphics[keepaspectratio]{elements/footelement2.pdf}}
+}
+\newcommand{\hiddenchapterpage}[1]{
+  \newpage
+  \null
+  \cleardoublepage
+  %\AddToShipoutPicture*{\BackgroundPic}
+  \chapter*{#1}
+  \renewcommand{\leftmark}{#1}
+  \newpage
+  \ohead{\textsc{\scriptsize\leftmark}}
+  \ofoot[\pagemark]{\scriptsize\pagemark}
+  %\cfoot{\centering\includegraphics[keepaspectratio]{elements/footelement2.pdf}}
 }
 \makeatletter
 \renewcommand\chapter{\if@openright\cleardoublepage\else\clearpage\fi
   \thispagestyle{empty}
   \global\@topnum\z@
   \@afterindentfalse
-  \ofoot[\pagemark]{}
+  \ofoot[\pagemark]{\scriptsize\pagemark}
   \cfoot{}
   \ohead{}
   \secdef\@chapter\@schapter}
@@ -60,6 +88,10 @@
 \newcommand{\fvisa}[2]{
   \index{#1}\index{#2}
   \section{#1}
+}
+\newcommand{\svisa}[3]{
+  \index{#1}\index{#2}
+  \section{#3}
 }
 
 %% TOC %%
@@ -81,28 +113,145 @@
                  {}
 \makeatother
 
+\newmdenv[
+  topline=false,
+  bottomline=false,
+  rightline=false,
+  linewidth=1pt,
+  skipabove=5pt,
+  skipbelow=3pt,
+  innertopmargin=0pt,
+  innerbottommargin=0pt
+]{leftborder}
+\makeatletter
+
+\newcommand*\cleartoleftpage{%
+  \clearpage
+  \ifodd\value{page}\hbox{}\newpage\fi
+}
+
 \begin{document}
+\setlength{\parindent}{15pt}
 \vspace*{6.5cm}
 \hspace*{1cm}
 \includegraphics[keepaspectratio,width=7cm]{elements/logo.pdf}
 \clearpage
-\noindent Denna manualen tillhör:
+\noindent Denna förträffliga oersättliga Manual tillhör:
 \ohead{\textsc{\scriptsize\leftmark}}
 \ofoot[\pagemark]{\scriptsize\pagemark}
 \clearpage
 \null
 \clearpage
+\newgeometry{top=1cm,bottom=1.2cm,left=1cm,right=1cm,footskip=0pt,headsep=0.2cm}
 \null
 \vfill
-    {\noindent\centering 
+    {\noindent\small\centering
+      Redaktör: ?\\
+      Grafisk formgivare: ?\\
       Logotyp: Jens Bohlin\\
       Producerad med \XeTeX\\
-      Tryckår: 2014\\
-      Tryckeri: ?\par
+      v1.0: 1994-11-21 (1000 exemplar)\\
+      v1.1: 1996-01-02 (1000 exemplar)\\
+      v2.001: 2001-11-15 (1000 exemplar)\\
+      v11111011111: 2015-??-?? (1200 exemplar)\\
+      Tryckeri: Lyxo AB\par
     }
+\restoregeometry
 \cleardoublepage
-\cfoot{\centering\includegraphics[keepaspectratio]{elements/footelement.pdf}}
-    {\noindent\large\textrm{\textbf{FÖRORD}}\vspace*{10pt}}
+%\cfoot{\centering\includegraphics[keepaspectratio]{elements/footelement2.pdf}}
+\noindent{\large\textrm{\textbf{FÖRORD}}\vspace*{10pt}}\\
+\indent ost
+\cleardoublepage
+\noindent{\large\textrm{\textbf{FÖRORD från v2.001}}\vspace*{10pt}}\\
+\indent ost
+\cleardoublepage
+\noindent{\large\textrm{\textbf{FÖRORD från v1.0}}\vspace*{10pt}}\\
+\indent Detta är en gemensam sångbok för samtliga datavetare i
+Sverige; C i Lindköping, DVP i Uppsala och C i Umeå. Vi har genom
+denna bok fått ytterligare en sak gemensamt.\\ \indent Att skapa en
+gemensam sångbok har diskuterats flerga gånger, jag minns att
+kontakter tog under 100-köret 1990 eller var det 1991?  Saker som
+händer under 100-kör är inget man minns, utan saker som man senare
+tror sig har hänt?! Den gången brakade arbetet samman efter några
+veckor. Men idén levde kvar och gav 3 (eller 4) år senare detta som
+resultat.\\ \indent Sångboken bygger på ``DVL:s Lilla blå
+v3.0$\beta$'' som aldrig han bli tryckt, innan arbetet kom igång för
+att skapa denna bok. Dock skall sägas att denna bok är betydligt
+större än ``Lilla blå v3.0$\beta$'', omkring 200 sidor för att inte
+vara exakt.\\ \indent När \textit{manualen} trycks i december 1994 är
+boken den största sångbok som finns runt om i vårt rike! Ok Psalmboken
+är större, men inte lika roligt att ha på gasquer!\\ \indent Vi som
+varit ansvariga för denna bok, har försökt att i så stor utsträckning
+som möjligt att få med melodier, låtarnas ursprung, och hur man skall
+sjunga. Allt för att underlätta för folk som inte är i kontakt med
+lika mycket sånger som vissa av oss andra.\\ \indent Det är många som
+har hjälpt till med denna bok, inte enbart datavetare utan även
+personer från helt andra linjer och orter, jag vill rikta ett
+speciellt tack till Er.\\ \indent Manualens generalgenomsjungning ägde
+rum på\\ Strålsnäs herrgård den 18 November 1994, då vi avnjöt en
+underbar rådjursmiddag. På denna sittning sjöng vi så mycket vi orkade
+och hade efter ca 4 timmar traverserat ca 40 sånger.\\ \indent Med på
+denna sångboksgenomsjungning och därav lika (o)ansvariga som jag till
+de eventuella felen var,\\ \textit{Micke Liljeblad, Mats Hägglund, Jakob
+  Engblom, Pär\\ Mattsson, Martin Davidson, Anders Jackson, Björn\\
+  Knutsson, Måns Engmem, Måns af Klercker, Jonas\\ Högström, Calle
+  Englund, Andreas Gref} och sist jag själv.\\ \indent Innan jag
+kommer till alla som skall tackas vill jag bara nämna att en sångbok
+är till för att sjungas ur, detta betyder inte att man behöver
+sjunga. Följande personer är jag evigt(?) tacksam till;\\
+
+\noindent
+\begin{tabular}{@{}p{0.5\textwidth}p{0.5\textwidth}@{}}
+  Anders Jansson & Anders Wilhelm\\
+  Bertil Spolander & Björn Knutsson\\
+  Björn Torkelsson & Erik Åhlin\\
+  Göran Svensson & Håkan Lindholm\\
+  Ingela Ljungkvist & Jan-Olof Flink\\
+  Jens Bohlin & Joakim Thörnkvist\\
+  Jonas Högström & Lars Hägglund\\
+  Måns af Klercker & Olof Appelblad\\
+  Pär Mattson
+\end{tabular}
+\newpage
+\indent Dessutom vill jag tacka alla som lusläst boken, sammt alla Ni
+som gjorde förhandsbeställningar. Det finns säkert många andra som jag
+missat och jag är precis lika tacksam till er som alla
+andra!\\ \indent Om ni har några bidrag eller saker som kan vara värda
+att rätta till så skicka dessa till någon av festerierna nedan;\\
+
+\noindent
+\begin{tabular}{@{}p{0.3\textwidth}p{0.7\textwidth}@{}}
+  Piraya klubben & piraya@ts.umu.se\\
+  Klubbverket & dvl-klubbverket@student.docs.uu.se\\
+  CC & cc@cyd.liu.se
+\end{tabular}\\
+
+\indent Till sist, kom ihåg att hela sångboken och fellista finns på:
+\texttt{http://www.ts.umu.se/\raisebox{.4ex}\texttildelow manualen/}\\ \\ Umeå den 21 November
+1994\\ \\ NeNNe
+\cleartoleftpage
+\noindent{\large\textrm{\textbf{TRAVERSERING}}\vspace*{10pt}}\\ \indent
+Genom hela denna bok gäller följande traverseringsregler. I sånger där
+en försångare eller dylikt skall sjunga ensam används fet text. Ifall
+något speciellt såsom en handling inträffar vid ett ord, så används
+(kursiv), där ordet för handling eller beteende står inom ( ). En
+sådan handling gäller oftast maximalt raden ut. Ifall en längre
+förklaring behövs kursiveras texten. Beskrivningen finns sedan efter
+sångens slut. I denna beskrivning kan mycket annat matnyttigt finnas,
+läs den gärna.\\ \indent I vissa sånger skall könen sjunga olika
+rader, i dessa sånger används {\Large\Male} för manligt kön och där
+kvinnligt kön skall sjunga används givetvis då {\Large\Female}.
+\begin{leftborder}
+  Då det ibland kan förekomma lokala variantioner på vissa sånger, så
+  används en  vertikal linje i högra kanten för att markera att detta
+  är olika alternativ. Ibland betyder linjen att det är raderna som är
+  alternativen, och ibland betyder linjen att det är olika
+  versalternativ. Men den kloke läsaren förstår säkert när vad är vad.
+\end{leftborder}
+\hspace{\indent} För att göra allt ännu svårare så skall man oftast sjunga med stark
+stämma där VERSALER används, men observera att man inte alltid skall
+göra detta. Vem har sagt att det skall vara lätt?
+\newpage
 %% begin toc on odd page and style the title %%
 \cleardoublepage
 \renewcommand{\contentsname}{\vspace{-2.1cm}\large\textrm{INNEHÅLL}\vspace{-1.2cm}}
@@ -111,47 +260,81 @@
 %% Remove the toc title from heading %%
 \renewcommand{\leftmark}{}
 
+\setlength{\parindent}{0pt}
 \chapterpage{Av tradition}{Av tradition}
 \input{songs/du_gamla_du_fria.tex}
-\visa{SVERIGES FLAGGA}
-Flamma stolt mot dunkla skyar\\
-lik en glimt av sommarens sol!\\
-Över Sveriges skogar, berg och byar,\\
-över vatten och viol!\\
-Du som sjunger, när Du bredes\\
-som vår gamla lyckas tolk.\\
-Solen lyser! Solen lyser!\\
-Ingen vredes åska slog vårt tappra folk!\\
-\\
-Flamma högt vårt kärlekstecken!\\
-Värm oss, när det blåser kallt!\\
-Stråla ut de blåa vecken\\
-kärlek mera stark än allt!\\
-Sveriges flagga! Sveriges ära!\\
-Fornklenod och framtidstolk!\\
-Gud är med oss! Gud är med oss!\\
-Han skall bära stark vårt fria svenska folk\\
-\\
-{\footnotesize\textit{
-    Text: K.G. Ossiannilsson\\
-    Musik: Hugo Alfvén
-}}
+%\input{songs/sveriges_flagga.tex}
+%\input{songs/jämtlandssången.tex}
+%\input{songs/jamtlandssången.tex}
+\input{songs/studentsången.tex}
+\input{songs/o_gamla_klang_och_jubeltid.tex}
+\input{songs/under_svea_baner.tex}
+
 \chapterpage{Datavetarvisor}{Datavetarvisor}
+\newpage
+\thispagestyle{empty}
+\noindent{\texttt{Datavetare är skapande människor\\
+\\
+Datavetare skapar. De skapar nya program som världen aldrig sett
+tidigare, för att låta datorer göra saker som de aldrig gjort
+tidigare.  De forskar fram nya kunskaper och öppnar nya fält för
+framtidens forskning. Datavetare skapar de verktyg som gör det möjligt
+att lösa nya problem.  Nya programmeringsspråk, nya beräkningsverktyg,
+bättre kompilatorer, bättre databaser, nya operativsystem, bättre
+utvecklingsverktyg, distribuerade system... Listan kan göras hur lång
+som helst.\\
+\\
+Datavetenskapens handfasta mål är att förbättra den programvara som vi
+kör på våra datorer. Vad som krävs är att programmen gör vad de skall
+(korrekthet), att de inte gör fel om något oförutsett inträffar
+(pålitlighet), och att de arbetar effektivt (effektivitet). Dessutom
+skall programmen utvecklas på ett effektivt sett.}}\\
+\\
+{\footnotesize\textit{Ur ``Vad är en datavetare egentligen''\\
+    BlurGel nr 0, 1995}}
+\clearpage
 \input{songs/the_basic_song.tex}
+
 \chapterpage{Snapsvisor}{Snapsvisor}
+
 \chapterpage{Ölvisor}{Ölvisor}
+%\customindex{YOLO}{49}
 \chapterpage{Vinvisor}{Vinvisor}
+
 \chapterpage{Avecvisor}{Avecvisor}
+
 \chapterpage{Gasquevisor}{Gasquevisor}
+
 \chapterpage{Säsongsvisor}{Säsongsvisor}
-\chapterpage{Visor på Svenska}{Visor på\\Svenska}
+
+\chapterpage{Svenska visor}{Svenska visor}
+
 \chapterpage{Osvenska visor}{Osvenska visor}
+
+\chapterpage{Phulavisor}{Phulavisor}
+
 \chapterpage{Register}{Register}
+
 \cfoot{}
 \newgeometry{top=1cm,bottom=1.2cm,left=1cm,right=1cm,footskip=0pt,headsep=0.2cm}
 \small
 \printindex
-\cleardoublepage
+\hiddenchapterpage{\texttt{\emptyset}}
+\ohead{}
+\ofoot[\pagemark]{}
+\newpage
+\null
+\newpage
+\null
+\newpage
+\null
+\newpage
+\null
+\newpage
+\null
+\newpage
+\null
+\newpage
 \null
 \newpage
 \null
