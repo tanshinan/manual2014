@@ -6,32 +6,110 @@
   }
 
   \lettergroupDefault{default}
-  \item \texttt  {10 LET oss nu fatta i våra glas}, 25
+  \item \texttt  {10 LET oss nu fatta i våra glas}, 26
+  \item 1515, 33
+
+  \indexspace
+
+  \lettergroup{A}
+  \item ANOTHER GLITCH IN THE CALL, 36
 
   \indexspace
 
   \lettergroup{D}
+  \item DATAVETARNAS HÄRJARVISA, 25
+  \item DATAVETARNAS PARADMARCH, 41
+  \item DATAVISA, 28
+  \item DET SKA VA' HEMBRÄNT, 40
+  \item DET VAR FEST NER I FOORUM, 39
+  \item Det var fest ner i FooRum på tisdagsnatten, 39
   \item DU GAMLA, DU FRIA, 16
+
+  \indexspace
+
+  \lettergroup{E}
+  \item Emacs är en stor koloss, 32
+  \item En datavetare, han bor vid FooBar, 25
+
+  \indexspace
+
+  \lettergroup{F}
+  \item Far, jag kan inte få upp min kommandotolk, 34
+
+  \indexspace
+
+  \lettergroup{G}
+  \item GE MIG MERA!, 26
+
+  \indexspace
+
+  \lettergroup{H}
+  \item HALLANDS-SHOT, 38
+  \item Höstvindar vina, ursh vilken pina, 33
+
+  \indexspace
+
+  \lettergroup{I}
+  \item Ingen vet det jag vet en hemlighet, 38
+  \item IT IS FREE, 42
+
+  \indexspace
+
+  \lettergroup{J}
+  \item Ja, här kommer datavetare, 41
+  \item Jag är helröd och helt OK, 28
+  \item Jag har festat mycket, det har inte varit lätt, 40
+  \item Jag har nu fått en och annan öl, 43
+  \item JUBILEUMSVISA (Madhouse), 25
+
+  \indexspace
+
+  \lettergroup{K}
+  \item KOMMANDOTOLKEN, 34
+
+  \indexspace
+
+  \lettergroup{M}
+  \item MORS LILLA DATOR, 35
+  \item Mors lilla dator åt skogen gick, 35
+
+  \indexspace
+
+  \lettergroup{N}
+  \item Nu ska vi kompilera, 25
 
   \indexspace
 
   \lettergroup{O}
   \item O, GAMLA KLANG- OCH JUBELTID, 18
+  \item OH, LJUVA ÖL, 43
+  \item OM EMACS, 32
 
   \indexspace
 
   \lettergroup{S}
   \item Sjungom studentens lyckliga dag, 17
+  \item Stackars kursexaminatör, 26
   \item STUDENTSÅNGEN, 17
 
   \indexspace
 
   \lettergroup{T}
-  \item \texttt  {THE BASIC SONG}, 25
+  \item \texttt  {THE BASIC SONG}, 26
+  \item TUPPENS KLAGOVISA, 37
+  \item Tuppens väckarklocka ringer sex varje morgon, 37
 
   \indexspace
 
   \lettergroup{U}
   \item UNDER SVEA BANÈR, 20
+
+  \indexspace
+
+  \lettergroup{W}
+  \item We don’t need no indirection, 36
+  \item When I find my code in tons of trouble, 30
+  \item When I find myself in front of Windows, 42
+  \item WRITE IN C, 30
 
 \end{theindex}

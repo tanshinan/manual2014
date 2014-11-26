@@ -1,8 +1,33 @@
 \documentclass[a6paper,fontsize=10pt,twoside,openright]{scrbook}
-\usepackage[a6paper,top=1cm,bottom=1.9cm,left=1cm,right=1cm,footskip=1cm,headsep=0.2cm]{geometry}
+\usepackage[a6paper,top=1cm,bottom=1.9cm,left=1cm,right=1cm,footskip=1cm,headsep=0.2cm]{geometry}% add showframe
 \usepackage[swedish]{babel}
 \usepackage{graphicx,tocloft,metalogo,titletoc,fontspec,titlesec,eso-pic,scrpage2,anyfontsize,microtype,array,marvosym,mdframed,textcomp,amssymb}
 \usepackage[columns=1]{idxlayout}
+
+\newgeometry{top=1cm,bottom=1cm,left=1cm,right=1cm,footskip=0pt,headsep=0.2cm}
+
+
+\setlength{\emergencystretch}{2em}
+
+\usepackage{letltxmacro}
+
+\LetLtxMacro\origttfamily\ttfamily
+\DeclareRobustCommand*{\ttfamily}{%
+  \origttfamily
+  \hyphenchar\font=`\-\relax
+  \fontdimen3\font=.25em\relax
+  \fontdimen4\font=.167em\relax
+  \fontdimen7\font=.167em\relax
+}
+
+%% Font: Baskervald X
+%% \usepackage[lf]{Baskervaldx} % lining figures
+%% \usepackage[bigdelims,vvarbb]{newtxmath} % math italic letters from Nimbus Roman
+%% \usepackage[cal=boondoxo]{mathalfa} % mathcal from STIX, unslanted a bit
+%% \renewcommand*\oldstylenums[1]{\textosf{#1}}
+
+%\usepackage[ebgaramond-maths]{mathdesign}
+\usepackage[bitstream-charter]{mathdesign}
 
 \usepackage[htt]{hyphenat}
 
@@ -30,20 +55,23 @@
 
 \newcommand{\rpt}{
         \raisebox{.2ex}{:}
-        \hspace*{-0.5ex}\raisebox{-.4ex}{\rule{.1ex}{2.5ex}\,\rule{.1ex}{2.5ex}}}
+        \hspace*{-0.5ex}\raisebox{-.4ex}{\rule{.1ex}{2.3ex}\,\rule{.1ex}{2.3ex}}}
 
 \newcommand{\revrpt}{
-        \raisebox{-.4ex}{\rule{.1ex}{2.5ex}\,\rule{.1ex}{2.5ex}}
+        \raisebox{-.4ex}{\rule{.1ex}{2.3ex}\,\rule{.1ex}{2.3ex}}
         \hspace*{-0.5ex}\raisebox{.2ex}{: }}
 
 %% chapter and section styling %%
-\titleformat{\chapter}[hang]{}{}{0pt}{\centering\fontsize{20}{70}\selectfont\chapterfont\texttt}
-\titleformat{\section}[hang]{}{}{0pt}{\textbf}
+\titleformat{\chapter}[hang]{}{}{0pt}{\centering\fontsize{30}{70}\rmfamily\textbf}
+\titleformat{\section}[hang]{\rmfamily\fontsize{11}{15}\bfseries}{}{0pt}{\textbf}
 \titlespacing*{\section}{0pt}{0pt}{0pt}
 \titlecontents{chapter}[0em]{\addvspace{3pt}}{\contentslabel{}}{}
-              {\titlerule*[0.4pc]{.}\contentspage}
-\newfontfamily\chapterfont[]{ChopinScript}
+              {\titlerule*[0.3pc]{.}\hspace*{-4pt}\contentspage}
 
+%\newfontfamily\chapterfont[]{ChopinScript}
+
+\addtokomafont{pagenumber}{\oldstylenums}
+              
 %% Command for chapter page, will remove foot and head %%
 \newcommand{\chapterpage}[2]{
   \newpage
@@ -53,7 +81,7 @@
   \chapter[#1]{#2}
   \renewcommand{\leftmark}{#1}
   \newpage
-  \ohead{\textsc{\scriptsize\leftmark}}
+  \ohead{\textnormal{\textsc{\scriptsize\leftmark}}}
   \ofoot[\pagemark]{\scriptsize\pagemark}
   %\cfoot{\centering\includegraphics[keepaspectratio]{elements/footelement2.pdf}}
 }
@@ -65,7 +93,7 @@
   \chapter*{#1}
   \renewcommand{\leftmark}{#1}
   \newpage
-  \ohead{\textsc{\scriptsize\leftmark}}
+  \ohead{\textnormal{\textsc{\scriptsize\leftmark}}}
   \ofoot[\pagemark]{\scriptsize\pagemark}
   %\cfoot{\centering\includegraphics[keepaspectratio]{elements/footelement2.pdf}}
 }
@@ -106,7 +134,7 @@
 
 \makeatletter
 \renewenvironment{theindex}
-                 {{\noindent\small\textrm{\textbf{TITEL och FÖRSTARADEN REGISTER}}\vspace*{10pt}\newline\par\textbf{\normalsize Symboler}\par}
+                 {{\noindent\rmfamily{\fontsize{11}{15}\textbf{TITEL och FÖRSTARADEN REGISTER}}\vspace*{10pt}\par\textbf{\normalsize Symboler}\par}
                    \@mkboth{\MakeUppercase\indexname}
                            {\MakeUppercase\indexname}
                            \let\item\@idxitem}
@@ -133,22 +161,39 @@
 \begin{document}
 \setlength{\parindent}{15pt}
 \vspace*{6.5cm}
-\hspace*{1cm}
+\hspace*{0.9cm}
 \includegraphics[keepaspectratio,width=7cm]{elements/logo.pdf}
 \clearpage
 \noindent Denna förträffliga oersättliga Manual tillhör:
-\ohead{\textsc{\scriptsize\leftmark}}
+\ohead{\textnormal{\textsc{\scriptsize\leftmark}}}
 \ofoot[\pagemark]{\scriptsize\pagemark}
 \clearpage
-\null
+%\section{Datavetare är skapande människor}\vspace{10pt}
+\noindent{\ttfamily Datavetare är skapande människor\\ \\ Datavetare
+  skapar. De skapar nya program som världen aldrig sett tidigare, för
+  att låta datorer göra saker som de aldrig gjort tidigare. De forskar
+  fram nya kunskaper och öppnar nya fält för framtidens
+  forskning. Datavetare skapar de verktyg som gör det möjligt att lösa
+  nya problem. Nya programmeringsspråk, nya beräkningsverktyg, bättre
+  kompilatorer, bättre databaser, nya operativsystem, bättre
+  utvecklingsverktyg, distribuerade system... Listan kan göras hur
+  lång som helst.\\ \\ Datavetenskapens handfasta mål är att förbättra
+  den programvara som vi kör på våra datorer. Vad som krävs är att
+  programmen gör vad de skall (korrekthet), att de inte gör fel om
+  något oförutsett inträffar (pålitlighet), och att de arbetar
+  effektivt (effektivitet). Dessutom skall programmen utvecklas på ett
+  effektivt sett.}\\
+\\
+{\footnotesize\textit{Ur ``Vad är en datavetare egentligen''\\
+    BlurGel nr \oldstylenums{0}, \oldstylenums{1995}}}
 \clearpage
-\newgeometry{top=1cm,bottom=1.2cm,left=1cm,right=1cm,footskip=0pt,headsep=0.2cm}
+%\newgeometry{top=1cm,bottom=1.2cm,left=1cm,right=1cm,footskip=0pt,headsep=0.2cm}
 \null
 \vfill
     {\noindent\small\centering
       Redaktör: ?\\
-      Grafisk formgivare: ?\\
-      Logotyp: Jens Bohlin\\
+      Grafisk formgivare: Per Bergqwist\\
+      Logotyp av Jens Bohlin\\
       Producerad med \XeTeX\\
       v1.0: 1994-11-21 (1000 exemplar)\\
       v1.1: 1996-01-02 (1000 exemplar)\\
@@ -156,49 +201,53 @@
       v11111011111: 2015-??-?? (1200 exemplar)\\
       Tryckeri: Lyxo AB\par
     }
-\restoregeometry
+%\restoregeometry
 \cleardoublepage
 %\cfoot{\centering\includegraphics[keepaspectratio]{elements/footelement2.pdf}}
-\noindent{\large\textrm{\textbf{FÖRORD}}\vspace*{10pt}}\\
-\indent ost
+\section{FÖRORD}\vspace{10pt}
+%\noindent{\large\textrm{\textbf{FÖRORD}}\vspace*{10pt}}\\
+\hspace{\indent} ost
 \cleardoublepage
-\noindent{\large\textrm{\textbf{FÖRORD från v2.001}}\vspace*{10pt}}\\
-\indent ost
+\section{FÖRORD från v2.001}\vspace{10pt}
+%\noindent{\large\textrm{\textbf{FÖRORD från v2.001}}\vspace*{10pt}}\\
+\hspace{\indent} ost
 \cleardoublepage
-\noindent{\large\textrm{\textbf{FÖRORD från v1.0}}\vspace*{10pt}}\\
-\indent Detta är en gemensam sångbok för samtliga datavetare i
-Sverige; C i Lindköping, DVP i Uppsala och C i Umeå. Vi har genom
+\section{FÖRORD från v1.0}\vspace{10pt}
+%\noindent{\large\textrm{\textbf{FÖRORD från v1.0}}\vspace*{10pt}}\\
+\hspace{\indent} Detta är en gemensam sångbok för samtliga datavetare
+i Sverige; C i Lindköping, DVP i Uppsala och C i Umeå. Vi har genom
 denna bok fått ytterligare en sak gemensamt.\\ \indent Att skapa en
 gemensam sångbok har diskuterats flerga gånger, jag minns att
 kontakter tog under 100-köret 1990 eller var det 1991?  Saker som
 händer under 100-kör är inget man minns, utan saker som man senare
 tror sig har hänt?! Den gången brakade arbetet samman efter några
 veckor. Men idén levde kvar och gav 3 (eller 4) år senare detta som
-resultat.\\ \indent Sångboken bygger på ``DVL:s Lilla blå
-v3.0$\beta$'' som aldrig han bli tryckt, innan arbetet kom igång för
-att skapa denna bok. Dock skall sägas att denna bok är betydligt
-större än ``Lilla blå v3.0$\beta$'', omkring 200 sidor för att inte
-vara exakt.\\ \indent När \textit{manualen} trycks i december 1994 är
-boken den största sångbok som finns runt om i vårt rike! Ok Psalmboken
-är större, men inte lika roligt att ha på gasquer!\\ \indent Vi som
-varit ansvariga för denna bok, har försökt att i så stor utsträckning
-som möjligt att få med melodier, låtarnas ursprung, och hur man skall
-sjunga. Allt för att underlätta för folk som inte är i kontakt med
-lika mycket sånger som vissa av oss andra.\\ \indent Det är många som
-har hjälpt till med denna bok, inte enbart datavetare utan även
-personer från helt andra linjer och orter, jag vill rikta ett
-speciellt tack till Er.\\ \indent Manualens generalgenomsjungning ägde
-rum på\\ Strålsnäs herrgård den 18 November 1994, då vi avnjöt en
-underbar rådjursmiddag. På denna sittning sjöng vi så mycket vi orkade
-och hade efter ca 4 timmar traverserat ca 40 sånger.\\ \indent Med på
-denna sångboksgenomsjungning och därav lika (o)ansvariga som jag till
-de eventuella felen var,\\ \textit{Micke Liljeblad, Mats Hägglund, Jakob
-  Engblom, Pär\\ Mattsson, Martin Davidson, Anders Jackson, Björn\\
-  Knutsson, Måns Engmem, Måns af Klercker, Jonas\\ Högström, Calle
-  Englund, Andreas Gref} och sist jag själv.\\ \indent Innan jag
+resultat.\\ \indent Sångboken bygger på ``DVL:s Lilla blå v3.0\ss''
+som aldrig han bli tryckt, innan arbetet kom igång för att skapa denna
+bok. Dock skall sägas att denna bok är betydligt större än ``Lilla blå
+v3.0\ss'', omkring 200 sidor för att inte vara exakt.\\ \indent När
+\textit{manualen} trycks i december 1994 är boken den största sångbok
+som finns runt om i vårt rike! Ok Psalmboken är större, men inte lika
+roligt att ha på gasquer!\\ \indent Vi som varit ansvariga för denna
+bok, har försökt att i så stor utsträckning som möjligt att få med
+melodier, låtarnas ursprung, och hur man skall sjunga. Allt för att
+underlätta för folk som inte är i kontakt med lika mycket sånger som
+vissa av oss andra.\\ \indent Det är många som har hjälpt till med
+denna bok, inte enbart datavetare utan även personer från helt andra
+linjer och orter, jag vill rikta ett speciellt tack till Er.
+\newpage
+\indent Manualens generalgenomsjungning ägde rum på\\ Strålsnäs
+herrgård den 18 November 1994, då vi avnjöt en underbar
+rådjursmiddag. På denna sittning sjöng vi så mycket vi orkade och hade
+efter ca 4 timmar traverserat ca 40 sånger.\\ \indent Med på denna
+sångboksgenomsjungning och därav lika (o)ansvariga som jag till de
+eventuella felen var,\\ \textit{Micke Liljeblad, Mats Hägglund, Jakob
+  Engblom, Pär\\ Mattsson, Martin Davidson, Anders Jackson,
+  Björn\\ Knutsson, Måns Engmem, Måns af Klercker, Jonas\\ Högström,
+  Calle Englund, Andreas Gref} och sist jag själv.\\ \indent Innan jag
 kommer till alla som skall tackas vill jag bara nämna att en sångbok
 är till för att sjungas ur, detta betyder inte att man behöver
-sjunga. Följande personer är jag evigt(?) tacksam till;\\
+sjunga. Följande personer är jag evigt(?)  tacksam till;\\
 
 \noindent
 \begin{tabular}{@{}p{0.5\textwidth}p{0.5\textwidth}@{}}
@@ -230,8 +279,8 @@ att rätta till så skicka dessa till någon av festerierna nedan;\\
 \texttt{http://www.ts.umu.se/\raisebox{.4ex}\texttildelow manualen/}\\ \\ Umeå den 21 November
 1994\\ \\ NeNNe
 \cleartoleftpage
-\noindent{\large\textrm{\textbf{TRAVERSERING}}\vspace*{10pt}}\\ \indent
-Genom hela denna bok gäller följande traverseringsregler. I sånger där
+\section{TRAVERSERING}\vspace{10pt}
+\hspace{\indent}Genom hela denna bok gäller följande traverseringsregler. I sånger där
 en försångare eller dylikt skall sjunga ensam används fet text. Ifall
 något speciellt såsom en handling inträffar vid ett ord, så används
 (kursiv), där ordet för handling eller beteende står inom ( ). En
@@ -242,63 +291,92 @@ läs den gärna.\\ \indent I vissa sånger skall könen sjunga olika
 rader, i dessa sånger används {\Large\Male} för manligt kön och där
 kvinnligt kön skall sjunga används givetvis då {\Large\Female}.
 \begin{leftborder}
-  Då det ibland kan förekomma lokala variantioner på vissa sånger, så
+  \hspace{\indent}Då det ibland kan förekomma lokala variantioner på vissa sånger, så
   används en  vertikal linje i högra kanten för att markera att detta
   är olika alternativ. Ibland betyder linjen att det är raderna som är
   alternativen, och ibland betyder linjen att det är olika
   versalternativ. Men den kloke läsaren förstår säkert när vad är vad.
 \end{leftborder}
-\hspace{\indent} För att göra allt ännu svårare så skall man oftast sjunga med stark
+\hspace{15pt} För att göra allt ännu svårare så skall man oftast sjunga med stark
 stämma där VERSALER används, men observera att man inte alltid skall
 göra detta. Vem har sagt att det skall vara lätt?
 \newpage
 %% begin toc on odd page and style the title %%
 \cleardoublepage
-\renewcommand{\contentsname}{\vspace{-2.1cm}\large\textrm{INNEHÅLL}\vspace{-1.2cm}}
+\renewcommand{\contentsname}{\vspace{-2.17cm}\rmfamily{\fontsize{11}{15}\textbf{INNEHÅLL}}\vspace{-1.2cm}}
 \tableofcontents
 
 %% Remove the toc title from heading %%
 \renewcommand{\leftmark}{}
 
 \setlength{\parindent}{0pt}
+\raggedbottom
 \chapterpage{Av tradition}{Av tradition}
 \input{songs/du_gamla_du_fria.tex}
+\newpage
 %\input{songs/sveriges_flagga.tex}
 %\input{songs/jämtlandssången.tex}
 %\input{songs/jamtlandssången.tex}
 \input{songs/studentsången.tex}
+\newpage
 \input{songs/o_gamla_klang_och_jubeltid.tex}
+\newpage
 \input{songs/under_svea_baner.tex}
 
 \chapterpage{Datavetarvisor}{Datavetarvisor}
 \newpage
 \thispagestyle{empty}
-\noindent{\texttt{Datavetare är skapande människor\\
-\\
-Datavetare skapar. De skapar nya program som världen aldrig sett
-tidigare, för att låta datorer göra saker som de aldrig gjort
-tidigare.  De forskar fram nya kunskaper och öppnar nya fält för
-framtidens forskning. Datavetare skapar de verktyg som gör det möjligt
-att lösa nya problem.  Nya programmeringsspråk, nya beräkningsverktyg,
-bättre kompilatorer, bättre databaser, nya operativsystem, bättre
-utvecklingsverktyg, distribuerade system... Listan kan göras hur lång
-som helst.\\
-\\
-Datavetenskapens handfasta mål är att förbättra den programvara som vi
-kör på våra datorer. Vad som krävs är att programmen gör vad de skall
-(korrekthet), att de inte gör fel om något oförutsett inträffar
-(pålitlighet), och att de arbetar effektivt (effektivitet). Dessutom
-skall programmen utvecklas på ett effektivt sett.}}\\
-\\
-{\footnotesize\textit{Ur ``Vad är en datavetare egentligen''\\
-    BlurGel nr 0, 1995}}
-\clearpage
+\null
+\vfill
+{\noindent\textit{\centering Fader Dator, som är i Salen,\\ helgad
+    vare Din skärm,\\ tillkomme Ditt tangentbord,\\ ske Din vilja,
+    så som i minnet,\\ så ock på nätet.\\ Vår dagliga utskrift giv
+    oss idag\\ och förlåt oss våra misstag\\ trots att vi ej
+    förlåta\\ dem som skyldiga äro.\\ Låt oss icke behöva
+    vänta\\ och fräls oss ifrån dumpar.\\ Ty Salen är din\\ och
+    Makten hos Handledaren\\ i Evighet.\\ UNIX.\par}}
+\vfill
+\null
+\newpage
+\input{songs/datavetares_harjarvisa.tex}
+\vspace{15pt}
+\input{songs/jubileumsvisa.tex}
+\newpage
 \input{songs/the_basic_song.tex}
-
+\vspace{15pt}
+\input{songs/ge_mig_mera.tex}
+\newpage
+\input{songs/datavisa.tex}
+\newpage
+\input{songs/write_in_c.tex}
+\newpage
+\input{songs/om_emacs.tex}
+\newpage
+\input{songs/1515.tex}
+\newpage
+\input{songs/kommandotolken.tex}
+\vspace{15pt}
+\input{songs/mors_lilla_dator.tex}
+\newpage
+\input{songs/another_glitch_in_the_call.tex}
+\vspace{15pt}
+\input{songs/tuppens_klagovisa.tex}
+\newpage
+\input{songs/hallands-shot.tex}
+\vspace{15pt}
+\input{songs/det_var_fest_ner_i_foorum.tex}
+\newpage
+\input{songs/det_ska_va_hembrant.tex}
+\newpage
+\input{songs/datavetares_paradmarch.tex}
+\newpage
+\input{songs/it_is_free.tex}
+\vspace{15pt}
+\input{songs/oh_ljuva_ol.tex}
 \chapterpage{Snapsvisor}{Snapsvisor}
 
 \chapterpage{Ölvisor}{Ölvisor}
-%\customindex{YOLO}{49}
+
 \chapterpage{Vinvisor}{Vinvisor}
 
 \chapterpage{Avecvisor}{Avecvisor}
@@ -316,12 +394,11 @@ skall programmen utvecklas på ett effektivt sett.}}\\
 \chapterpage{Register}{Register}
 
 \cfoot{}
-\newgeometry{top=1cm,bottom=1.2cm,left=1cm,right=1cm,footskip=0pt,headsep=0.2cm}
+%\newgeometry{top=1cm,bottom=1.2cm,left=1cm,right=1cm,footskip=0pt,headsep=0.2cm}
 \small
 \printindex
-\hiddenchapterpage{\texttt{\emptyset}}
+\hiddenchapterpage{$\emptyset$}
 \ohead{}
-\ofoot[\pagemark]{}
 \newpage
 \null
 \newpage
