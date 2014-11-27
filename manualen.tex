@@ -1,13 +1,13 @@
 \documentclass[a6paper,fontsize=10pt,twoside,openright]{scrbook}
 \usepackage[a6paper,top=1cm,bottom=1.9cm,left=1cm,right=1cm,footskip=1cm,headsep=0.2cm]{geometry}% add showframe
 \usepackage[swedish]{babel}
-\usepackage{graphicx,tocloft,metalogo,titletoc,fontspec,titlesec,eso-pic,scrpage2,anyfontsize,microtype,array,marvosym,mdframed,textcomp,amssymb}
+\usepackage{graphicx,tocloft,metalogo,titletoc,fontspec,titlesec,eso-pic,scrpage2,anyfontsize,microtype,array,marvosym,mdframed,textcomp,amssymb,enumitem}
 \usepackage[columns=1]{idxlayout}
 
 \newgeometry{top=1cm,bottom=1cm,left=1cm,right=1cm,footskip=0pt,headsep=0.2cm}
 
 
-\setlength{\emergencystretch}{2em}
+%\setlength{\emergencystretch}{2em}
 
 \usepackage{letltxmacro}
 
@@ -30,6 +30,11 @@
 \usepackage[bitstream-charter]{mathdesign}
 
 \usepackage[htt]{hyphenat}
+\tolerance=1
+\emergencystretch=\maxdimen
+\hyphenpenalty
+\exhyphenpenalty
+
 
 \usepackage{setspace}
 \renewcommand{\baselinestretch}{0.98} 
@@ -63,14 +68,14 @@
 
 %% chapter and section styling %%
 \titleformat{\chapter}[hang]{}{}{0pt}{\centering\fontsize{30}{70}\rmfamily\textbf}
-\titleformat{\section}[hang]{\rmfamily\fontsize{11}{15}\bfseries}{}{0pt}{\textbf}
+\titleformat{\section}[hang]{\rmfamily\fontsize{13}{15}\bfseries}{}{0pt}{\textbf}
 \titlespacing*{\section}{0pt}{0pt}{0pt}
 \titlecontents{chapter}[0em]{\addvspace{3pt}}{\contentslabel{}}{}
               {\titlerule*[0.3pc]{.}\hspace*{-4pt}\contentspage}
 
 %\newfontfamily\chapterfont[]{ChopinScript}
 
-\addtokomafont{pagenumber}{\oldstylenums}
+%\addtokomafont{pagenumber}{\oldstylenums}
               
 %% Command for chapter page, will remove foot and head %%
 \newcommand{\chapterpage}[2]{
@@ -82,7 +87,7 @@
   \renewcommand{\leftmark}{#1}
   \newpage
   \ohead{\textnormal{\textsc{\scriptsize\leftmark}}}
-  \ofoot[\pagemark]{\scriptsize\pagemark}
+  \ofoot[\pagemark]{\textsc{\scriptsize\pagemark}}
   %\cfoot{\centering\includegraphics[keepaspectratio]{elements/footelement2.pdf}}
 }
 \newcommand{\hiddenchapterpage}[1]{
@@ -94,7 +99,7 @@
   \renewcommand{\leftmark}{#1}
   \newpage
   \ohead{\textnormal{\textsc{\scriptsize\leftmark}}}
-  \ofoot[\pagemark]{\scriptsize\pagemark}
+  \ofoot[\pagemark]{\textsc{\scriptsize\pagemark}}
   %\cfoot{\centering\includegraphics[keepaspectratio]{elements/footelement2.pdf}}
 }
 \makeatletter
@@ -102,7 +107,7 @@
   \thispagestyle{empty}
   \global\@topnum\z@
   \@afterindentfalse
-  \ofoot[\pagemark]{\scriptsize\pagemark}
+  \ofoot[\pagemark]{\textsc{\scriptsize\pagemark}}
   \cfoot{}
   \ohead{}
   \secdef\@chapter\@schapter}
@@ -134,7 +139,7 @@
 
 \makeatletter
 \renewenvironment{theindex}
-                 {{\noindent\rmfamily{\fontsize{11}{15}\textbf{TITEL och FÖRSTARADEN REGISTER}}\vspace*{10pt}\par\textbf{\normalsize Symboler}\par}
+                 {{\noindent\rmfamily{\fontsize{13}{15}\textbf{TITEL och FÖRSTARADEN REGISTER}}\vspace*{10pt}\par\textbf{\normalsize Symboler}\par}
                    \@mkboth{\MakeUppercase\indexname}
                            {\MakeUppercase\indexname}
                            \let\item\@idxitem}
@@ -166,7 +171,7 @@
 \clearpage
 \noindent Denna förträffliga oersättliga Manual tillhör:
 \ohead{\textnormal{\textsc{\scriptsize\leftmark}}}
-\ofoot[\pagemark]{\scriptsize\pagemark}
+\ofoot[\pagemark]{\textsc{\scriptsize\pagemark}}
 \clearpage
 %\section{Datavetare är skapande människor}\vspace{10pt}
 \noindent{\ttfamily Datavetare är skapande människor\\ \\ Datavetare
@@ -185,7 +190,7 @@
   effektivt sett.}\\
 \\
 {\footnotesize\textit{Ur ``Vad är en datavetare egentligen''\\
-    BlurGel nr \oldstylenums{0}, \oldstylenums{1995}}}
+    BlurGel nr 0, 1995}}
 \clearpage
 %\newgeometry{top=1cm,bottom=1.2cm,left=1cm,right=1cm,footskip=0pt,headsep=0.2cm}
 \null
@@ -207,14 +212,33 @@
 \section{FÖRORD}\vspace{10pt}
 %\noindent{\large\textrm{\textbf{FÖRORD}}\vspace*{10pt}}\\
 \hspace{\indent} ost
-\cleardoublepage
+\newpage
 \section{FÖRORD från v2.001}\vspace{10pt}
 %\noindent{\large\textrm{\textbf{FÖRORD från v2.001}}\vspace*{10pt}}\\
-\hspace{\indent} ost
-\cleardoublepage
+\hspace{\indent}Allt sedan Manualen v1.1 kom till världen har det
+funnits en skara människor som ägnat sina liv åt att vänta på dess
+efterföljare. Denna skaras oförtrutliga tillväxt utmynnande i att ett
+formaliserat uppdateringsarbete satte igång våren 1999. Den 4 december
+-99 samlades en liten men representativ skara från C i Linköping, DVP
+i Uppsala och C i Umeå för att samla alla tankar och idéer som
+framförts på den då flitigt utnyttjade mailinglistan
+\texttt{manual@acc.umu.se}. Efter detta möte trodde vi att arbetet
+skulle leda till en färdig Manual våren 2000. Så blev det dock inte på
+grund av en utdragen och högst osaklig debatt om en del låtar som
+redan var bortplockade. Nu, över ett år senare, är vi som har
+funderat, fipplat och till och med slitit(?) med denna nya bok
+lyckliga över att få presentera Manualen version 2.001\\ \indent En
+betydande samling sånger som Manualen kräver naturligtvis en avsevärd
+mängd arbete att sammanställa, faktum är att antalet välvilliga
+medhjälpare från alla berörda order förmodligen inte går att passa in
+i en nibble. Det stora antalet inblandade parter gör att en uppräkning
+är dömd att innehålla felaktigheter, dock gör vi nedan ett dj-ärvt
+försök samtidigt som vi hoppas att alla vi glömt kan förlåta oss i
+någon framtid.
+\newpage
 \section{FÖRORD från v1.0}\vspace{10pt}
 %\noindent{\large\textrm{\textbf{FÖRORD från v1.0}}\vspace*{10pt}}\\
-\hspace{\indent} Detta är en gemensam sångbok för samtliga datavetare
+\hspace{\indent}Detta är en gemensam sångbok för samtliga datavetare
 i Sverige; C i Lindköping, DVP i Uppsala och C i Umeå. Vi har genom
 denna bok fått ytterligare en sak gemensamt.\\ \indent Att skapa en
 gemensam sångbok har diskuterats flerga gånger, jag minns att
@@ -303,7 +327,7 @@ göra detta. Vem har sagt att det skall vara lätt?
 \newpage
 %% begin toc on odd page and style the title %%
 \cleardoublepage
-\renewcommand{\contentsname}{\vspace{-2.17cm}\rmfamily{\fontsize{11}{15}\textbf{INNEHÅLL}}\vspace{-1.2cm}}
+\renewcommand{\contentsname}{\vspace{-2.17cm}\rmfamily{\fontsize{13}{15}\textbf{INNEHÅLL}}\vspace{-1.2cm}}
 \tableofcontents
 
 %% Remove the toc title from heading %%
@@ -312,6 +336,21 @@ göra detta. Vem har sagt att det skall vara lätt?
 \setlength{\parindent}{0pt}
 \raggedbottom
 \chapterpage{Av tradition}{Av tradition}
+\null
+\vfill
+\hfill\begin{minipage}[c]{6.7cm}
+\textit{Vad bjuder oss uppriktigt Afrika?\\
+Vad visa kan Amerika?\\
+Vad Asien? Vad allt Europa?\\
+Jag trotsar öppet alltihopa.\\
+Men Skandinavien - det är alladar!\\
+Blott Sverige svenska krusbär har.\\
+\\
+Carl Love Almquist}
+\end{minipage}\hfill
+\vfill
+\null
+\newpage
 \input{songs/du_gamla_du_fria.tex}
 \newpage
 %\input{songs/sveriges_flagga.tex}
@@ -319,10 +358,9 @@ göra detta. Vem har sagt att det skall vara lätt?
 %\input{songs/jamtlandssången.tex}
 \input{songs/studentsången.tex}
 \newpage
-\input{songs/o_gamla_klang_och_jubeltid.tex}
-\newpage
 \input{songs/under_svea_baner.tex}
-
+\newpage
+\input{songs/o_gamla_klang_och_jubeltid.tex}
 \chapterpage{Datavetarvisor}{Datavetarvisor}
 \newpage
 \thispagestyle{empty}
@@ -374,7 +412,43 @@ göra detta. Vem har sagt att det skall vara lätt?
 \vspace{15pt}
 \input{songs/oh_ljuva_ol.tex}
 \chapterpage{Snapsvisor}{Snapsvisor}
-
+\section{SUPARNAS ORDNING}\index{SUPARNAS ORDNING}
+\vspace{10pt}
+\begin{enumerate}[leftmargin=0.65cm,topsep=0pt,itemsep=0pt,partopsep=0pt,parsep=3pt]
+\item Helan
+\item Halvan
+\item Tersen.
+\item Kvarten
+\item Kvinten
+\item Sexten
+\item Septen
+\item Rivan
+\item Rafflan.
+\item Rännan
+\item Smuttan
+\item Smuttans unge
+\item Femton droppar
+\item Lilla Manasse
+\item Lilla Manasses Broder
+\item Klämtaren
+\item Kreaturens återuppståndelse
+\item Den bleka dödens dryck
+\item Krokofanternas intåg
+\item Ett evigt liv
+\end{enumerate}
+\newpage
+\section{ANVISNINGAR FÖR SNAPSENS TAGANDE}\index{ANVISNINGAR FÖR SNAPSENS TAGANDE}
+\vspace{10pt}
+\begin{itemize}[leftmargin=0cm,topsep=0pt,itemsep=2pt,partopsep=0pt,parsep=3pt,label={}]
+\item Snapsen tages till fisk.
+\item All mat är fisk, förutom ölsupa och pannkaka.
+\item Den som äter ölsupa eller pannkaka, sup på grannens fisk.
+\item Skulle grannen förtära ölsupa eller pannkaka, må även dessa rätter betraktas som fisk.
+\item Desserten ätes med gaffel, så länge det går, därefter med sked.
+\item Man må icke dricka ur sköljkopparna.
+\item Ty den goda törsten bör släckas med ädlare fludium än tvättvatten.
+\item Vatten betraktas aldrig som fisk.
+\end{itemize}
 \chapterpage{Ölvisor}{Ölvisor}
 
 \chapterpage{Vinvisor}{Vinvisor}
@@ -382,7 +456,24 @@ göra detta. Vem har sagt att det skall vara lätt?
 \chapterpage{Avecvisor}{Avecvisor}
 
 \chapterpage{Gasquevisor}{Gasquevisor}
+\input{songs/harjarvisan.tex}
 
+%% (Med handen för hjärtat står man upp och
+%%     fortsätter med)}}
+%% \vspace{10pt}
+%% \fvisa{DATAVETARNAS HÄRJARVISA}{Nu ska vi kompilera}
+%% \vspace{10pt}
+%% Nu ska vi kompilera,\\
+%% supa och penetrera\\
+%% söka rekusioner ända in\\
+%% till fixpunktssemantik.\\
+%% Av induktion och basfall\\
+%% blir man med lätthet asknall.\\
+%% Hashtabeller parsas rekursivt\\
+%% ifrån hår till häl\\
+%% \\
+%%   {\footnotesize\textit{Text: Pär Mattsson och Magnus Ingelbo från DVL Uppsala.}}
+  
 \chapterpage{Säsongsvisor}{Säsongsvisor}
 
 \chapterpage{Svenska visor}{Svenska visor}

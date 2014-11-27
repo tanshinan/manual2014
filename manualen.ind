@@ -6,110 +6,118 @@
   }
 
   \lettergroupDefault{default}
-  \item \texttt  {10 LET oss nu fatta i våra glas}, 26
-  \item 1515, 33
+  \item \texttt  {10 LET oss nu fatta i våra glas}, 24
+  \item 1515, 31
 
   \indexspace
 
   \lettergroup{A}
-  \item ANOTHER GLITCH IN THE CALL, 36
+  \item ANOTHER GLITCH IN THE CALL, 34
+  \item ANVISNINGAR FÖR SNAPSENS TAGANDE, 45
 
   \indexspace
 
   \lettergroup{D}
-  \item DATAVETARNAS HÄRJARVISA, 25
-  \item DATAVETARNAS PARADMARCH, 41
-  \item DATAVISA, 28
-  \item DET SKA VA' HEMBRÄNT, 40
-  \item DET VAR FEST NER I FOORUM, 39
-  \item Det var fest ner i FooRum på tisdagsnatten, 39
-  \item DU GAMLA, DU FRIA, 16
+  \item DATAVETARNAS HÄRJARVISA, 23, 55
+  \item DATAVETARNAS PARADMARCH, 39
+  \item DATAVISA, 26
+  \item DET SKA VA' HEMBRÄNT, 38
+  \item DET VAR FEST NER I FOORUM, 37
+  \item Det var fest ner i FooRum på tisdagsnatten, 37
+  \item DU GAMLA, DU FRIA, 15
 
   \indexspace
 
   \lettergroup{E}
-  \item Emacs är en stor koloss, 32
-  \item En datavetare, han bor vid FooBar, 25
+  \item Emacs är en stor koloss, 30
+  \item En datavetare, han bor vid FooBar, 23
 
   \indexspace
 
   \lettergroup{F}
-  \item Far, jag kan inte få upp min kommandotolk, 34
+  \item Far, jag kan inte få upp min kommandotolk, 32
 
   \indexspace
 
   \lettergroup{G}
-  \item GE MIG MERA!, 26
+  \item GE MIG MERA!, 24
 
   \indexspace
 
   \lettergroup{H}
-  \item HALLANDS-SHOT, 38
-  \item Höstvindar vina, ursh vilken pina, 33
+  \item HÄRJAREVISAN, 54
+  \item HALLANDS-SHOT, 36
+  \item Höstvindar vina, ursh vilken pina, 31
 
   \indexspace
 
   \lettergroup{I}
-  \item Ingen vet det jag vet en hemlighet, 38
-  \item IT IS FREE, 42
+  \item Ingen vet det jag vet en hemlighet, 36
+  \item IT IS FREE, 40
 
   \indexspace
 
   \lettergroup{J}
-  \item Ja, här kommer datavetare, 41
-  \item Jag är helröd och helt OK, 28
-  \item Jag har festat mycket, det har inte varit lätt, 40
-  \item Jag har nu fått en och annan öl, 43
-  \item JUBILEUMSVISA (Madhouse), 25
+  \item Ja, här kommer datavetare, 39
+  \item Jag är helröd och helt OK, 26
+  \item Jag har festat mycket, det har inte varit lätt, 38
+  \item Jag har nu fått en och annan öl, 41
+  \item JUBILEUMSVISA (MADHOUSE), 23
 
   \indexspace
 
   \lettergroup{K}
-  \item KOMMANDOTOLKEN, 34
+  \item KOMMANDOTOLKEN, 32
+
+  \indexspace
+
+  \lettergroup{L}
+  \item Liksom våra fäder, vikingarna i Norden, 54
 
   \indexspace
 
   \lettergroup{M}
-  \item MORS LILLA DATOR, 35
-  \item Mors lilla dator åt skogen gick, 35
+  \item MORS LILLA DATOR, 33
+  \item Mors lilla dator åt skogen gick, 33
 
   \indexspace
 
   \lettergroup{N}
-  \item Nu ska vi kompilera, 25
+  \item Nu ska vi kompilera, 23
 
   \indexspace
 
   \lettergroup{O}
   \item O, GAMLA KLANG- OCH JUBELTID, 18
-  \item OH, LJUVA ÖL, 43
-  \item OM EMACS, 32
+  \item OH, LJUVA ÖL, 41
+  \item OM EMACS, 30
 
   \indexspace
 
   \lettergroup{S}
-  \item Sjungom studentens lyckliga dag, 17
-  \item Stackars kursexaminatör, 26
-  \item STUDENTSÅNGEN, 17
+  \item Sjungom studentens lyckliga dag, 16
+  \item Stackars kursexaminatör, 24
+  \item STUDENTSÅNGEN, 16
+  \item SUPARNAS ORDNING, 44
 
   \indexspace
 
   \lettergroup{T}
-  \item \texttt  {THE BASIC SONG}, 26
-  \item TUPPENS KLAGOVISA, 37
-  \item Tuppens väckarklocka ringer sex varje morgon, 37
+  \item \texttt  {THE BASIC SONG}, 24
+  \item TUPPENS KLAGOVISA, 35
+  \item Tuppens väckarklocka ringer sex varje morgon, 35
 
   \indexspace
 
   \lettergroup{U}
-  \item UNDER SVEA BANÈR, 20
+  \item UNDER SVEA BANÈR, 17
 
   \indexspace
 
   \lettergroup{W}
-  \item We don’t need no indirection, 36
-  \item When I find my code in tons of trouble, 30
-  \item When I find myself in front of Windows, 42
-  \item WRITE IN C, 30
+  \item We don’t need no indirection, 34
+  \item When I find my code in tons of trouble, 28
+  \item When I find myself in front of Windows, 40
+  \item WRITE IN C, 28
 
 \end{theindex}
