@@ -28,12 +28,11 @@
 
 %\usepackage[ebgaramond-maths]{mathdesign}
 \usepackage[bitstream-charter]{mathdesign}
-
 \usepackage[htt]{hyphenat}
-\tolerance=1
-\emergencystretch=\maxdimen
-\hyphenpenalty
-\exhyphenpenalty
+%% \tolerance=1
+%% \emergencystretch=\maxdimen
+%% \hyphenpenalty
+%% \exhyphenpenalty
 
 
 \usepackage{setspace}
@@ -60,15 +59,15 @@
 
 \newcommand{\rpt}{
         \raisebox{.2ex}{:}
-        \hspace*{-0.5ex}\raisebox{-.4ex}{\rule{.1ex}{2.3ex}\,\rule{.1ex}{2.3ex}}}
+        \hspace*{-0.5ex}\raisebox{-.4ex}{\rule{.1ex}{2.3ex}\,\rule{.2ex}{2.3ex}}}
 
 \newcommand{\revrpt}{
-        \raisebox{-.4ex}{\rule{.1ex}{2.3ex}\,\rule{.1ex}{2.3ex}}
+        \raisebox{-.4ex}{\rule{.2ex}{2.3ex}\,\rule{.1ex}{2.3ex}}
         \hspace*{-0.5ex}\raisebox{.2ex}{: }}
 
 %% chapter and section styling %%
 \titleformat{\chapter}[hang]{}{}{0pt}{\centering\fontsize{30}{70}\rmfamily\textbf}
-\titleformat{\section}[hang]{\rmfamily\fontsize{13}{15}\bfseries}{}{0pt}{\textbf}
+\titleformat{\section}[hang]{}{}{0pt}{\fontsize{13}{15}\rmfamily\textbf}
 \titlespacing*{\section}{0pt}{0pt}{0pt}
 \titlecontents{chapter}[0em]{\addvspace{3pt}}{\contentslabel{}}{}
               {\titlerule*[0.3pc]{.}\hspace*{-4pt}\contentspage}
@@ -113,6 +112,9 @@
   \secdef\@chapter\@schapter}
 \makeatother
 
+\newcommand{\specialcell}[2][c]{
+  \begin{tabular}[#1]{@{}l@{}}#2\end{tabular}} 
+
 %% Command for songs %%
 \newcommand{\visa}[1]{
   \index{#1}
@@ -145,7 +147,6 @@
                            \let\item\@idxitem}
                  {}
 \makeatother
-
 \newmdenv[
   topline=false,
   bottomline=false,
@@ -204,7 +205,7 @@
       v1.1: 1996-01-02 (1000 exemplar)\\
       v2.001: 2001-11-15 (1000 exemplar)\\
       v11111011111: 2015-??-?? (1200 exemplar)\\
-      Tryckeri: Lyxo AB\par
+      Tryckeri: Boktryckarna\par
     }
 %\restoregeometry
 \cleardoublepage
@@ -212,7 +213,7 @@
 \section{FÖRORD}\vspace{10pt}
 %\noindent{\large\textrm{\textbf{FÖRORD}}\vspace*{10pt}}\\
 \hspace{\indent} ost
-\newpage
+\cleardoublepage
 \section{FÖRORD från v2.001}\vspace{10pt}
 %\noindent{\large\textrm{\textbf{FÖRORD från v2.001}}\vspace*{10pt}}\\
 \hspace{\indent}Allt sedan Manualen v1.1 kom till världen har det
@@ -236,6 +237,28 @@ i en nibble. Det stora antalet inblandade parter gör att en uppräkning
 försök samtidigt som vi hoppas att alla vi glömt kan förlåta oss i
 någon framtid.
 \newpage
+\indent Vilka var de tappra själarna som var med på mötet i Uppsala
+då?\\
+\\
+\noindent
+\begin{tabular}{@{}p{0.5\textwidth}p{0.5\textwidth}@{}}
+  Lars-Arne Mattson & Anders Ramsell\\
+  Henrik Eriksson & Olof Dahlberg\\
+  Hans Molin & Björn Bergman\\
+  Jesper Wilhelmsson & Ingela Anderton\\
+  Daniel Gref & Mattias Hallberg\\
+  Daniel Holmgren & Andreas Hed
+\end{tabular}\\
+\\
+%% \\
+%% Manualen finns också på nätet,\\ URL:
+%% \texttt{http://www.acc.umu.se/\raisebox{.4ex}\texttildelow
+%%   manualen/}\\
+\\ Hoppas nu att ni är nöjda med
+resultatet.\\ \\ Uppsala den 24 december 2000 (God Jul!)\\ \\ Björn
+Bergman / Jesper Wilhelmsson / Andreas Hed\\ \\ De sista justeringarna
+skedde under den datavetenskapliga utbildningskonferensen i Umeå 2001.
+\cleardoublepage
 \section{FÖRORD från v1.0}\vspace{10pt}
 %\noindent{\large\textrm{\textbf{FÖRORD från v1.0}}\vspace*{10pt}}\\
 \hspace{\indent}Detta är en gemensam sångbok för samtliga datavetare
@@ -289,18 +312,21 @@ sjunga. Följande personer är jag evigt(?)  tacksam till;\\
 \indent Dessutom vill jag tacka alla som lusläst boken, sammt alla Ni
 som gjorde förhandsbeställningar. Det finns säkert många andra som jag
 missat och jag är precis lika tacksam till er som alla
-andra!\\ \indent Om ni har några bidrag eller saker som kan vara värda
-att rätta till så skicka dessa till någon av festerierna nedan;\\
+andra!\\
+%% \indent Om ni har några bidrag eller saker som kan vara värda
+%% att rätta till så skicka dessa till någon av festerierna nedan;\\
 
-\noindent
-\begin{tabular}{@{}p{0.3\textwidth}p{0.7\textwidth}@{}}
-  Piraya klubben & piraya@ts.umu.se\\
-  Klubbverket & dvl-klubbverket@student.docs.uu.se\\
-  CC & cc@cyd.liu.se
-\end{tabular}\\
+%% \noindent
+%% \begin{tabular}{@{}p{0.3\textwidth}p{0.7\textwidth}@{}}
+%%   Piraya klubben & piraya@ts.umu.se\\
+%%   Klubbverket & dvl-klubbverket@student.docs.uu.se\\
+%%   CC & cc@cyd.liu.se
+%% \end{tabular}\\
 
-\indent Till sist, kom ihåg att hela sångboken och fellista finns på:
-\texttt{http://www.ts.umu.se/\raisebox{.4ex}\texttildelow manualen/}\\ \\ Umeå den 21 November
+%% \indent Till sist, kom ihåg att hela sångboken och fellista finns på:
+%% \texttt{http://www.ts.umu.se/\raisebox{.4ex}\texttildelow manualen/}\\
+%% \\
+\noindent Umeå den 21 November
 1994\\ \\ NeNNe
 \cleartoleftpage
 \section{TRAVERSERING}\vspace{10pt}
@@ -452,30 +478,102 @@ Carl Love Almquist}
 \chapterpage{Ölvisor}{Ölvisor}
 
 \chapterpage{Vinvisor}{Vinvisor}
-
+\input{songs/gloggvisa.tex}
+\vspace{15pt}
+\input{songs/gloggvisan.tex}
+\newpage
+\input{songs/sudda_sudda.tex}
+\vspace{15pt}
+\input{songs/undulaten.tex}
+\newpage
+\input{songs/solsken_i_blick.tex}
+\newpage
+\input{songs/fransk_vinvisa.tex}
+\vspace{15pt}
+\input{songs/vinets_lov.tex}
 \chapterpage{Avecvisor}{Avecvisor}
 
 \chapterpage{Gasquevisor}{Gasquevisor}
-\input{songs/harjarvisan.tex}
+\input{songs/valkommen_hit.tex}
+\vspace{15pt}
+\input{songs/till_dryckens_ara.tex}
+\newpage
+\input{songs/var_ungdoms_fagraste_var.tex}
+\vspace{15pt}
+\input{songs/siffervisan.tex}
+\newpage
+\input{songs/jag_har_aldrig_varit_pa_snusen.tex}
+\newpage
+\input{songs/kamelen_pa_kanalen.tex}
+\newpage
+\input{songs/dom_som_ar_nyktra.tex}
+\vspace{15pt}
+\input{songs/sa_lange.tex}
+\newpage
+\input{songs/vi_som_ar_nyktra.tex}
+\vspace{15pt}
+\input{songs/tag_nu_djupa_klunkar.tex}
+\newpage
+\input{songs/jag_var_full_en_gang.tex}
+\newpage
+\input{songs/lambo.tex}
+\newpage
+\input{songs/nikolajev.tex}
+\newpage
+\input{songs/minne.tex}
+\vspace{15pt}
+\input{songs/det_var_lange_sen.tex}
+\newpage
+\input{songs/kalmarevisan.tex}
+\newpage
+\input{songs/vikingen.tex}
+\newpage
+\input{songs/we_are_sailing.tex}
+\newpage
+\input{songs/harjarevisan.tex}
+\newpage
+\input{songs/spritbolaget.tex}
+\newpage
+\input{songs/sjung_om_fru_svenssons.tex}
+\vspace{15pt}
+\input{songs/var_inte_blyg.tex}
+\newpage
+\input{songs/vi_kom_fran_norrland.tex}
+\newpage
+\input{songs/ofvandahls.tex}
+\newpage
+\input{songs/varsang.tex}
+\newpage
+\input{songs/integralvisan.tex}
+\newpage
+\input{songs/lappsangen.tex}
+\newpage
+\input{songs/lingonben.tex}
+\newpage
+\input{songs/provrorsbarnet.tex}
+\vspace{15pt}
+\input{songs/visa_for_omusikaliska.tex}
+\newpage
+\input{songs/stortharligt_full.tex}
+\vspace{15pt}
+\input{songs/kantom_studiosij.tex}
+\newpage
+\input{songs/receptet.tex}
+\newpage
+\input{songs/gallivarevisan.tex}
+\newpage
+\input{songs/en_glad_calypso_om_varen.tex}
 
-%% (Med handen för hjärtat står man upp och
-%%     fortsätter med)}}
-%% \vspace{10pt}
-%% \fvisa{DATAVETARNAS HÄRJARVISA}{Nu ska vi kompilera}
-%% \vspace{10pt}
-%% Nu ska vi kompilera,\\
-%% supa och penetrera\\
-%% söka rekusioner ända in\\
-%% till fixpunktssemantik.\\
-%% Av induktion och basfall\\
-%% blir man med lätthet asknall.\\
-%% Hashtabeller parsas rekursivt\\
-%% ifrån hår till häl\\
-%% \\
-%%   {\footnotesize\textit{Text: Pär Mattsson och Magnus Ingelbo från DVL Uppsala.}}
-  
 \chapterpage{Säsongsvisor}{Säsongsvisor}
-
+\input{songs/langtan_till_landet.tex}
+\newpage
+\input{songs/skona_maj.tex}
+\newpage
+\input{songs/summarn_kummar.tex}
+\newpage
+\input{songs/det_ar_varen.tex}
+\vspace{15pt}
+\input{songs/avslutningssangen.tex}
 \chapterpage{Svenska visor}{Svenska visor}
 
 \chapterpage{Osvenska visor}{Osvenska visor}
