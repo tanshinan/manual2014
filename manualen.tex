@@ -29,6 +29,10 @@
 %\usepackage[ebgaramond-maths]{mathdesign}
 \usepackage[bitstream-charter]{mathdesign}
 \usepackage[htt]{hyphenat}
+
+%% Gömma varningar om underfull \hbox
+%% \hbadness=10001
+
 %% \tolerance=1
 %% \emergencystretch=\maxdimen
 %% \hyphenpenalty
@@ -141,7 +145,7 @@
 
 \makeatletter
 \renewenvironment{theindex}
-                 {{\noindent\rmfamily{\fontsize{13}{15}\textbf{TITEL och FÖRSTARADEN REGISTER}}\vspace*{10pt}\par\textbf{\normalsize Symboler}\par}
+                 {{\noindent\rmfamily{\fontsize{13}{15}\textbf{TITEL och FÖRSTARADEN REGISTER}}\vspace*{10pt}\par\textbf{\normalsize \#}\par}
                    \@mkboth{\MakeUppercase\indexname}
                            {\MakeUppercase\indexname}
                            \let\item\@idxitem}
@@ -212,11 +216,11 @@
 %\cfoot{\centering\includegraphics[keepaspectratio]{elements/footelement2.pdf}}
 \section{FÖRORD}\vspace{10pt}
 %\noindent{\large\textrm{\textbf{FÖRORD}}\vspace*{10pt}}\\
-\hspace{\indent} ost
+\hspace{10pt} ost
 \cleardoublepage
 \section{FÖRORD från v2.001}\vspace{10pt}
 %\noindent{\large\textrm{\textbf{FÖRORD från v2.001}}\vspace*{10pt}}\\
-\hspace{\indent}Allt sedan Manualen v1.1 kom till världen har det
+\hspace{10pt}Allt sedan Manualen v1.1 kom till världen har det
 funnits en skara människor som ägnat sina liv åt att vänta på dess
 efterföljare. Denna skaras oförtrutliga tillväxt utmynnande i att ett
 formaliserat uppdateringsarbete satte igång våren 1999. Den 4 december
@@ -261,7 +265,7 @@ skedde under den datavetenskapliga utbildningskonferensen i Umeå 2001.
 \cleardoublepage
 \section{FÖRORD från v1.0}\vspace{10pt}
 %\noindent{\large\textrm{\textbf{FÖRORD från v1.0}}\vspace*{10pt}}\\
-\hspace{\indent}Detta är en gemensam sångbok för samtliga datavetare
+\hspace{10pt}Detta är en gemensam sångbok för samtliga datavetare
 i Sverige; C i Lindköping, DVP i Uppsala och C i Umeå. Vi har genom
 denna bok fått ytterligare en sak gemensamt.\\ \indent Att skapa en
 gemensam sångbok har diskuterats flerga gånger, jag minns att
@@ -330,7 +334,7 @@ andra!\\
 1994\\ \\ NeNNe
 \cleartoleftpage
 \section{TRAVERSERING}\vspace{10pt}
-\hspace{\indent}Genom hela denna bok gäller följande traverseringsregler. I sånger där
+\hspace{10pt}Genom hela denna bok gäller följande traverseringsregler. I sånger där
 en försångare eller dylikt skall sjunga ensam används fet text. Ifall
 något speciellt såsom en handling inträffar vid ett ord, så används
 (kursiv), där ordet för handling eller beteende står inom ( ). En
@@ -341,7 +345,7 @@ läs den gärna.\\ \indent I vissa sånger skall könen sjunga olika
 rader, i dessa sånger används {\Large\Male} för manligt kön och där
 kvinnligt kön skall sjunga används givetvis då {\Large\Female}.
 \begin{leftborder}
-  \hspace{\indent}Då det ibland kan förekomma lokala variantioner på vissa sånger, så
+  \hspace{10pt}Då det ibland kan förekomma lokala variantioner på vissa sånger, så
   används en  vertikal linje i högra kanten för att markera att detta
   är olika alternativ. Ibland betyder linjen att det är raderna som är
   alternativen, och ibland betyder linjen att det är olika
@@ -392,13 +396,13 @@ Carl Love Almquist}
 \thispagestyle{empty}
 \null
 \vfill
-{\noindent\textit{\centering Fader Dator, som är i Salen,\\ helgad
+{\noindent{\textit{\centering Fader Dator, som är i Salen,\\ helgad
     vare Din skärm,\\ tillkomme Ditt tangentbord,\\ ske Din vilja,
     så som i minnet,\\ så ock på nätet.\\ Vår dagliga utskrift giv
     oss idag\\ och förlåt oss våra misstag\\ trots att vi ej
     förlåta\\ dem som skyldiga äro.\\ Låt oss icke behöva
     vänta\\ och fräls oss ifrån dumpar.\\ Ty Salen är din\\ och
-    Makten hos Handledaren\\ i Evighet.\\ UNIX.\par}}
+    Makten hos Handledaren\\ i Evighet.\\ UNIX.\\}}}
 \vfill
 \null
 \newpage
@@ -579,9 +583,16 @@ Carl Love Almquist}
 \chapterpage{Osvenska visor}{Osvenska visor}
 
 \chapterpage{Phulavisor}{Phulavisor}
+\input{songs/bakfyllostrofen.tex}
+\input{songs/be-_be-_vitamin.tex}
+\input{songs/claes_palander.tex}
+\input{songs/ingemar_bergmans_snapsvisa.tex}
+\input{songs/kottet_kommer.tex}
+\input{songs/lapin_kulta.tex}
+\input{songs/ol-kanon.tex}
+\input{songs/si.tex}
 
 \chapterpage{Register}{Register}
-
 \cfoot{}
 %\newgeometry{top=1cm,bottom=1.2cm,left=1cm,right=1cm,footskip=0pt,headsep=0.2cm}
 \small

@@ -1,7 +1,7 @@
 ;;; xindy style file
 ;;; (define-attributes (("gobble" "default")))
 ;;; (markup-locref  :open "\mygobble{" :close "}" :attr "gobble")
-;;; (markup-locclass-list :open "\hspace*{10pt}" :sep "")
+;;; (markup-locclass-list :open ",\hspace*{10pt}" :sep "")
 (sort-rule "ä" "å")
 (sort-rule "å" "ä")
 (sort-rule "Ä" "Å")
