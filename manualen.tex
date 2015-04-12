@@ -70,8 +70,8 @@
         \hspace*{-0.5ex}\raisebox{.2ex}{: }}
 
 %% chapter and section styling %%
-\titleformat{\chapter}[hang]{}{}{0pt}{\centering\fontsize{30}{70}\rmfamily\textbf}
-\titleformat{\section}[hang]{}{}{0pt}{\fontsize{13}{15}\rmfamily\textbf}
+\titleformat{\chapter}{}{}{0pt}{\centering\fontsize{30}{70}\rmfamily\textbf}
+\titleformat{\section}{}{}{0pt}{\fontsize{13}{15}\rmfamily\textbf}
 \titlespacing*{\section}{0pt}{0pt}{0pt}
 \titlecontents{chapter}[0em]{\addvspace{3pt}}{\contentslabel{}}{}
               {\titlerule*[0.3pc]{.}\hspace*{-4pt}\contentspage}
@@ -120,17 +120,17 @@
   \begin{tabular}[#1]{@{}l@{}}#2\end{tabular}} 
 
 %% Command for songs %%
-\newcommand{\visa}[1]{
-  \index{\uppercase{#1}}
-  \section{#1}
+\newcommand{\visa}[1]{%
+  \index{\uppercase{#1}}%
+  \section{#1}%
 }
-\newcommand{\fvisa}[2]{
-  \index{\uppercase{#1}}\index{#2}
-  \section{#1}
+\newcommand{\fvisa}[2]{%
+  \index{\uppercase{#1}}\index{#2}%
+  \section{#1}%
 }
-\newcommand{\svisa}[3]{
-  \index{\uppercase{#1}}\index{#2}
-  \section{#3}
+\newcommand{\svisa}[3]{%
+  \index{\uppercase{#1}}\index{#2}%
+  \section{#3}%
 }
 
 %% TOC %%
@@ -391,11 +391,13 @@ Carl Love Almquist}
 \newpage
 \input{songs/jaamtlandssangen.tex}
 \newpage
-\input{songs/studentsången.tex}
+\input{songs/varmlandsvisan.tex}
 \newpage
 \input{songs/under_svea_baner.tex}
 \newpage
 \input{songs/o_gamla_klang_och_jubeltid.tex}
+\newpage
+\input{songs/studentsången.tex}
 \chapterpage{Datavetarvisor}{Datavetarvisor}
 \newpage
 \thispagestyle{empty}
@@ -502,6 +504,8 @@ DV99\\{\footnotesize\textit{PS blurGel är bäst! DS}} \vfill \null
 \input{songs/att_ta_sig.tex}
 \newpage
 \input{songs/alkotest.tex}
+\newpage
+\input{songs/att_krydda_brannvin.tex}
 \chapterpage{Ölvisor}{Ölvisor}
 
 \chapterpage{Vinvisor}{Vinvisor}
@@ -534,12 +538,26 @@ DV99\\{\footnotesize\textit{PS blurGel är bäst! DS}} \vfill \null
 \input{songs/festus_punschvisa.tex}
 \newpage
 \input{songs/punschvisa.tex}
+\vspace{15pt}
+\input{songs/punschen_gul.tex}
 \newpage
 \input{songs/punschen_kommer_kall.tex}
 \vspace{15pt}
 \input{songs/punschen_kommer_varm.tex}
 \newpage
+\input{songs/punschens_lov.tex}
+\vspace{15pt}
+\input{songs/vadjan_till_punschen.tex}
+\newpage
 \input{songs/golden_drops.tex}
+\vspace{15pt}
+\input{songs/sodavattenpunsch.tex}
+\newpage
+\input{songs/pumpa_punsch.tex}
+\newpage
+\input{songs/punschen_vi_radat.tex}
+\newpage
+\input{songs/djungelpunsch.tex}
 \chapterpage{Gasquevisor}{Gasquevisor}
 \input{songs/valkommen_hit.tex}
 \vspace{15pt}
@@ -641,18 +659,14 @@ DV99\\{\footnotesize\textit{PS blurGel är bäst! DS}} \vfill \null
 \input{songs/atombomben.tex}
 \input{songs/balladen_om_theobald_thor.tex}
 \input{songs/blottarkarlek.tex}
-\input{songs/rida_get.tex}
 \input{songs/byssan_full.tex}
 \input{songs/akademikerungar.tex}
 \input{songs/aland.tex}
 \input{songs/always_look_on_the_bright_side_of_life.tex}
 \input{songs/artor_och_punsch.tex}
-\input{songs/att_krydda_brannvin.tex}
 \input{songs/auld_lang_syne.tex}
-\message{FEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEK}
 \input{songs/bacon_i_mitt_hjarta.tex}
 \input{songs/baileysvisan.tex}
-\input{songs/bakfyllostrofen.tex}
 \input{songs/balladen_dagen_efter.tex}
 \input{songs/balladen_om_briggen_blue_bird_av_hull.tex}
 \input{songs/balladen_om_frederik_akare.tex}
@@ -675,7 +689,6 @@ DV99\\{\footnotesize\textit{PS blurGel är bäst! DS}} \vfill \null
 \input{songs/den_blomstertid_nu_kommer.tex}
 \input{songs/den_gamla_apparaten.tex}
 \input{songs/denna_thaft.tex}
-\input{songs/djungelpunsch.tex}
 \input{songs/du_kare_lille_snickerbo.tex}
 \input{songs/en_gang_i_manan.tex}
 \input{songs/flottarkarlek.tex}
@@ -691,7 +704,6 @@ DV99\\{\footnotesize\textit{PS blurGel är bäst! DS}} \vfill \null
 \input{songs/free_software_song.tex}
 \input{songs/handen_ar_villig.tex}
 \input{songs/har_ar_gudagott_att_vara.tex}
-\input{songs/harjarvisan.tex}
 \input{songs/harlig_ar_punschen.tex}
 \input{songs/helan_gar.tex}
 \input{songs/helan_rasat.tex}
@@ -702,21 +714,13 @@ DV99\\{\footnotesize\textit{PS blurGel är bäst! DS}} \vfill \null
 \input{songs/om_bellman.tex}
 \input{songs/oppna_landskap.tex}
 \input{songs/parleporten.tex}
-\input{songs/pumpa_punsch.tex}
-\input{songs/punschen_gul.tex}
-\input{songs/punschens_lov.tex}
-\input{songs/punschen_vi_radat.tex}
-\input{songs/rida_get.tex}
 \input{songs/sista_punschvisan.tex}
 \input{songs/skummande_cider.tex}
 \input{songs/skummande_ol.tex}
 \input{songs/smedsvisa.tex}
-\input{songs/sodavattenpunsch.tex}
 \input{songs/stargin.tex}
 \input{songs/storswansken.tex}
 \input{songs/taffelbrytarvisa.tex}
-\input{songs/vadjan_till_punschen.tex}
-\input{songs/varmlandsvisan.tex}
 \input{songs/vommar_vommar_vommar.tex}
 \chapterpage{Register}{Register}
 \cfoot{}
