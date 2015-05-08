@@ -10,3 +10,6 @@ pdf: manualen.tex
 
 index: 
 	xindy -C utf8 -L swedish -M texindy -M manualen.xdy manualen.idx
+
+joined:
+	pdfjoin --rotateoversize 'false'  empty.pdf manualen.pdf
