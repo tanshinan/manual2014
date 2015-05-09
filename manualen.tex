@@ -1,15 +1,33 @@
-\documentclass[a6paper,fontsize=10pt,twoside,openright]{scrbook}
+\documentclass[a6paper,fontsize=10pt,twoside,open=right]{scrbook}
 \usepackage[a6paper,top=1cm,bottom=1.9cm,left=1cm,right=1cm,footskip=1cm,headsep=0.2cm,showframe]{geometry}% add showframe
 \usepackage[swedish]{babel}
-\usepackage{graphicx,tocloft,metalogo,titletoc,fontspec,titlesec,eso-pic,scrpage2,anyfontsize,microtype,array,marvosym,mdframed,textcomp,amssymb,enumitem}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{tocloft}
+\usepackage{metalogo}
+\usepackage{titletoc}
+\usepackage{titlesec}
+\usepackage{eso-pic}
+\usepackage{scrpage2}
+\usepackage{anyfontsize}
+\usepackage{microtype}
+\usepackage{array}
+\usepackage{marvosym}
+\usepackage{mdframed}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{enumitem}
+\usepackage{letltxmacro}
 \usepackage[columns=1]{idxlayout}
+\usepackage[bitstream-charter]{mathdesign}
+\usepackage{hyphenat}
+\usepackage{setspace}
+\usepackage{makeidx}
 
 \newgeometry{top=1cm,bottom=1cm,left=1cm,right=1cm,footskip=0pt,headsep=0.2cm}
 
-
 %\setlength{\emergencystretch}{2em}
-
-\usepackage{letltxmacro}
 
 \LetLtxMacro\origttfamily\ttfamily
 \DeclareRobustCommand*{\ttfamily}{%
@@ -20,15 +38,7 @@
   \fontdimen7\font=.167em\relax
 }
 
-%% Font: Baskervald X
-%% \usepackage[lf]{Baskervaldx} % lining figures
-%% \usepackage[bigdelims,vvarbb]{newtxmath} % math italic letters from Nimbus Roman
-%% \usepackage[cal=boondoxo]{mathalfa} % mathcal from STIX, unslanted a bit
-%% \renewcommand*\oldstylenums[1]{\textosf{#1}}
-
 %\usepackage[ebgaramond-maths]{mathdesign}
-\usepackage[bitstream-charter]{mathdesign}
-\usepackage[htt]{hyphenat}
 
 %% Gömma varningar om underfull \hbox
 %% \hbadness=10001
@@ -38,19 +48,15 @@
 %% \hyphenpenalty
 %% \exhyphenpenalty
 
-
-\usepackage{setspace}
 \renewcommand{\baselinestretch}{0.98} 
 
-%\usepackage{showframe}
-\usepackage{makeidx}
 \makeindex
 
 \let\oldemptyset\emptyset
 \let\emptyset\varnothing
 
 %% eso-pic for background on chapter pages %%
-\newcommand\BackgroundPic{\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{elements/chapter2.pdf}}
+%\newcommand\BackgroundPic{\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{elements/chapter2.pdf}}
 
 %% scrpage2 pagestyling %%
 \pagestyle{scrheadings}
@@ -169,7 +175,7 @@
 }
 
 \begin{document}
-\setlength{\parindent}{15pt}
+\setlength{\parindent}{0pt}
 \vspace*{6.5cm}
 \hspace*{0.9cm}
 \includegraphics[keepaspectratio,width=7cm]{elements/logo.pdf}
@@ -179,24 +185,26 @@
 \ofoot[\pagemark]{\textsc{\scriptsize\pagemark}}
 \clearpage
 %\section{Datavetare är skapande människor}\vspace{10pt}
-\noindent{\ttfamily Datavetare är skapande människor\\ \\ Datavetare
-  skapar. De skapar nya program som världen aldrig sett tidigare, för
-  att låta datorer göra saker som de aldrig gjort tidigare. De forskar
-  fram nya kunskaper och öppnar nya fält för framtidens
-  forskning. Datavetare skapar de verktyg som gör det möjligt att lösa
-  nya problem. Nya programmeringsspråk, nya beräkningsverktyg, bättre
-  kompilatorer, bättre databaser, nya operativsystem, bättre
-  utvecklingsverktyg, distribuerade system... Listan kan göras hur
-  lång som helst.\\ \\ Datavetenskapens handfasta mål är att förbättra
-  den programvara som vi kör på våra datorer. Vad som krävs är att
+{\ttfamily Datavetare är skapande människor\par
+  \vspace{10pt} Datavetare skapar. De skapar nya program som världen
+  aldrig sett tidigare, för att låta datorer göra saker som de aldrig
+  gjort tidigare. De forskar fram nya kunskaper och öppnar nya fält
+  för framtidens forskning. Datavetare skapar de verktyg som gör det
+  möjligt att lösa nya problem. Nya programmeringsspråk, nya
+  beräkningsverktyg, bättre kompilatorer, bättre databaser, nya
+  operativsystem, bättre utvecklingsverktyg, distribuerade
+  system... Listan kan göras hur lång som helst.\par
+  \vspace{10pt} Datavetenskapens handfasta mål är att förbättra den
+  programvara som vi kör på våra datorer. Vad som krävs är att
   programmen gör vad de skall (korrekthet), att de inte gör fel om
   något oförutsett inträffar (pålitlighet), och att de arbetar
   effektivt (effektivitet). Dessutom skall programmen utvecklas på ett
-  effektivt sett.}\\
-\\
-{\footnotesize\textit{Ur ``Vad är en datavetare egentligen''\\
-    BlurGel nr 0, 1995}}
+  effektivt sett.}\par
+\vspace{10pt}
+{\footnotesize\textit{Ur ``Vad är en datavetare
+egentligen''\\ BlurGel nr 0, 1995}}
 \clearpage
+\setlength{\parindent}{15pt}
 %\newgeometry{top=1cm,bottom=1.2cm,left=1cm,right=1cm,footskip=0pt,headsep=0.2cm}
 \null
 \vfill
@@ -204,7 +212,7 @@
       Redaktör: ?\\
       Grafisk formgivare: Per Bergqwist\\
       Logotyp av Jens Bohlin\\
-      Producerad med \XeTeX\\
+      Producerad med \LaTeX\\
       v1.0: 1994-11-21 (1000 exemplar)\\
       v1.1: 1996-01-02 (1000 exemplar)\\
       v2.001: 2001-11-15 (1000 exemplar)\\
@@ -218,7 +226,8 @@
 %\noindent{\large\textrm{\textbf{FÖRORD}}\vspace*{10pt}}\\
 \hspace{10pt} ost
 \cleardoublepage
-\section{FÖRORD från v2.001}\vspace{10pt}
+\section{FÖRORD från v2.001}\par
+\vspace{10pt}
 %\noindent{\large\textrm{\textbf{FÖRORD från v2.001}}\vspace*{10pt}}\\
 \hspace{10pt}Allt sedan Manualen v1.1 kom till världen har det
 funnits en skara människor som ägnat sina liv åt att vänta på dess
@@ -242,8 +251,8 @@ försök samtidigt som vi hoppas att alla vi glömt kan förlåta oss i
 någon framtid.
 \newpage
 \indent Vilka var de tappra själarna som var med på mötet i Uppsala
-då?\\
-\\
+då?\par
+\vspace{10pt}
 \noindent
 \begin{tabular}{@{}p{0.5\textwidth}p{0.5\textwidth}@{}}
   Lars-Arne Mattson & Anders Ramsell\\
@@ -252,13 +261,13 @@ då?\\
   Jesper Wilhelmsson & Ingela Anderton\\
   Daniel Gref & Mattias Hallberg\\
   Daniel Holmgren & Andreas Hed
-\end{tabular}\\
-\\
+\end{tabular}\par
+\vspace{10pt}
 %% \\
 %% Manualen finns också på nätet,\\ URL:
 %% \texttt{http://www.acc.umu.se/\raisebox{.4ex}\texttildelow
 %%   manualen/}\\
-\\ Hoppas nu att ni är nöjda med
+\noindent Hoppas nu att ni är nöjda med
 resultatet.\\ \\ Uppsala den 24 december 2000 (God Jul!)\\ \\ Björn
 Bergman / Jesper Wilhelmsson / Andreas Hed\\ \\ De sista justeringarna
 skedde under den datavetenskapliga utbildningskonferensen i Umeå 2001.
@@ -397,7 +406,7 @@ Carl Love Almquist}
 \newpage
 \input{songs/o_gamla_klang_och_jubeltid.tex}
 \newpage
-\input{songs/studentsången.tex}
+\input{songs/studentsangen.tex}
 \chapterpage{Datavetarvisor}{Datavetarvisor}
 \newpage
 \thispagestyle{empty}
