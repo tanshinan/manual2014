@@ -1,1 +1,3 @@
-sed -i ':a;N;13929ba;s/\\\n\\/\par\n\vspace{10pt}/g'
+sed -i ':a;N;13929ba;s/\\\\\n\\\\/\\par\n\\vspace{10pt}/g'
+
+awk '/input\{songs\/(.*)\}/' manualen.tex
