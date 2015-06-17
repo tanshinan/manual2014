@@ -99,6 +99,16 @@
   \ofoot[\pagemark]{\textsc{\scriptsize\pagemark}}
   %\cfoot{\centering\includegraphics[keepaspectratio]{elements/footelement2.pdf}}
 }
+\newcommand{\chapterpagesame}[2]{
+  \newpage
+  %\AddToShipoutPicture*{\BackgroundPic}
+  \chapter[#1]{#2}
+  \renewcommand{\leftmark}{#1}
+  \newpage
+  \ohead{\textnormal{\textsc{\scriptsize\leftmark}}}
+  \ofoot[\pagemark]{\textsc{\scriptsize\pagemark}}
+  %\cfoot{\centering\includegraphics[keepaspectratio]{elements/footelement2.pdf}}
+}
 \newcommand{\hiddenchapterpage}[1]{
   \newpage
   \null
@@ -116,7 +126,7 @@
   \thispagestyle{empty}
   \global\@topnum\z@
   \@afterindentfalse
-  \ofoot[\pagemark]{\textsc{}}%\scriptsize\pagemark
+  \ofoot[\pagemark]{\textsc{\scriptsize\pagemark}}
   \cfoot{}
   \ohead{}
   \secdef\@chapter\@schapter}
@@ -992,6 +1002,8 @@ DV99\\{\footnotesize\textit{PS blurGel är bäst! DS}} \vfill \null
 \input{songs/magical_trevor_3.tex}
 \newpage
 \input{songs/magical_trevor_4.tex}
+\newpage
+\input{songs/nyan_cat.tex}
 \chapterpage{Phulavisor}{Phulavisor}
 \input{songs/atombomben.tex}
 \vspace{15pt}
@@ -1741,7 +1753,7 @@ DV99\\{\footnotesize\textit{PS blurGel är bäst! DS}} \vfill \null
 \vspace{10pt}
 \vfill
 
-\chapterpage{Register}{Register}
+\chapterpagesame{Register}{Register}
 \cfoot{}
 %\newgeometry{top=1cm,bottom=1.2cm,left=1cm,right=1cm,footskip=0pt,headsep=0.2cm}
 \small
