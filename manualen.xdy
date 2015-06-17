@@ -6,3 +6,5 @@
 (sort-rule "å" "ä")
 (sort-rule "Ä" "Å")
 (sort-rule "Å" "Ä")
+
+(define-letter-group "BLANDAD INFORMATION" :prefixes ("Ã") :after "Ö")

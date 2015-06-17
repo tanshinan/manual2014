@@ -148,6 +148,10 @@
   \index{\uppercase{#1}}\index{#2}%
   \section{\uppercase{#3}}%
 }
+\newcommand{\tvisa}[1]{%
+  \index{Ã#1@\uppercase{#1}}
+  \section{\uppercase{#1}}%
+}
 
 %% TOC %%
 \setcounter{tocdepth}{0}
@@ -528,43 +532,13 @@ DV99\\{\footnotesize\textit{PS blurGel är bäst! DS}} \vfill \null
 \input{songs/oh_ljuva_ol.tex}
 \input{songs/livet_ar_harligt.tex}
 \chapterpage{Snapsvisor}{Snapsvisor}
-\section{SUPARNAS ORDNING}\index{SUPARNAS ORDNING}
-\vspace{10pt}
-\begin{enumerate}[leftmargin=0.65cm,topsep=0pt,itemsep=0pt,partopsep=0pt,parsep=3pt]
-\item Helan
-\item Halvan
-\item Tersen.
-\item Kvarten
-\item Kvinten
-\item Sexten
-\item Septen
-\item Rivan
-\item Rafflan.
-\item Rännan
-\item Smuttan
-\item Smuttans unge
-\item Femton droppar
-\item Lilla Manasse
-\item Lilla Manasses Broder
-\item Klämtaren
-\item Kreaturens återuppståndelse
-\item Den bleka dödens dryck
-\item Krokofanternas intåg
-\item Ett evigt liv
-\end{enumerate}
+\input{songs/suparnas_ordning.tex}
+\vspace{15pt}
+\input{songs/anvisningar_for_snapsens_tagande.tex}
 \newpage
-\section{ANVISNINGAR FÖR SNAPSENS TAGANDE}\index{ANVISNINGAR FÖR SNAPSENS TAGANDE}
-\vspace{10pt}
-\begin{itemize}[leftmargin=0cm,topsep=0pt,itemsep=2pt,partopsep=0pt,parsep=3pt,label={}]
-\item Snapsen tages till fisk.
-\item All mat är fisk, förutom ölsupa och pannkaka.
-\item Den som äter ölsupa eller pannkaka, sup på grannens fisk.
-\item Skulle grannen förtära ölsupa eller pannkaka, må även dessa rätter betraktas som fisk.
-\item Desserten ätes med gaffel, så länge det går, därefter med sked.
-\item Man må icke dricka ur sköljkopparna.
-\item Ty den goda törsten bör släckas med ädlare fludium än tvättvatten.
-\item Vatten betraktas aldrig som fisk.
-\end{itemize}
+\input{songs/planksaft.tex}
+\vspace{15pt}
+\input{songs/festen_kan_borja.tex}
 \newpage
 \input{songs/2_7_och_en_halv.tex}
 \vspace{15pt}
@@ -577,10 +551,15 @@ DV99\\{\footnotesize\textit{PS blurGel är bäst! DS}} \vfill \null
 \input{songs/kissemiss.tex}
 \newpage
 \input{songs/alkotest.tex}
+\vspace{15pt}
+\input{songs/jukkasjarvi_visan.tex}
 \newpage
 \input{songs/jag_tror_pa_akvavit.tex}
 \vspace{15pt}
 \input{songs/hur_lange_skall_pa_borden.tex}
+\vspace{15pt}
+\input{songs/hyfsvisa.tex}
+\vspace*{-10pt}
 \newpage
 \input{songs/vodka_vodka.tex}
 \vspace{15pt}
@@ -594,21 +573,15 @@ DV99\\{\footnotesize\textit{PS blurGel är bäst! DS}} \vfill \null
 \newpage
 \input{songs/och_forst_tar_vi_lilla_helan.tex}
 \vspace{15pt}
-\input{songs/om_jag_hade_brannvin.tex}
-\newpage
-\input{songs/ris-jerk.tex}
-\vspace{15pt}
-\input{songs/fjompe_tompe_torstig.tex}
-\vspace{15pt}
-\input{songs/jukkasjarvi_visan.tex}
-\vspace{15pt}
-\input{songs/nar_helan_man_tagit.tex}
+\input{songs/svarmor_den_tredje.tex}
 \newpage
 \input{songs/och_glaset_det_star_i_ringen.tex}
-\newpage
-\input{songs/svarmor_den_forsta.tex}
 \vspace{15pt}
-\input{songs/svarmor_den_tredje.tex}
+\input{songs/svarmor_den_forsta.tex}
+\newpage
+\input{songs/nar_helan_man_tagit.tex}
+\vspace{15pt}
+\input{songs/om_jag_hade_brannvin.tex}
 \newpage
 \input{songs/utvandrare.tex}
 \vspace{15pt}
@@ -619,6 +592,10 @@ DV99\\{\footnotesize\textit{PS blurGel är bäst! DS}} \vfill \null
 \input{songs/plopp_o_kluck.tex}
 \vspace{15pt}
 \input{songs/sputnik.tex}
+\newpage
+\input{songs/visa_for_omusikaliska.tex}
+\vspace{15pt}
+\input{songs/hej_hopp.tex}
 \newpage
 \input{songs/lappvisa.tex}
 \vspace{15pt}
@@ -644,7 +621,7 @@ DV99\\{\footnotesize\textit{PS blurGel är bäst! DS}} \vfill \null
 \vspace{15pt}
 \input{songs/hell_and_gore.tex}
 \vspace{15pt}
-\input{songs/hyfsvisa.tex}
+\input{songs/ris-jerk.tex}
 \newpage
 \input{songs/torsten_rasar.tex}
 \newpage
@@ -683,6 +660,8 @@ DV99\\{\footnotesize\textit{PS blurGel är bäst! DS}} \vfill \null
 \input{songs/helan_sa_ensam.tex}
 \vspace{15pt}
 \input{songs/nubbevisa_till_halvan.tex}
+\vspace{15pt}
+\input{songs/se_farfar.tex}
 \newpage
 \input{songs/imbelupet.tex}
 \vspace{15pt}
@@ -698,11 +677,13 @@ DV99\\{\footnotesize\textit{PS blurGel är bäst! DS}} \vfill \null
 \vspace{15pt}
 \input{songs/emc2.tex}
 \newpage
-\input{songs/absolutist_nej_da.tex}
-\vspace{15pt}
 \input{songs/nubben_gors_av_gran_och_tall.tex}
 \vspace{15pt}
+\input{songs/absolutist_nej_da.tex}
+\vspace{15pt}
 \input{songs/invers_aptit.tex}
+\vspace{15pt}
+\input{songs/be-_be-_vitamin.tex}
 \newpage
 \input{songs/punkatrost.tex}
 \vspace{15pt}
@@ -715,12 +696,7 @@ DV99\\{\footnotesize\textit{PS blurGel är bäst! DS}} \vfill \null
 \input{songs/nubbevisa.tex}
 \newpage
 \input{songs/det_naturliga_urvalet.tex}
-\vspace{15pt}
-\input{songs/magen_brummar.tex}
-\vspace{15pt}
-\input{songs/be-_be-_vitamin.tex}
 \newpage
-
 \null
 \vfill
 \begin{center}
@@ -750,7 +726,7 @@ DV99\\{\footnotesize\textit{PS blurGel är bäst! DS}} \vfill \null
 \vspace{15pt}
 \input{songs/tank_om_man_hade.tex}
 \vspace{15pt}
-\input{songs/se_farfar.tex}
+\input{songs/finsk_snapsvisa.tex}
 \newpage
 \input{songs/vi_aro_sma_humlor.tex}
 \vspace{15pt}
@@ -768,23 +744,17 @@ DV99\\{\footnotesize\textit{PS blurGel är bäst! DS}} \vfill \null
 \newpage
 \input{songs/minne.tex}
 \vspace{15pt}
-\input{songs/finsk_snapsvisa.tex}
+\input{songs/magen_brummar.tex}
 \newpage
 \input{songs/segersnapsvisa.tex}
-\newpage
-\input{songs/visa_for_omusikaliska.tex}
 \vspace{15pt}
-\input{songs/hej_hopp.tex}
+\input{songs/fjompe_tompe_torstig.tex}
 \newpage
 \input{songs/vi_skalar_for_vara_vanner.tex}
 \vspace{15pt}
 \input{songs/en_gang_i_manan.tex}
 \newpage
 \input{songs/mera_brannvin.tex}
-\newpage
-\input{songs/planksaft.tex}
-\vspace{15pt}
-\input{songs/festen_kan_borja.tex}
 \chapterpage{Ölvisor}{Ölvisor}
 \input{songs/drommen_om_olen.tex}
 \vspace{15pt}
@@ -1067,21 +1037,13 @@ DV99\\{\footnotesize\textit{PS blurGel är bäst! DS}} \vfill \null
 \vspace{15pt}
 \input{songs/claes_palander.tex}
 \vspace{15pt}
-
-\vspace{15pt}
 \input{songs/si.tex}
 \vspace{15pt}
 \input{songs/bakfyllosofen.tex}
 \vspace{15pt}
 \input{songs/kottet_kommer.tex}
 \vspace{15pt}
-
-\vspace{15pt}
-\vspace{15pt}
 \input{songs/anti_snapsvisa.tex}
-\vspace{15pt}
-
-\vspace{15pt}
 \vspace{15pt}
 \input{songs/aland.tex}
 \vspace{15pt}
@@ -1111,11 +1073,7 @@ DV99\\{\footnotesize\textit{PS blurGel är bäst! DS}} \vfill \null
 \vspace{15pt}
 \input{songs/bordeaux.tex}
 \vspace{15pt}
-
-\vspace{15pt}
 \input{songs/bort_alt_hvad.tex}
-\vspace{15pt}
-
 \vspace{15pt}
 \input{songs/botvisa.tex}
 \vspace{15pt}
@@ -1127,18 +1085,12 @@ DV99\\{\footnotesize\textit{PS blurGel är bäst! DS}} \vfill \null
 \vspace{15pt}
 \input{songs/crassus_vinsang.tex}
 \vspace{15pt}
-
-\vspace{15pt}
 \input{songs/d6_90s_punschvisa.tex}
 \vspace{15pt}
 \vspace{15pt}
 \input{songs/den_gamla_apparaten.tex}
 \vspace{15pt}
-
-\vspace{15pt}
 \input{songs/du_kare_lille_snickerbo.tex}
-\vspace{15pt}
-
 \vspace{15pt}
 \input{songs/flottarkarlek.tex}
 \vspace{15pt}
@@ -1162,14 +1114,7 @@ DV99\\{\footnotesize\textit{PS blurGel är bäst! DS}} \vfill \null
 \vspace{15pt}
 \input{songs/free_software_song.tex}
 \vspace{15pt}
-
-\vspace{15pt}
-\vspace{15pt}
 \input{songs/harlig_ar_punschen.tex}
-\vspace{15pt}
-
-\vspace{15pt}
-
 \vspace{15pt}
 \input{songs/inga_blommor.tex}
 \vspace{15pt}
@@ -1187,8 +1132,6 @@ DV99\\{\footnotesize\textit{PS blurGel är bäst! DS}} \vfill \null
 \vspace{15pt}
 \input{songs/smedsvisa.tex}
 \vspace{15pt}
-
-\vspace{15pt}
 \input{songs/storswansken.tex}
 \vspace{15pt}
 \input{songs/taffelbrytarvisa.tex}
@@ -1202,8 +1145,6 @@ DV99\\{\footnotesize\textit{PS blurGel är bäst! DS}} \vfill \null
 \input{songs/nar_jag_kissar_overallt.tex}
 \vspace{15pt}
 \input{songs/portos_visa.tex}
-\vspace{15pt}
-
 \vspace{15pt}
 \input{songs/an_en_gang_daran.tex}
 \vspace{15pt}
@@ -1229,21 +1170,9 @@ DV99\\{\footnotesize\textit{PS blurGel är bäst! DS}} \vfill \null
 \vspace{15pt}
 \input{songs/den_forsta_gang.tex}
 \vspace{15pt}
-
-\vspace{15pt}
-
-\vspace{15pt}
-
-\vspace{15pt}
-    
-\vspace{15pt}
-
-\vspace{15pt}
 \input{songs/drunken_sailor.tex}
 \vspace{15pt}
 \input{songs/dvls_datasang.tex}
-\vspace{15pt}
-
 \vspace{15pt}
 \input{songs/en_gang_i_min_ungdom_festade_jag.tex}
 \vspace{15pt}
@@ -1251,15 +1180,9 @@ DV99\\{\footnotesize\textit{PS blurGel är bäst! DS}} \vfill \null
 \vspace{15pt}
 \input{songs/fakultativ_bacchanal.tex}
 \vspace{15pt}
-
-\vspace{15pt}
 \input{songs/fantomens_brallor.tex}
 \vspace{15pt}
 \input{songs/felicia_adjo.tex}
-\vspace{15pt}
-
-\vspace{15pt}
-
 \vspace{15pt}
 \input{songs/fritiof_och_carmencita.tex}
 \vspace{15pt}
@@ -1269,17 +1192,11 @@ DV99\\{\footnotesize\textit{PS blurGel är bäst! DS}} \vfill \null
 \vspace{15pt}
 \input{songs/graa_har.tex}
 \vspace{15pt}
-
-\vspace{15pt}
 \input{songs/guling.tex}
 \vspace{15pt}
 \input{songs/gullefjun.tex}
 \vspace{15pt}
-
-\vspace{15pt}
 \input{songs/handelsvisa.tex}
-\vspace{15pt}
-
 \vspace{15pt}
 \input{songs/honan_agda.tex}
 \vspace{15pt}
@@ -1335,37 +1252,23 @@ DV99\\{\footnotesize\textit{PS blurGel är bäst! DS}} \vfill \null
 \vspace{15pt}
 \input{songs/varvinets_lov.tex}
 \vspace{15pt}
-
-\vspace{15pt}
 \input{songs/vinet_ar_ett_markligt_ting.tex}
 \vspace{15pt}
 \input{songs/vinvisa_porr.tex}
-\vspace{15pt}
-
 \vspace{15pt}
 \input{songs/visa_vid_midsommartid.tex}
 \vspace{15pt}
 \input{songs/vit_vecka.tex}
 \vspace{15pt}
-
-\vspace{15pt}
 \input{songs/when_we_get_drunker.tex}
 \vspace{15pt}
 \input{songs/yesterday.tex}
 \vspace{15pt}
-
-\vspace{15pt}
 \input{songs/bordsvisa.tex}
-\vspace{15pt}
-
-\vspace{15pt}
-
 \vspace{15pt}
 \input{songs/flickan_och_krakan.tex}
 \vspace{15pt}
 \input{songs/forsta_snapsen.tex}
-\vspace{15pt}
-
 \vspace{15pt}
 \input{songs/full_idag.tex}
 \vspace{15pt}
@@ -1373,57 +1276,23 @@ DV99\\{\footnotesize\textit{PS blurGel är bäst! DS}} \vfill \null
 \vspace{15pt}
 \input{songs/hadiska_tanke.tex}
 \vspace{15pt}
-
-\vspace{15pt}
 \input{songs/hastens_rumpa.tex}
-\vspace{15pt}
-
 \vspace{15pt}
 \input{songs/hej_ha.tex}
 \vspace{15pt}
-
-\vspace{15pt}
-
-\vspace{15pt}
-
-\vspace{15pt}
-
-\vspace{15pt}
-
-\vspace{15pt}
-
-\vspace{15pt}
-
-\vspace{15pt}
 \input{songs/i_ett_hus.tex}
-\vspace{15pt}
-
-\vspace{15pt}
-
 \vspace{15pt}
 \input{songs/inga_forbud_idag.tex}
 \vspace{15pt}
-
-\vspace{15pt}
-
-\vspace{15pt}
 \input{songs/inre_dialog_vin.tex}
-\vspace{15pt}
-
 \vspace{15pt}
 \input{songs/i_will_derive.tex}
 \vspace{15pt}
 \input{songs/jag_ska_festa.tex}
 \vspace{15pt}
-
-\vspace{15pt}
-
-\vspace{15pt}
 \input{songs/jungfru_jungfru.tex}
 \vspace{15pt}
 \input{songs/jungman_jansson.tex}
-\vspace{15pt}
-
 \vspace{15pt}
 \input{songs/kopparslagaren_1.tex}
 \vspace{15pt}
@@ -1442,21 +1311,11 @@ DV99\\{\footnotesize\textit{PS blurGel är bäst! DS}} \vfill \null
 \vspace{15pt}
 \input{songs/lanka_lilla_dator_dar.tex}
 \vspace{15pt}
-
-\vspace{15pt}
-
-\vspace{15pt}
 \input{songs/lille_olle.tex}
-\vspace{15pt}
-
-\vspace{15pt}
-
 \vspace{15pt}
 \input{songs/ljusbla_ar_var_overall.tex}
 \vspace{15pt}
 \input{songs/lumberjack_song.tex}
-\vspace{15pt}
-
 \vspace{15pt}
 \input{songs/majsang.tex}
 \vspace{15pt}
@@ -1464,13 +1323,7 @@ DV99\\{\footnotesize\textit{PS blurGel är bäst! DS}} \vfill \null
 \vspace{15pt}
 \input{songs/ma_saften_vara_med_er.tex}
 \vspace{15pt}
-
-\vspace{15pt}
-
-\vspace{15pt}
 \input{songs/min_gode_van_joel.tex}
-\vspace{15pt}
-
 \vspace{15pt}
 \input{songs/mjolk.tex}
 \vspace{15pt}
@@ -1480,33 +1333,13 @@ DV99\\{\footnotesize\textit{PS blurGel är bäst! DS}} \vfill \null
 \vspace{15pt}
 \input{songs/munkar.tex}
 \vspace{15pt}
-
-\vspace{15pt}
-
-\vspace{15pt}
-
-\vspace{15pt}
-
-\vspace{15pt}
 \input{songs/nya_studentsangen.tex}
-\vspace{15pt}
-
-\vspace{15pt}
-
 \vspace{15pt}
 \input{songs/ode_till_prolog.tex}
 \vspace{15pt}
 \input{songs/ode_till_treo_comp.tex}
 \vspace{15pt}
-
-\vspace{15pt}
-
-\vspace{15pt}
 \input{songs/our_family.tex}
-\vspace{15pt}
-
-\vspace{15pt}
-
 \vspace{15pt}
 \input{songs/riddarna_kring_runda_bordet.tex}
 \vspace{15pt}
@@ -1520,15 +1353,9 @@ DV99\\{\footnotesize\textit{PS blurGel är bäst! DS}} \vfill \null
 \vspace{15pt}
 \input{songs/roxanne.tex}
 \vspace{15pt}
-
-\vspace{15pt}
 \input{songs/satans_tarar.tex}
 \vspace{15pt}
 \input{songs/schottis_pa_valhall.tex}
-\vspace{15pt}
-
-\vspace{15pt}
-
 \vspace{15pt}
 \input{songs/se_vinet_vantar.tex}
 \vspace{15pt}
@@ -1550,27 +1377,11 @@ DV99\\{\footnotesize\textit{PS blurGel är bäst! DS}} \vfill \null
 \vspace{15pt}
 \input{songs/spritromantik.tex}
 \vspace{15pt}
-
-\vspace{15pt}
-
-\vspace{15pt}
-
-\vspace{15pt}
-
-\vspace{15pt}
-
-\vspace{15pt}
 \input{songs/tacksamma_visan.tex}
-\vspace{15pt}
-
 \vspace{15pt}
 \input{songs/trettifyran.tex}
 \vspace{15pt}
 \input{songs/turistens_klagan.tex}
-\vspace{15pt}
-
-\vspace{15pt}
-
 \vspace{15pt}
 \input{songs/vandrande_rodnad.tex}
 \vspace{15pt}
@@ -1578,25 +1389,13 @@ DV99\\{\footnotesize\textit{PS blurGel är bäst! DS}} \vfill \null
 \vspace{15pt}
 \input{songs/vattuvisa.tex}
 \vspace{15pt}
-
-\vspace{15pt}
-
-\vspace{15pt}
-
-\vspace{15pt}
-
-\vspace{15pt}
 \input{songs/vi_hade_inga_druvor.tex}
-\vspace{15pt}
-
 \vspace{15pt}
 \input{songs/vi_som_oss_for_att_glupa_satt.tex}
 \vspace{15pt}
 \input{songs/professor_baltazar.tex}
 \vspace{15pt}
 \input{songs/flickan_vid_din_sida.tex}
-\vspace{15pt}
-
 \vspace{15pt}
 \input{songs/lasse_gar_tunga_fjat.tex}
 \vspace{15pt}
@@ -1606,10 +1405,6 @@ DV99\\{\footnotesize\textit{PS blurGel är bäst! DS}} \vfill \null
 \vspace{15pt}
 \input{songs/mannens_klader.tex}
 \vspace{15pt}
-
-\vspace{15pt}
-
-\vspace{15pt}
 \input{songs/nar_jag_ar_fuller.tex}
 \vspace{15pt}
 \input{songs/nar_kaffet_ar_serverat.tex}
@@ -1617,8 +1412,6 @@ DV99\\{\footnotesize\textit{PS blurGel är bäst! DS}} \vfill \null
 \input{songs/nar_vinet_gick_hadan.tex}
 \vspace{15pt}
 \input{songs/ner_i_min_kallare.tex}
-\vspace{15pt}
-
 \vspace{15pt}
 \input{songs/nu_har_grabbarna_kalas.tex}
 \vspace{15pt}
@@ -1631,8 +1424,6 @@ DV99\\{\footnotesize\textit{PS blurGel är bäst! DS}} \vfill \null
 \input{songs/ont_i_huvudet.tex}
 \vspace{15pt}
 \input{songs/photoshop.tex}
-\vspace{15pt}
-
 \vspace{15pt}
 \input{songs/programforklaring.tex}
 \vspace{15pt}
@@ -1649,8 +1440,6 @@ DV99\\{\footnotesize\textit{PS blurGel är bäst! DS}} \vfill \null
 \input{songs/till_kraftklon.tex}
 \vspace{15pt}
 \input{songs/till_vinet.tex}
-\vspace{15pt}
-
 \vspace{15pt}
 \input{songs/trink_trink_bruderlein_trink.tex}
 \vspace{15pt}
