@@ -24,6 +24,7 @@
 \usepackage{hyphenat}
 \usepackage{setspace}
 \usepackage{makeidx}
+\usepackage{overpic,textpos}
 
 \newgeometry{top=1cm,bottom=1cm,left=1cm,right=1cm,footskip=0pt,headsep=0.2cm}
 
@@ -76,7 +77,7 @@
         \hspace*{-0.5ex}\raisebox{.2ex}{: }}
 
 %% chapter and section styling %%
-\titleformat{\chapter}{}{}{0pt}{\centering\fontsize{30}{70}\rmfamily\textbf}
+\titleformat{\chapter}{}{}{0pt}{\centering\fontsize{30}{40}\rmfamily\textbf}
 \titleformat{\section}{}{}{0pt}{\fontsize{13}{15}\rmfamily\textbf}
 \titlespacing*{\section}{0pt}{0pt}{0pt}
 \titlecontents{chapter}[0em]{\addvspace{3pt}}{\contentslabel{}}{}
@@ -93,6 +94,21 @@
   \cleardoublepage
   %\AddToShipoutPicture*{\BackgroundPic}
   \chapter[#1]{#2}
+  \renewcommand{\leftmark}{#1}
+  \newpage
+  \ohead{\textnormal{\textsc{\scriptsize\leftmark}}}
+  \ofoot[\pagemark]{\textsc{\scriptsize\pagemark}}
+  %\cfoot{\centering\includegraphics[keepaspectratio]{elements/footelement2.pdf}}
+}
+\newcommand{\chapterpageimage}[3]{
+  \newpage
+  \null
+  \cleardoublepage
+  \chapter[#1]{#2}
+  \vspace*{-45pt}
+  \begin{center}
+    \includegraphics[keepaspectratio,height=0.65\textheight]{#3}
+  \end{center}
   \renewcommand{\leftmark}{#1}
   \newpage
   \ohead{\textnormal{\textsc{\scriptsize\leftmark}}}
@@ -483,8 +499,8 @@ Carl Love Almquist}
 \input{songs/1515.tex}
 \newpage
 \null
-\vfill
-\includegraphics[keepaspectratio,width=\textwidth]{elements/kika.pdf}
+\vspace{5pt}
+\includegraphics[keepaspectratio,width=\textwidth]{elements/Kikabilden.jpg}
 \vspace{10pt}\\ Som många andra flyttade jag ifrån min egen familj och
 kom ensam till den nya världen på Universitetet.\par
 \vspace{10pt}
@@ -495,7 +511,7 @@ Tack till alla ni som är min familj - ni har alltid en plats i mitt
 hjärta.\par
 \vspace{10pt}
 /Erika ``Kika'' Wahlberg (fd Westermark),
-DV99\\{\footnotesize\textit{PS blurGel är bäst! DS}} \vfill \null
+DV99\\{\footnotesize\textit{PS blurGel är bäst! DS}}
 \newpage
 \input{songs/write_in_c.tex}
 \vspace{15pt}
@@ -1130,7 +1146,7 @@ DV99\\{\footnotesize\textit{PS blurGel är bäst! DS}} \vfill \null
 \input{songs/satans_tarar.tex}
 \newpage
 \input{songs/fakultativ_bacchanal.tex}
-\chapterpage{Bakfylla}{Bakfylla}
+\chapterpageimage{Bakfylla}{Bakfylla}{elements/bakfylla.jpg}
 \input{songs/dan_darpa.tex}
 \vspace{15pt}
 \input{songs/ode_till_treo_comp.tex}
@@ -1188,7 +1204,30 @@ DV99\\{\footnotesize\textit{PS blurGel är bäst! DS}} \vfill \null
 \newpage
 \input{songs/kraftan_ar_ett_lackert_djur.tex}
 \newpage
-\chapterpage{Svenska visor}{Svenska visor}
+\chapterpageimage{Svenska visor}{Svenska visor}{elements/svenska_visor.jpg}
+\newpage
+%% \input{songs/balladen_om_briggen_blue_bird_av_hull.tex} Jobbig att få in
+\input{songs/om_bellman.tex}
+\vspace*{-10pt}
+\newpage
+\input{songs/bort_alt_hvad.tex}
+\newpage
+\input{songs/fredmans_epistel_2.tex}
+\newpage
+\input{songs/fredmans_epistel_9.tex}
+\vspace*{-10pt}
+\newpage
+\input{songs/fredmans_epistel_81.tex}
+\newpage
+\input{songs/fredmans_epistel_82.tex}
+\newpage
+\null
+\newpage
+\input{songs/fredmans_sang_10.tex}
+\input{songs/fredmans_sang_21.tex}
+\input{songs/fredmans_sang_28.tex}
+\input{songs/fredmans_sang_35.tex}
+\input{songs/fredmans_sang_64.tex}
 \input{songs/nocturne.tex}
 \newpage
 \input{songs/en_tokig_sang.tex}
@@ -1209,21 +1248,6 @@ DV99\\{\footnotesize\textit{PS blurGel är bäst! DS}} \vfill \null
 \newpage
 \input{songs/an_en_gang_daran.tex}
 \newpage
-%% \input{songs/balladen_om_briggen_blue_bird_av_hull.tex} Jobbig att få in
-\input{songs/om_bellman.tex}
-\vspace*{-10pt}
-\newpage
-\null
-\newpage
-%% \input{songs/fredmans_epistel_2.tex}
-%% \input{songs/fredmans_epistel_81.tex}
-%% \input{songs/fredmans_epistel_82.tex}
-%% \input{songs/fredmans_epistel_9.tex}
-%% \input{songs/fredmans_sang_10.tex}
-%% \input{songs/fredmans_sang_21.tex}
-%% \input{songs/fredmans_sang_28.tex}
-%% \input{songs/fredmans_sang_35.tex}
-%% \input{songs/fredmans_sang_64.tex}
 \input{songs/flickan_och_krakan.tex}
 \newpage
 \input{songs/fantomens_brallor.tex}
@@ -1447,7 +1471,7 @@ DV99\\{\footnotesize\textit{PS blurGel är bäst! DS}} \vfill \null
 \newpage
 \input{songs/jag_fangade.tex}
 % annat
-\input{songs/bort_alt_hvad.tex}
+
 \input{songs/nar_jag_kissar_overallt.tex}
 
 \input{songs/forsta_supen.tex}
