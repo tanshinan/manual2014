@@ -253,7 +253,8 @@ egentligen''\\ BlurGel nr 0, 1995}}
     {\noindent\small\centering
       Redaktör: ?\\
       Grafisk formgivare: Per Bergqwist\\
-      Logotyp av Jens Bohlin\\
+      Illustrationer: Paulina Hermansson\\
+      Logotyp: Jens Bohlin\\
       Producerad med \LaTeX\\
       v1.0: 1994-11-21 (1000 exemplar)\\
       v1.1: 1996-01-02 (1000 exemplar)\\
@@ -423,14 +424,16 @@ göra detta. Vem har sagt att det skall vara lätt?
 %% begin toc on odd page and style the title %%
 \cleardoublepage
 \renewcommand{\contentsname}{\vspace{-2.17cm}\rmfamily{\fontsize{13}{15}\textbf{INNEHÅLL}}\vspace{-1.2cm}}
-\tableofcontents
-
+\tableofcontents\par
+\vfill
+\noindent\includegraphics[keepaspectratio,width=\textwidth]{elements/groda.jpg}
+\vfill
 %% Remove the toc title from heading %%
 \renewcommand{\leftmark}{}
 
 \setlength{\parindent}{0pt}
 \raggedbottom
-\chapterpage{Av tradition}{Av tradition}
+\chapterpageimage{Av tradition}{Av tradition}{elements/avtradition.jpg}
 \null
 \vfill
 \hfill\begin{minipage}[c]{6.7cm}
@@ -460,8 +463,6 @@ Carl Love Almquist}
 \newpage
 \input{songs/under_svea_baner.tex}
 \newpage
-\input{songs/o_gamla_klang_och_jubeltid.tex}
-\newpage
 \input{songs/studentsangen.tex}
 \newpage
 \input{songs/den_blomstertid_nu_kommer.tex}
@@ -469,7 +470,7 @@ Carl Love Almquist}
 \input{songs/har_ar_gudagott_att_vara.tex}
 \newpage
 \input{songs/kungssangen.tex}
-\chapterpage{Datavetarvisor}{Datavetarvisor}
+\chapterpageimage{Datavetarvisor}{Datavetarvisor}{elements/datavetar.jpg}
 \newpage
 \thispagestyle{empty}
 \null
@@ -500,7 +501,7 @@ Carl Love Almquist}
 \newpage
 \null
 \vspace{5pt}
-\includegraphics[keepaspectratio,width=\textwidth]{elements/Kikabilden.jpg}
+\includegraphics[keepaspectratio,width=\textwidth]{elements/kika.jpg}
 \vspace{10pt}\\ Som många andra flyttade jag ifrån min egen familj och
 kom ensam till den nya världen på Universitetet.\par
 \vspace{10pt}
@@ -601,7 +602,7 @@ DV99\\{\footnotesize\textit{PS blurGel är bäst! DS}}
 \newpage
 \input{songs/datavetares_paradmarch.tex}
 
-\chapterpage{Snapsvisor}{Snapsvisor}
+\chapterpageimage{Snapsvisor}{Snapsvisor}{elements/snaps.jpg}
 \input{songs/suparnas_ordning.tex}
 \vspace{15pt}
 \input{songs/anvisningar_for_snapsens_tagande.tex}
@@ -826,7 +827,9 @@ DV99\\{\footnotesize\textit{PS blurGel är bäst! DS}}
 \vspace{15pt}
 \input{songs/en_gang_i_manan.tex}
 \newpage
-\input{songs/sista_snapsen.tex}
+\input{songs/gladjetaren.tex}
+\vspace{15pt}
+\input{songs/forsta_supen.tex}
 \newpage
 \input{songs/forsta_snapsen.tex}
 \vspace{15pt}
@@ -834,8 +837,8 @@ DV99\\{\footnotesize\textit{PS blurGel är bäst! DS}}
 \newpage
 \input{songs/varsupar_friska.tex}
 \newpage
-\input{songs/gladjetaren.tex}
-\chapterpage{Ölvisor}{Ölvisor}
+\input{songs/sista_snapsen.tex}
+\chapterpageimage{Ölvisor}{Ölvisor}{elements/ol.jpg}
 \input{songs/lite_om_ol.tex}
 \newpage
 \input{songs/ud_efter_ol.tex}
@@ -896,7 +899,7 @@ DV99\\{\footnotesize\textit{PS blurGel är bäst! DS}}
 \input{songs/i_goda_vanners_lag.tex}
 \vspace{15pt}
 \input{songs/guld.tex}
-\chapterpage{Vinvisor}{Vinvisor}
+\chapterpageimage{Vinvisor}{Vinvisor}{elements/vin.jpg}
 \input{songs/gloggvisa.tex}
 \vspace{15pt}
 \input{songs/undulaten.tex}
@@ -948,7 +951,8 @@ DV99\\{\footnotesize\textit{PS blurGel är bäst! DS}}
 \input{songs/hej_ha.tex}
 \vspace{15pt}
 \input{songs/se_vinet_vantar.tex}
-\chapterpage{Punschvisor}{Punschvisor}
+\chapterpageimage{Punschvisor}{Punschvisor}{elements/punsch1.jpg}
+\chapterpageimage{Punschvisor}{Punschvisor}{elements/punsch2.jpg}
 \input{songs/punschhistorik.tex}
 \newpage
 \input{songs/artsoppan.tex}
@@ -1020,7 +1024,9 @@ DV99\\{\footnotesize\textit{PS blurGel är bäst! DS}}
 \input{songs/langtan_till_punschen.tex}
 \vspace{15pt}
 \input{songs/sista_punschvisan.tex}
-\chapterpage{Gasquevisor}{Gasquevisor}
+\chapterpageimage{Gasquevisor}{Gasquevisor}{elements/gasque.jpg}
+\input{songs/o_gamla_klang_och_jubeltid.tex}
+\newpage
 \input{songs/var_ungdoms_fagraste_var.tex}
 \vspace{15pt}
 \input{songs/till_dryckernas_ara.tex}
@@ -1173,7 +1179,7 @@ DV99\\{\footnotesize\textit{PS blurGel är bäst! DS}}
 \input{songs/ont_i_huvudet.tex}
 \newpage
 \input{songs/vit_vecka.tex}
-\chapterpage{Säsongsvisor}{Säsongsvisor}
+\chapterpageimage{Säsongsvisor}{Säsongsvisor}{elements/sasong.jpg}
 \input{songs/sommaren_ar_min.tex}
 \newpage
 \input{songs/det_ar_varen.tex}
@@ -1204,7 +1210,7 @@ DV99\\{\footnotesize\textit{PS blurGel är bäst! DS}}
 \newpage
 \input{songs/kraftan_ar_ett_lackert_djur.tex}
 \newpage
-\chapterpageimage{Svenska visor}{Svenska visor}{elements/svenska_visor.jpg}
+\chapterpageimage{Svenska visor}{Svenska visor}{elements/svenska.jpg}
 \newpage
 %% \input{songs/balladen_om_briggen_blue_bird_av_hull.tex} Jobbig att få in
 \input{songs/om_bellman.tex}
@@ -1317,7 +1323,7 @@ DV99\\{\footnotesize\textit{PS blurGel är bäst! DS}}
 \input{songs/anglamark.tex}
 \newpage
 \input{songs/oppna_landskap.tex}
-\chapterpage{Osvenska visor}{Osvenska visor}
+\chapterpageimage{Osvenska visor}{Osvenska visor}{elements/osvenska.jpg}
 \input{songs/always_look_on_the_bright_side_of_life.tex}
 \vspace{15pt}
 \input{songs/sit_on_my_face.tex}
@@ -1366,7 +1372,7 @@ DV99\\{\footnotesize\textit{PS blurGel är bäst! DS}}
 \input{songs/auld_lang_syne.tex}
 \newpage
 \input{songs/the_laughing_policeman.tex}
-\chapterpage{Interwebz}{Interwebz}
+\chapterpageimage{Interwebz}{Interwebz}{elements/interwebz.jpg}
 \input{songs/ansiktsburk.tex}
 \newpage
 \input{songs/i_cant_poop_in_strange_places.tex}
@@ -1402,7 +1408,7 @@ DV99\\{\footnotesize\textit{PS blurGel är bäst! DS}}
 \input{songs/magical_trevor_4.tex}
 \newpage
 \input{songs/nyan_cat.tex}
-\chapterpage{Phulavisor}{Phulavisor}
+\chapterpageimage{Phulavisor}{Phulavisor}{elements/phula.jpg}
 \input{songs/atombomben.tex}
 \vspace{15pt}
 \input{songs/fido.tex}
@@ -1474,7 +1480,7 @@ DV99\\{\footnotesize\textit{PS blurGel är bäst! DS}}
 
 \input{songs/nar_jag_kissar_overallt.tex}
 
-\input{songs/forsta_supen.tex}
+
 \input{songs/charlie_var_en_maffiadrang.tex}
 \input{songs/getingen.tex}
 
@@ -1559,7 +1565,7 @@ DV99\\{\footnotesize\textit{PS blurGel är bäst! DS}}
 \end{center}\par
 \vspace{10pt}
 \vfill
-\chapterpagesame{Register}{Register}
+\chapterpageimage{Register}{Register}{elements/register.jpg}
 \cfoot{}
 %\newgeometry{top=1cm,bottom=1.2cm,left=1cm,right=1cm,footskip=0pt,headsep=0.2cm}
 \small
