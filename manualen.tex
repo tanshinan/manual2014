@@ -115,29 +115,6 @@
   \ofoot[\pagemark]{\textsc{\scriptsize\pagemark}}
   %\cfoot{\centering\includegraphics[keepaspectratio]{elements/footelement2.pdf}}
 }
-\newcommand{\chapterpageimagesame}[3]{
-  \newpage
-  \chapter[#1]{#2}
-  \vspace*{-45pt}
-  \begin{center}
-    \includegraphics[keepaspectratio,height=0.65\textheight]{#3}
-  \end{center}
-  \renewcommand{\leftmark}{#1}
-  \newpage
-  \ohead{\textnormal{\textsc{\scriptsize\leftmark}}}
-  \ofoot[\pagemark]{\textsc{\scriptsize\pagemark}}
-  %\cfoot{\centering\includegraphics[keepaspectratio]{elements/footelement2.pdf}}
-}
-\newcommand{\chapterpagesame}[2]{
-  \newpage
-  %\AddToShipoutPicture*{\BackgroundPic}
-  \chapter[#1]{#2}
-  \renewcommand{\leftmark}{#1}
-  \newpage
-  \ohead{\textnormal{\textsc{\scriptsize\leftmark}}}
-  \ofoot[\pagemark]{\textsc{\scriptsize\pagemark}}
-  %\cfoot{\centering\includegraphics[keepaspectratio]{elements/footelement2.pdf}}
-}
 \newcommand{\hiddenchapterpage}[1]{
   \newpage
   \null
@@ -272,7 +249,7 @@ egentligen''\\ BlurGel nr 0, 1995}}
       v1.0: 1994-11-21 (1000 exemplar)\\
       v1.1: 1996-01-02 (1000 exemplar)\\
       v2.001: 2001-11-15 (1000 exemplar)\\
-      v11111011111: 2015-??-?? (1000 exemplar)\\
+      v3.0: 2015-??-?? (1200 exemplar)\\
       Tryckeri: Boktryckarna\par
     }
 %\restoregeometry
@@ -280,7 +257,61 @@ egentligen''\\ BlurGel nr 0, 1995}}
 %\cfoot{\centering\includegraphics[keepaspectratio]{elements/footelement2.pdf}}
 \section{FÖRORD}\vspace{10pt}
 %\noindent{\large\textrm{\textbf{FÖRORD}}\vspace*{10pt}}\\
-\hspace{10pt} Efter mer än 9 månaders arbete så är\par
+\hspace{10pt}Då var det åter dags för en ny version av Manualen. Det
+fanns många anledningar att göra en ny. Den viktigaste är att lagret
+är slut. Historiskt har Manualen gjorts gemensamt av datavetarna i
+Upsala, Linköping och Umeå. Alldeles nyligen upphörde Linköping med
+sin datavetarutbildning. Vi ville gärna ha ett nära samarbete med
+Umeå, men vi gjorde bedömningen att det skulle dra ut för mycket på
+tiden. Vi kunde knappt ens komma överens i vår egen grupp, så det var
+nog rätt beslut.\\
+\hspace*{10pt}Den Manual du nu håller i din hand är ett stycke
+historia. Den första Manualen trycktes 1994. Sannolikheten är stor att
+Du inte var född då. Totalt har denna Manual fyra företrädare,
+inklusive Jubileumsmanualen som trycktes till trettioårsjubileet för
+datavetarutbildningen i Upsala. Sångboken innehåller sånger av stor
+bredd, med både fina och traditionella visor av bland annat Taube,
+Bellman och Vreeswjik och mer studentikosa visor av varierande
+kvalitet och seriositet.\\
+\hspace*{10pt}Mycket har hänt sedan den första Manualen kom ut. Vad som
+ansågs ok att skämta om för tjugo år sedan är inte ok idag. Om man
+läser den första versionen av Manualen kommer man hitta mycket
+studentikos sexism. Personligen tycker jag att sådant är väldigt
+roligt att sjunga, och det är många sånger jag har föreslagit som
+blivit nedröstade. Dock måste jag erkänna att jag i slutändan är glad
+att de inte kom med. Var sak har sin tid och plats. Många sånger i den
+ursprungliga Manualen hade orsakat rejält med ramaskri, och det är
+inte omöjligt att större dagstidningar hade uppmärksammat det om vi
+tog med dem. Två sånger vi tog bort var Lilla Ida och
+Nekrofiljack.\\
+\hspace*{10pt}Hur går det då till att skapa en sångbok? Mig veterligen
+finns det ingen standardiserad metod. Vi gjorde som så att vi samlade
+alla sångböcker vi hade och sjöng samtliga sånger. Ibland var det ett
+jäkla jobb att hitta melodierna till sångerna. När vi hade sjungit
+igenom sången diskuterade vi lite och röstade om huruvida vi skulle ha
+med den eller ej. Vi tog även med en hel del nyskrivna sånger. Vissa
+var bra och vissa var lite sämre, men för sånger skrivna av
+datavetarstudenter lade vi tröskeln betydligt lägre. En del sånger
+behövde också en del revidering för att de skulle gå att sjunga. Att
+ändra i någon annans sång utan tillstånd känns lite sådär, men då
+alternativet var att inte ta med dessa sånger fick det bli så.\\
+\hspace*{10pt}I dagsläget finns det en plan för att DV-kören i Upsala
+ska sjunga in samtliga sånger och lägga ut dem på nätet. När och om
+detta sker är högst oklart. Förhoppningsvis kommer vår insamlingssida
+www.manualen.nu att kunna användas för detta ändamål.\\
+\hspace*{10pt}Det är många jag skulle vilja tacka. Först och främst
+vill jag tacka alla i sångboksgruppen, men det finns åtskilliga
+personer som direkt eller indirekt har bidragit till den här boken. En
+studentikos sångbok utan studentikosa sånger skrivna av studentikosa
+studenter skulle bara vara en helt vanlig sångbok. Det är de
+specialskrivna sångerna som gör Manualen (och alla andra
+studentsångböcker) till vad den är. Det finns en del tomma sidor i
+Manualen. Där går det alldeles utmärkt att skriva lite sånger du
+kommer på. Med lite tur kanske du får se dem i tryckt form i
+framtiden.\par
+\vspace{10pt}
+\noindent Patrik ``klutt'' Broman
+\par
 \noindent
 \begin{tabular}{@{}p{0.5\textwidth}p{0.5\textwidth}@{}}
   Catarina Malmberg & Niklas Malmberg\\
@@ -439,7 +470,9 @@ göra detta. Vem har sagt att det skall vara lätt?
 \renewcommand{\contentsname}{\vspace{-2.17cm}\rmfamily{\fontsize{13}{15}\textbf{INNEHÅLL}}\vspace{-1.2cm}}
 \tableofcontents\par
 \vfill
-\noindent\includegraphics[keepaspectratio,width=\textwidth]{elements/groda.jpg}
+\begin{center}
+  \noindent\includegraphics[keepaspectratio,width=0.8\textwidth]{elements/groda.jpg}
+\end{center}
 \vfill
 %% Remove the toc title from heading %%
 \renewcommand{\leftmark}{}
@@ -455,9 +488,9 @@ Vad visa kan Amerika?\\
 Vad Asien? Vad allt Europa?\\
 Jag trotsar öppet alltihopa.\\
 Men Skandinavien - det är alladar!\\
-Blott Sverige svenska krusbär har.\\
-\\
-Carl Love Almquist}
+Blott Sverige svenska krusbär har.}\par
+\vspace{10pt}
+\textit{Carl Love Almquist}
 \end{minipage}\hfill
 \vfill
 \null
@@ -1070,6 +1103,7 @@ DV99\\{\footnotesize\textit{PS blurGel är bäst! DS}}
   \vspace{10pt}
   {\footnotesize\textit{forts. $\rightarrow$ s.\pageref{13373}}}
 \end{center}\par
+\vspace*{-10pt}
 \vfill
 \null
 \chapterpageimage{Gasquevisor}{Gasquevisor}{elements/gasque.jpg}
@@ -1606,21 +1640,17 @@ DV99\\{\footnotesize\textit{PS blurGel är bäst! DS}}
 \input{songs/onani_onana.tex}
 \newpage
 \input{songs/solo_lars.tex}
+\newpage
+% Lukas, bild här
 \chapterpageimage{Register}{Register}{elements/register.jpg}
 \cfoot{}
 %\newgeometry{top=1cm,bottom=1.2cm,left=1cm,right=1cm,footskip=0pt,headsep=0.2cm}
 \small
 \printindex
-\hiddenchapterpage{$\emptyset$}
+\newpage
+\null
+\newpage
 \ohead{}
-\newpage
-\null
-\newpage
-\null
-\newpage
-\null
-\newpage
-\null
 \newpage
 \null
 \newpage

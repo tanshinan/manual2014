@@ -7,4 +7,4 @@
 (sort-rule "Ä" "Å")
 (sort-rule "Å" "Ä")
 
-(define-letter-group "BLANDAT" :prefixes ("Ã") :after "Ö")
+(define-letter-group "ÖVRIGT" :prefixes ("Ã") :after "Ö")

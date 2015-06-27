@@ -13,7 +13,7 @@
    height="226.20056"
    id="svg3055"
    version="1.1"
-   inkscape:version="0.48.5 r10040"
+   inkscape:version="0.91 r13725"
    sodipodi:docname="logo.svg">
   <defs
      id="defs3057">
@@ -33,11 +33,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.4"
-     inkscape:cx="299.08715"
-     inkscape:cy="285.97033"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="66.60381"
+     inkscape:cy="118.23192"
      inkscape:document-units="px"
-     inkscape:current-layer="g3282"
+     inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:snap-bbox="true"
      inkscape:snap-bbox-edge-midpoints="true"
@@ -142,14 +142,14 @@
          y="308.30069">SVERIGES DATAVETARES SÅNGBOK</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:22.04747963px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"
-       x="664.95654"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.04747963px;line-height:125%;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman';text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none"
+       x="662.98041"
        y="308.29999"
        id="text3090-7-8-5"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan3092-8-7-1"
-         x="664.95654"
-         y="308.29999">V11111011111</tspan></text>
+         x="662.98041"
+         y="308.29999">VERSION 3.0</tspan></text>
   </g>
 </svg>
