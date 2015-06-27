@@ -24,7 +24,7 @@
 \usepackage{hyphenat}
 \usepackage{setspace}
 \usepackage{makeidx}
-\usepackage{overpic,textpos}
+\usepackage{overpic,textpos,hyperref}
 
 \newgeometry{top=1cm,bottom=1cm,left=1cm,right=1cm,footskip=0pt,headsep=0.2cm}
 
@@ -588,10 +588,6 @@ DV99\\{\footnotesize\textit{PS blurGel är bäst! DS}}
 \newpage
 \input{songs/lille_olle.tex}
 \newpage
-\input{songs/livet_ar_harligt.tex}
-\vspace{15pt}
-\input{songs/datanord.tex}
-\newpage
 \input{songs/datavetarkandidat.tex}
 \newpage
 \input{songs/overallen.tex}
@@ -616,6 +612,8 @@ DV99\\{\footnotesize\textit{PS blurGel är bäst! DS}}
 \input{songs/photoshop.tex}
 \newpage
 \input{songs/munkar.tex}
+\newpage
+\input{songs/datanord.tex}
 \chapterpageimage{Snapsvisor}{Snapsvisor}{elements/snaps.jpg}
 \input{songs/suparnas_ordning.tex}
 \vspace{15pt}
@@ -666,11 +664,11 @@ DV99\\{\footnotesize\textit{PS blurGel är bäst! DS}}
 \newpage
 \input{songs/helan_och_halvan.tex}
 \vspace{15pt}
-\input{songs/om_jag_hade_brannvin.tex}
+\input{songs/botten_upp.tex}
 \newpage
 \input{songs/utvandrare.tex}
 \vspace{15pt}
-\input{songs/botten_upp.tex}
+\input{songs/om_jag_hade_brannvin.tex}
 \newpage
 \input{songs/manvisa.tex}
 \vspace{15pt}
@@ -752,13 +750,13 @@ DV99\\{\footnotesize\textit{PS blurGel är bäst! DS}}
 \vspace{15pt}
 \input{songs/harligt_smakar_akvaviten.tex}
 \newpage
-\input{songs/djurisk_snapsvisa.tex}
-\vspace{15pt}
-\input{songs/lappsangen.tex}
-\newpage
 \input{songs/drankta_lucia.tex}
 \vspace{15pt}
 \input{songs/ingen_radder_for_helan_ar.tex}
+\newpage
+\input{songs/djurisk_snapsvisa.tex}
+\vspace{15pt}
+\input{songs/lappsangen.tex}
 \newpage
 \input{songs/nubben_gors_av_gran_och_tall.tex}
 \vspace{15pt}
@@ -786,10 +784,8 @@ DV99\\{\footnotesize\textit{PS blurGel är bäst! DS}}
 \vfill
 \index{ÃDepth-first search@\uppercase{Depth-first search}}
 \begin{center}
-  \tiny{Depth-first search}
-  \\
-  \includegraphics[keepaspectratio,width=0.8\textwidth]{elements/images/dfs.png}
-  \\
+  \tiny{Depth-first search}\\
+  \includegraphics[keepaspectratio,width=0.8\textwidth]{elements/images/dfs.png}\\
   \tiny{BY-NC 2.5 xkcd.com}
 \end{center}
 \par
@@ -839,11 +835,11 @@ DV99\\{\footnotesize\textit{PS blurGel är bäst! DS}}
 \vspace{15pt}
 \input{songs/en_gang_i_manan.tex}
 \newpage
-\input{songs/gladjetaren.tex}
+\input{songs/forsta_snapsen.tex}
 \vspace{15pt}
 \input{songs/forsta_supen.tex}
 \newpage
-\input{songs/forsta_snapsen.tex}
+\input{songs/gladjetaren.tex}
 \vspace{15pt}
 \input{songs/jungfru_jungfru.tex}
 \newpage
@@ -856,18 +852,24 @@ DV99\\{\footnotesize\textit{PS blurGel är bäst! DS}}
 \input{songs/magen_brummar.tex}
 \newpage
 \input{songs/getingen.tex}
+\vspace{15pt}
+\input{songs/livet_ar_harligt.tex}
 \newpage
 \null
 \vfill
-\index{Ã1337@1337}
+\vspace*{-10pt}
+\index{Ã1337: Part 1@1337: Part 1}
 \begin{center}
+  \label{13371}
   \tiny{1337: Part 1}\\
   \includegraphics[keepaspectratio,width=0.8\textwidth]{elements/images/1337_part_1_1.png}\\
   \includegraphics[keepaspectratio,width=0.8\textwidth]{elements/images/1337_part_1_2.png}\\
-  \tiny{BY-NC 2.5 xkcd.com}
+  \tiny{BY-NC 2.5 xkcd.com}\par
+  \vspace{10pt}
+  {\footnotesize\textit{forts. $\rightarrow$ s.\pageref{13372}}}
 \end{center}\par
-\vspace{10pt}
 \vfill
+\null
 \chapterpageimage{Ölvisor}{Ölvisor}{elements/ol.jpg}
 \input{songs/lite_om_ol.tex}
 \newpage
@@ -1020,7 +1022,7 @@ DV99\\{\footnotesize\textit{PS blurGel är bäst! DS}}
 \vspace{15pt}
 \input{songs/onomatopoetisk_punsch.tex}
 \newpage
-\input{songs/solo_lars.tex}
+\input{songs/baileysvisan.tex}
 \newpage
 \input{songs/lilla_punschvisan.tex}
 \vspace{15pt}
@@ -1038,13 +1040,13 @@ DV99\\{\footnotesize\textit{PS blurGel är bäst! DS}}
 \vspace{15pt}
 \input{songs/gudars_punschvisa.tex}
 \newpage
-\input{songs/anglapunschen.tex}
-\vspace{15pt}
-\input{songs/kyparen.tex}
-\newpage
 \input{songs/festus_punschvisa.tex}
 \vspace{15pt}
 \input{songs/harlig_ar_punschen.tex}
+\newpage
+\input{songs/anglapunschen.tex}
+\vspace{15pt}
+\input{songs/kyparen.tex}
 \newpage
 \input{songs/botvisa.tex}
 \newpage
@@ -1056,7 +1058,20 @@ DV99\\{\footnotesize\textit{PS blurGel är bäst! DS}}
 \vspace{15pt}
 \input{songs/sista_punschvisan.tex}
 \newpage
-\input{songs/baileysvisan.tex}
+\null
+\vfill
+\vspace*{-10pt}
+\index{Ã1337: Part 2@1337: Part 2}
+\begin{center}
+  \label{13372}
+  \tiny{1337: Part 2}\\
+  \includegraphics[keepaspectratio,width=0.8\textwidth]{elements/images/1337_part_2.png}\\
+  \tiny{BY-NC 2.5 xkcd.com}\par
+  \vspace{10pt}
+  {\footnotesize\textit{forts. $\rightarrow$ s.\pageref{13373}}}
+\end{center}\par
+\vfill
+\null
 \chapterpageimage{Gasquevisor}{Gasquevisor}{elements/gasque.jpg}
 \input{songs/o_gamla_klang_och_jubeltid.tex}
 \newpage
@@ -1080,13 +1095,13 @@ DV99\\{\footnotesize\textit{PS blurGel är bäst! DS}}
 \vspace{15pt}
 \input{songs/valkommen_hit.tex}
 \newpage
-\input{songs/dom_som_ar_nyktra.tex}
-\vspace{15pt}
-\input{songs/inga_forbud_idag.tex}
-\newpage
 \input{songs/vi_som_ar_nyktra.tex}
 \vspace{15pt}
 \input{songs/siffervisan.tex}
+\newpage
+\input{songs/dom_som_ar_nyktra.tex}
+\vspace{15pt}
+\input{songs/inga_forbud_idag.tex}
 \newpage
 \input{songs/graa_har.tex}
 \newpage
@@ -1181,22 +1196,13 @@ DV99\\{\footnotesize\textit{PS blurGel är bäst! DS}}
 \newpage
 \input{songs/fakultativ_bacchanal.tex}
 \vspace{15pt}
-\input{songs/tag_nu_djupa_klunkar.tex}
+\input{songs/systemet.tex}
 \newpage
 \input{songs/spritbolaget.tex}
 \newpage
 \input{songs/reccens_forsta.tex}
 \vspace{15pt}
-\input{songs/systemet.tex}
-\null
-\vfill
-\vspace*{-10pt}
-\begin{center}
-  \tiny{1337: Part 2}\\
-  \includegraphics[keepaspectratio,width=0.8\textwidth]{elements/images/1337_part_2.png}\\
-  \tiny{BY-NC 2.5 xkcd.com}
-\end{center}\par
-\vfill
+\input{songs/tag_nu_djupa_klunkar.tex}
 \chapterpageimage{Bakfyllevisor}{Bakfyllevisor}{elements/bakfylla.jpg}
 \input{songs/dan_darpa.tex}
 \vspace{15pt}
@@ -1227,14 +1233,19 @@ DV99\\{\footnotesize\textit{PS blurGel är bäst! DS}}
 \newpage
 \null
 \vfill
-\vspace*{-10pt}
+\vspace*{-15pt}
+\index{Ã1337: Part 3@1337: Part 3}
 \begin{center}
+  \label{13373}
   \tiny{1337: Part 3}\\
-  \includegraphics[keepaspectratio,width=0.8\textwidth]{elements/images/1337_part_3.png}\\
-  \tiny{BY-NC 2.5 xkcd.com}
+  \includegraphics[keepaspectratio,width=0.80\textwidth]{elements/images/1337_part_3.png}\\
+  \tiny{BY-NC 2.5 xkcd.com}\par
+  \vspace{10pt}
+  {\footnotesize\textit{forts. $\rightarrow$ s.\pageref{13374a}}}
 \end{center}\par
+\vspace*{-10pt}
 \vfill
-\newpage
+\null
 \chapterpageimage{Säsongsvisor}{Säsongsvisor}{elements/sasong.jpg}
 \input{songs/sommaren_ar_min.tex}
 \newpage
@@ -1269,12 +1280,17 @@ DV99\\{\footnotesize\textit{PS blurGel är bäst! DS}}
 \null
 \vfill
 \vspace*{-10pt}
+\index{Ã1337: Part 4a@1337: Part 4a}
 \begin{center}
-  \tiny{1337: Part 4}\\
+  \label{13374a}
+  \tiny{1337: Part 4a}\\
   \includegraphics[keepaspectratio,width=0.8\textwidth]{elements/images/1337_part_4_1.png}\\
-  \tiny{BY-NC 2.5 xkcd.com}
+  \tiny{BY-NC 2.5 xkcd.com}\par
+  \vspace{10pt}
+  {\footnotesize\textit{forts. $\rightarrow$ s.\pageref{13374b}}}
 \end{center}\par
 \vfill
+\null
 \chapterpageimage{Svenska visor}{Svenska visor}{elements/svenska.jpg}
 \newpage
 \input{songs/om_bellman.tex}
@@ -1311,11 +1327,13 @@ DV99\\{\footnotesize\textit{PS blurGel är bäst! DS}}
 \vspace{15pt}
 \input{songs/sjung_om_fru_svenssons.tex}
 \newpage
-\input{songs/i_ett_hus.tex}
+\input{songs/jag_vill_ha_blommig_falukorv_till_lunch.tex}
 \newpage
 \input{songs/an_en_gang_daran.tex}
 \newpage
 \input{songs/flickan_och_krakan.tex}
+\vspace{15pt}
+\input{songs/i_ett_hus.tex}
 \newpage
 \input{songs/fantomens_brallor.tex}
 \newpage
@@ -1330,17 +1348,11 @@ DV99\\{\footnotesize\textit{PS blurGel är bäst! DS}}
 \newpage
 \input{songs/gallivarerallarna.tex}
 \newpage
-\input{songs/jungman_jansson.tex}
-\newpage
 \input{songs/nu_gronskar_det.tex}
 \newpage
 \input{songs/sjosala_vals.tex}
 \newpage
 \input{songs/brev_fran_kolonien.tex}
-\newpage
-\input{songs/en_kulen_natt.tex}
-\newpage
-\input{songs/jag_vill_ha_blommig_falukorv_till_lunch.tex}
 \newpage
 \input{songs/turistens_klagan.tex}
 \newpage
@@ -1362,6 +1374,8 @@ DV99\\{\footnotesize\textit{PS blurGel är bäst! DS}}
 \input{songs/sant_e_livet.tex}
 \newpage
 \input{songs/luring.tex}
+\vspace{15pt}
+\input{songs/en_kulen_natt.tex}
 \newpage
 \input{songs/riddarna_kring_runda_bordet.tex}
 \newpage
@@ -1386,18 +1400,38 @@ DV99\\{\footnotesize\textit{PS blurGel är bäst! DS}}
 \input{songs/langt_ner_i_smaland.tex}
 \newpage
 \input{songs/internationalen.tex}
+\newpage
+\input{songs/jungman_jansson.tex}
+\newpage
+\input{songs/kung_louies_sang.tex}
+\newpage
+\null
+\vfill
+\index{Ã1337: Part 4b@1337: Part 4b}
+\vspace*{-10pt}
+\begin{center}
+  \label{13374b}
+  \tiny{1337: Part 4b}\\
+  \includegraphics[keepaspectratio,width=0.8\textwidth]{elements/images/1337_part_4_2.png}\\
+  \tiny{BY-NC 2.5 xkcd.com}\par
+  \vspace{10pt}
+  {\footnotesize\textit{forts. $\rightarrow$ s.\pageref{13375a}}}
+\end{center}\par
+\vfill
+\null
 \chapterpageimage{Osvenska visor}{Osvenska visor}{elements/osvenska.jpg}
 \input{songs/always_look_on_the_bright_side_of_life.tex}
 \vspace{15pt}
 \input{songs/sit_on_my_face.tex}
 \newpage
-\input{songs/kung_louies_sang.tex}
+\input{songs/proud_mary.tex}
 \newpage
 \input{songs/blowin_in_the_wind.tex}
 \newpage
 \input{songs/ma_saften_vara_med_er.tex}
 \newpage
-\input{songs/our_family.tex}
+\input{songs/the_rose.tex}
+\vspace*{-10pt}
 \newpage
 \input{songs/yesterday.tex}
 \vspace{15pt}
@@ -1406,9 +1440,6 @@ DV99\\{\footnotesize\textit{PS blurGel är bäst! DS}}
 \input{songs/when_we_get_drunker.tex}
 \vspace{15pt}
 \input{songs/de_brevitate_vitae.tex}
-\vspace{15pt}
-\input{songs/professor_baltazar.tex}
-\vspace*{-14pt}
 \newpage
 \input{songs/i_will_derive.tex}
 \newpage
@@ -1419,11 +1450,6 @@ DV99\\{\footnotesize\textit{PS blurGel är bäst! DS}}
 \newpage
 \input{songs/roxanne.tex}
 \newpage
-\input{songs/proud_mary.tex}
-\newpage
-\input{songs/the_rose.tex}
-\vspace*{-10pt}
-\newpage
 \input{songs/shell_be_coming_round_the_mountain.tex}
 \vspace*{15pt}
 \input{songs/sancta_lucia.tex}
@@ -1433,8 +1459,27 @@ DV99\\{\footnotesize\textit{PS blurGel är bäst! DS}}
 \input{songs/sma_grodorna_latin.tex}
 \newpage
 \input{songs/auld_lang_syne.tex}
+\vspace{15pt}
+\input{songs/professor_baltazar.tex}
 \newpage
 \input{songs/the_laughing_policeman.tex}
+\newpage
+\input{songs/our_family.tex}
+\newpage
+\null
+\vfill
+\index{Ã1337: Part 5a@1337: Part 5a}
+\vspace*{-10pt}
+\begin{center}
+  \label{13375a}
+  \tiny{1337: Part 5a} \\
+  \includegraphics[keepaspectratio,width=0.8\textwidth]{elements/images/1337_part_5_1.png}\\
+  \tiny{BY-NC 2.5 xkcd.com}\par
+  \vspace{10pt}
+  {\footnotesize\textit{forts. $\rightarrow$ s.\pageref{13375b}}}
+\end{center}\par
+\vfill
+\null
 \chapterpageimage{Interwebz}{Interwebz}{elements/interwebz.jpg}
 \input{songs/ansiktsburk.tex}
 \newpage
@@ -1474,28 +1519,31 @@ DV99\\{\footnotesize\textit{PS blurGel är bäst! DS}}
 \newpage
 \null
 \vfill
+\index{Ã1337: Part 5b@1337: Part 5b}
 \vspace*{-10pt}
 \begin{center}
-  \tiny{1337: Part 4}\\
-  \includegraphics[keepaspectratio,width=0.8\textwidth]{elements/images/1337_part_4_2.png}\\
-  \tiny{BY-NC 2.5 xkcd.com}
+  \label{13375b}
+ \tiny{1337: Part 5b}\\
+ \includegraphics[keepaspectratio,width=0.8\textwidth]{elements/images/1337_part_5_2.png}\\
+ \tiny{BY-NC 2.5 xkcd.com}
 \end{center}\par
 \vfill
 \null
 \chapterpageimage{Phulavisor}{Phulavisor}{elements/phula.jpg}
-\input{songs/atombomben.tex}
-\vspace{15pt}
 \input{songs/fido.tex}
 \vspace{15pt}
 \input{songs/eno.tex}
 \newpage
-\input{songs/balladen_om_theobald_thor.tex}
+\input{songs/atombomben.tex}
+\vspace*{-10pt}
 \newpage
-\input{songs/flickan_och_svinet.tex}
+\input{songs/balladen_om_theobald_thor.tex}
 \newpage
 \input{songs/blottarkarlek.tex}
 \vspace{15pt}
 \input{songs/katten_den_har_fyra_ben.tex}
+\newpage
+\input{songs/flickan_och_svinet.tex}
 \newpage
 \input{songs/intellektuell_visa.tex}
 \vspace{15pt}
@@ -1547,7 +1595,7 @@ DV99\\{\footnotesize\textit{PS blurGel är bäst! DS}}
 \newpage
 \input{songs/tuffe_uffe.tex}
 \vspace{15pt}
-\input{songs/onani_onana.tex}
+\input{songs/nu_har_vi_ljus.tex}
 \newpage
 \input{songs/charlie_var_en_maffiadrang.tex}
 \vspace{15pt}
@@ -1555,30 +1603,9 @@ DV99\\{\footnotesize\textit{PS blurGel är bäst! DS}}
 \newpage
 \input{songs/jag_fangade.tex}
 \vspace{15pt}
-\input{songs/nu_har_vi_ljus.tex}
-\vspace*{-10pt}
+\input{songs/onani_onana.tex}
 \newpage
-\null
-\vfill
-\vspace*{-10pt}
-\begin{center}
-  \tiny{1337: Part 5} \\
-  \includegraphics[keepaspectratio,width=0.8\textwidth]{elements/images/1337_part_5_1.png}\\
-  \tiny{BY-NC 2.5 xkcd.com}
-\end{center}\par
-\vfill
-\null
-\newpage
-\null
-\vfill
-\vspace*{-10pt}
-\begin{center}
- \tiny{1337: Part 5}\\
- \includegraphics[keepaspectratio,width=0.8\textwidth]{elements/images/1337_part_5_2.png}\\
- \tiny{BY-NC 2.5 xkcd.com}
-\end{center}\par
-\vfill
-\null
+\input{songs/solo_lars.tex}
 \chapterpageimage{Register}{Register}{elements/register.jpg}
 \cfoot{}
 %\newgeometry{top=1cm,bottom=1.2cm,left=1cm,right=1cm,footskip=0pt,headsep=0.2cm}
