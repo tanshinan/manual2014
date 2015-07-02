@@ -198,6 +198,12 @@
   \ifodd\value{page}\hbox{}\newpage\fi
 }
 
+\newcommand\textline[4][t]{%
+  \vspace*{-5pt}\hfill\par\smallskip\noindent\parbox[#1]{.266\textwidth}{\raggedright\strut#2}%
+  \parbox[#1]{.266\textwidth}{\centering\strut#3}%
+  \parbox[#1]{.266\textwidth}{\raggedleft\strut#4}\hfill\par\smallskip%
+}
+
 \begin{document}
 \setlength{\parindent}{0pt}
 \vspace*{6.5cm}
@@ -578,12 +584,11 @@ DV99\\{\footnotesize\textit{PS blurGel är bäst! DS}}
 \vfill
 \index{ÃCompiler complaint@\uppercase{Compiler complaint}}
 \begin{center}
-  \tiny{Compiler complaint}
-  \\
-  \includegraphics[keepaspectratio,width=0.8\textwidth]{elements/images/compiler_complaint_1.png}
-  \\
-  \includegraphics[keepaspectratio,width=0.8\textwidth]{elements/images/compiler_complaint_2.png}
-  \\
+  \tiny{Compiler complaint}\par
+  \vspace{5pt}
+  \includegraphics[keepaspectratio,width=0.8\textwidth]{elements/images/compiler_complaint_1.png}\\
+  \includegraphics[keepaspectratio,width=0.8\textwidth]{elements/images/compiler_complaint_2.png}\par
+  \vspace{5pt}
   \tiny{BY-NC 2.5 xkcd.com}
 \end{center}
 \par
@@ -817,8 +822,10 @@ DV99\\{\footnotesize\textit{PS blurGel är bäst! DS}}
 \vfill
 \index{ÃDepth-first search@\uppercase{Depth-first search}}
 \begin{center}
-  \tiny{Depth-first search}\\
-  \includegraphics[keepaspectratio,width=0.8\textwidth]{elements/images/dfs.png}\\
+  \tiny{Depth-first search}\par
+  \vspace{5pt}
+  \includegraphics[keepaspectratio,width=0.8\textwidth]{elements/images/dfs.png}\par
+  \vspace{5pt}
   \tiny{BY-NC 2.5 xkcd.com}
 \end{center}
 \par
@@ -894,12 +901,11 @@ DV99\\{\footnotesize\textit{PS blurGel är bäst! DS}}
 \index{Ã1337: Part 1@1337: Part 1}
 \begin{center}
   \label{13371}
-  \tiny{1337: Part 1}\\
+  \tiny{1337: Part 1}\par
+  \vspace{5pt}
   \includegraphics[keepaspectratio,width=0.8\textwidth]{elements/images/1337_part_1_1.png}\\
   \includegraphics[keepaspectratio,width=0.8\textwidth]{elements/images/1337_part_1_2.png}\\
-  \tiny{BY-NC 2.5 xkcd.com}\par
-  \vspace{10pt}
-  {\footnotesize\textit{forts. $\rightarrow$ s.\pageref{13372}}}
+  \textline[t]{}{\tiny{BY-NC 2.5 xkcd.com}}{\tiny{\textit{forts. $\rightarrow$ s.\pageref{13372}}}}\par
 \end{center}\par
 \vfill
 \null
@@ -1097,11 +1103,10 @@ DV99\\{\footnotesize\textit{PS blurGel är bäst! DS}}
 \index{Ã1337: Part 2@1337: Part 2}
 \begin{center}
   \label{13372}
-  \tiny{1337: Part 2}\\
+  \tiny{1337: Part 2}\par
+  \vspace{5pt}
   \includegraphics[keepaspectratio,width=0.8\textwidth]{elements/images/1337_part_2.png}\\
-  \tiny{BY-NC 2.5 xkcd.com}\par
-  \vspace{10pt}
-  {\footnotesize\textit{forts. $\rightarrow$ s.\pageref{13373}}}
+  \textline[t]{\tiny{\textit{s.\pageref{13371} $\leftarrow$ föreg.}}}{\tiny{BY-NC 2.5 xkcd.com}}{\tiny{\textit{forts. $\rightarrow$ s.\pageref{13373}}}}\par
 \end{center}\par
 \vspace*{-10pt}
 \vfill
@@ -1271,11 +1276,10 @@ DV99\\{\footnotesize\textit{PS blurGel är bäst! DS}}
 \index{Ã1337: Part 3@1337: Part 3}
 \begin{center}
   \label{13373}
-  \tiny{1337: Part 3}\\
-  \includegraphics[keepaspectratio,width=0.80\textwidth]{elements/images/1337_part_3.png}\\
-  \tiny{BY-NC 2.5 xkcd.com}\par
-  \vspace{10pt}
-  {\footnotesize\textit{forts. $\rightarrow$ s.\pageref{13374a}}}
+  \tiny{1337: Part 3}\par
+  \vspace{5pt}
+  \includegraphics[keepaspectratio,width=0.8\textwidth]{elements/images/1337_part_3.png}\\
+  \textline[t]{\tiny{\textit{s.\pageref{13372} $\leftarrow$ föreg.}}}{\tiny{BY-NC 2.5 xkcd.com}}{\tiny{\textit{forts. $\rightarrow$ s.\pageref{13374a}}}}\par
 \end{center}\par
 \vspace*{-10pt}
 \vfill
@@ -1317,11 +1321,10 @@ DV99\\{\footnotesize\textit{PS blurGel är bäst! DS}}
 \index{Ã1337: Part 4a@1337: Part 4a}
 \begin{center}
   \label{13374a}
-  \tiny{1337: Part 4a}\\
-  \includegraphics[keepaspectratio,width=0.8\textwidth]{elements/images/1337_part_4_1.png}\\
-  \tiny{BY-NC 2.5 xkcd.com}\par
-  \vspace{10pt}
-  {\footnotesize\textit{forts. $\rightarrow$ s.\pageref{13374b}}}
+  \tiny{1337: Part 4a}\par
+  \vspace{5pt}
+  \includegraphics[keepaspectratio,width=0.9\textwidth]{elements/images/1337_part_4_1.png}\\
+  \textline[t]{\tiny{\textit{s.\pageref{13373} $\leftarrow$ föreg.}}}{\tiny{BY-NC 2.5 xkcd.com}}{\tiny{\textit{forts. $\rightarrow$ s.\pageref{13374b}}}}\par
 \end{center}\par
 \vfill
 \null
@@ -1445,12 +1448,12 @@ DV99\\{\footnotesize\textit{PS blurGel är bäst! DS}}
 \vspace*{-10pt}
 \begin{center}
   \label{13374b}
-  \tiny{1337: Part 4b}\\
-  \includegraphics[keepaspectratio,width=0.8\textwidth]{elements/images/1337_part_4_2.png}\\
-  \tiny{BY-NC 2.5 xkcd.com}\par
-  \vspace{10pt}
-  {\footnotesize\textit{forts. $\rightarrow$ s.\pageref{13375a}}}
+  \tiny{1337: Part 4b}\par
+  \vspace{5pt}
+  \includegraphics[keepaspectratio,width=0.9\textwidth]{elements/images/1337_part_4_2.png}\\
+  \textline[t]{\tiny{\textit{s.\pageref{13374a} $\leftarrow$ föreg.}}}{\tiny{BY-NC 2.5 xkcd.com}}{\tiny{\textit{forts. $\rightarrow$ s.\pageref{13375a}}}}\par
 \end{center}\par
+\vspace*{-10pt}
 \vfill
 \null
 \chapterpageimage{Osvenska visor}{Osvenska visor}{elements/osvenska.jpg}
@@ -1506,11 +1509,10 @@ DV99\\{\footnotesize\textit{PS blurGel är bäst! DS}}
 \vspace*{-10pt}
 \begin{center}
   \label{13375a}
-  \tiny{1337: Part 5a} \\
-  \includegraphics[keepaspectratio,width=0.8\textwidth]{elements/images/1337_part_5_1.png}\\
-  \tiny{BY-NC 2.5 xkcd.com}\par
-  \vspace{10pt}
-  {\footnotesize\textit{forts. $\rightarrow$ s.\pageref{13375b}}}
+  \tiny{1337: Part 5a}\par
+  \vspace{5pt}
+  \includegraphics[keepaspectratio,width=0.9\textwidth]{elements/images/1337_part_5_1.png}\\
+  \textline[t]{\tiny{\textit{s.\pageref{13374b} $\leftarrow$ föreg.}}}{\tiny{BY-NC 2.5 xkcd.com}}{\tiny{\textit{forts. $\rightarrow$ s.\pageref{13375b}}}}\par
 \end{center}\par
 \vfill
 \null
@@ -1557,9 +1559,10 @@ DV99\\{\footnotesize\textit{PS blurGel är bäst! DS}}
 \vspace*{-10pt}
 \begin{center}
   \label{13375b}
- \tiny{1337: Part 5b}\\
- \includegraphics[keepaspectratio,width=0.8\textwidth]{elements/images/1337_part_5_2.png}\\
- \tiny{BY-NC 2.5 xkcd.com}
+  \tiny{1337: Part 5b}\par
+  \vspace{5pt}
+  \includegraphics[keepaspectratio,width=0.9\textwidth]{elements/images/1337_part_5_2.png}\\
+  \textline[t]{\tiny{\textit{s.\pageref{13375a} $\leftarrow$ föreg.}}}{\tiny{BY-NC 2.5 xkcd.com}}{}\par
 \end{center}\par
 \vfill
 \null
@@ -1641,7 +1644,21 @@ DV99\\{\footnotesize\textit{PS blurGel är bäst! DS}}
 \newpage
 \input{songs/solo_lars.tex}
 \newpage
-% Lukas, bild här
+\newpage
+\null
+\vfill
+\index{ÃPointers@\uppercase{Pointers}}
+\begin{center}
+  \tiny{Pointers}\par
+  \vspace{5pt}
+  \includegraphics[keepaspectratio,width=0.8\textwidth]{elements/images/pointers.png}\par
+  \vspace{5pt}
+  \tiny{BY-NC 2.5 xkcd.com}
+\end{center}
+\par
+\vspace{10pt}
+\vfill
+\null
 \chapterpageimage{Register}{Register}{elements/register.jpg}
 \cfoot{}
 %\newgeometry{top=1cm,bottom=1.2cm,left=1cm,right=1cm,footskip=0pt,headsep=0.2cm}
