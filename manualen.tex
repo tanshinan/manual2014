@@ -25,6 +25,8 @@
 \usepackage{setspace}
 \usepackage{makeidx}
 \usepackage{overpic,textpos,hyperref}
+\usepackage{alltt}
+\renewcommand{\ttdefault}{txtt}
 
 \newgeometry{top=1cm,bottom=1cm,left=1cm,right=1cm,footskip=0pt,headsep=0.2cm}
 
@@ -77,9 +79,10 @@
         \hspace*{-0.5ex}\raisebox{.2ex}{: }}
 
 %% chapter and section styling %%
-\titleformat{\chapter}{}{}{0pt}{\centering\fontsize{30}{40}\rmfamily\textbf}
+\titleformat{\chapter}{}{}{0pt}{\vspace*{20pt}\centering\fontsize{30}{40}\rmfamily\textbf}
 \titleformat{\section}{}{}{0pt}{\fontsize{13}{15}\rmfamily\textbf}
 \titlespacing*{\section}{0pt}{0pt}{0pt}
+\titlespacing*{\chapter}{0pt}{0pt}{40pt}
 \titlecontents{chapter}[0em]{\addvspace{3pt}}{\contentslabel{}}{}
               {\titlerule*[0.3pc]{.}\hspace*{-4pt}\contentspage}
 
@@ -105,7 +108,7 @@
   \null
   \cleardoublepage
   \chapter[#1]{#2}
-  \vspace*{-45pt}
+  \vspace*{-35pt}
   \begin{center}
     \includegraphics[keepaspectratio,height=0.65\textheight]{#3}
   \end{center}
@@ -210,7 +213,7 @@
 \hspace*{0.9cm}
 \includegraphics[keepaspectratio,width=7cm]{elements/logo.pdf}
 \clearpage
-\noindent Denna förträffliga Manual tillhör:
+\noindent Denna fantasmagoriska Manual tillhör:
 \ohead{\textnormal{\textsc{\scriptsize\leftmark}}}
 \ofoot[\pagemark]{\textsc{\scriptsize\pagemark}}
 \clearpage
@@ -247,7 +250,7 @@ egentligen''\\ BlurGel nr 0, 1995}}
 \null
 \vfill
     {\noindent\small\centering
-      Redaktör: ?\\
+      Redaktör: Janne\\
       Grafisk formgivare: Per Bergqwist\\
       Illustratör: Paulina Hermansson\\
       Logotyp: Jens Bohlin\\
@@ -262,74 +265,59 @@ egentligen''\\ BlurGel nr 0, 1995}}
 \cleardoublepage
 %\cfoot{\centering\includegraphics[keepaspectratio]{elements/footelement2.pdf}}
 \section{FÖRORD}\vspace{10pt}
-%\noindent{\large\textrm{\textbf{FÖRORD}}\vspace*{10pt}}\\
-\hspace{10pt}Då var det åter dags för en ny version av Manualen. Det
-fanns många anledningar att göra en ny. Den viktigaste är att lagret
-är slut. Historiskt har Manualen gjorts gemensamt av datavetarna i
-Upsala, Linköping och Umeå. Alldeles nyligen upphörde Linköping med
-sin datavetarutbildning. Vi ville gärna ha ett nära samarbete med
-Umeå, men vi gjorde bedömningen att det skulle dra ut för mycket på
-tiden. Vi kunde knappt ens komma överens i vår egen grupp, så det var
-nog rätt beslut.\\
-\hspace*{10pt}Den Manual du nu håller i din hand är ett stycke
-historia. Den första Manualen trycktes 1994. Sannolikheten är stor att
-Du inte var född då. Totalt har denna Manual fyra företrädare,
-inklusive Jubileumsmanualen som trycktes till trettioårsjubileet för
-datavetarutbildningen i Upsala. Sångboken innehåller sånger av stor
-bredd, med både fina och traditionella visor av bland annat Taube,
-Bellman och Vreeswjik och mer studentikosa visor av varierande
-kvalitet och seriositet.\\
-\hspace*{10pt}Mycket har hänt sedan den första Manualen kom ut. Vad som
-ansågs ok att skämta om för tjugo år sedan är inte ok idag. Om man
-läser den första versionen av Manualen kommer man hitta mycket
-studentikos sexism. Personligen tycker jag att sådant är väldigt
-roligt att sjunga, och det är många sånger jag har föreslagit som
-blivit nedröstade. Dock måste jag erkänna att jag i slutändan är glad
-att de inte kom med. Var sak har sin tid och plats. Många sånger i den
-ursprungliga Manualen hade orsakat rejält med ramaskri, och det är
-inte omöjligt att större dagstidningar hade uppmärksammat det om vi
-tog med dem. Två sånger vi tog bort var Lilla Ida och
-Nekrofiljack.\\
-\hspace*{10pt}Hur går det då till att skapa en sångbok? Mig veterligen
-finns det ingen standardiserad metod. Vi gjorde som så att vi samlade
-alla sångböcker vi hade och sjöng samtliga sånger. Ibland var det ett
-jäkla jobb att hitta melodierna till sångerna. När vi hade sjungit
-igenom sången diskuterade vi lite och röstade om huruvida vi skulle ha
-med den eller ej. Vi tog även med en hel del nyskrivna sånger. Vissa
-var bra och vissa var lite sämre, men för sånger skrivna av
-datavetarstudenter lade vi tröskeln betydligt lägre. En del sånger
-behövde också en del revidering för att de skulle gå att sjunga. Att
-ändra i någon annans sång utan tillstånd känns lite sådär, men då
-alternativet var att inte ta med dessa sånger fick det bli så.\\
-\hspace*{10pt}I dagsläget finns det en plan för att DV-kören i Upsala
-ska sjunga in samtliga sånger och lägga ut dem på nätet. När och om
-detta sker är högst oklart. Förhoppningsvis kommer vår insamlingssida
-www.manualen.nu att kunna användas för detta ändamål.\\
-\hspace*{10pt}Det är många jag skulle vilja tacka. Först och främst
-vill jag tacka alla i sångboksgruppen, men det finns åtskilliga
-personer som direkt eller indirekt har bidragit till den här boken. En
-studentikos sångbok utan studentikosa sånger skrivna av studentikosa
-studenter skulle bara vara en helt vanlig sångbok. Det är de
-specialskrivna sångerna som gör Manualen (och alla andra
-studentsångböcker) till vad den är. Det finns en del tomma sidor i
-Manualen. Där går det alldeles utmärkt att skriva lite sånger du
-kommer på. Med lite tur kanske du får se dem i tryckt form i
-framtiden.\par
+\hspace*{10pt}Den Manual du nu håller i din hand är en del av ett
+stycke historia. Den första Manualen trycktes nämligen år 1994 och totalt
+har det tryckts fyra upplagor, inklusive Jubileumsmanualen som trycktes
+till trettioårsjubileet för datavetarutbildningen i Uppsala.
+
+\hspace*{10pt}Historiskt sett har Manualen producerats gemensamt av
+datavetarna i Uppsala, Linköping och Umeå. Alldeles nyligen upphörde
+dock Linköping med sin datavetarutbildning och Umeå verkar ha haft problem
+med sin mailserver, då vi inte fick några svar därifrån.
+
+\hspace*{10pt}Under 2014 och 2015 samlades en ädel grupp upsaliensisiska
+datavetare under ouppräkneligt många timmar av möten för att fastställa
+innehållet av den nya Manualen. Det resulterade i återupplivandet av
+många sånger ifrån gamla upplagor men ännu fler nya sånger som aldrig
+funnits i Manualen tidigare lades in, bland annat skapades ett helt nytt
+kapitel vid namn ``Interwebz''.
+
 \vspace{10pt}
-\noindent Patrik ``klutt'' Broman
-\par
-\noindent
-\begin{tabular}{@{}p{0.5\textwidth}p{0.5\textwidth}@{}}
-  Catarina Malmberg & Niklas Malmberg\\
-  Joakim Hägglund & Jakob Engblom\\
-  Pär Mattsson & Samuel Strand\\
-  Jesper Wilhelmsson & Andrée bylund\\
-  Martin Frost & Hans Molin\\
-  Markus Säfström & Christian Axelsson\\
-  Ingemar Åberg & Niclas Stensbäck\\
-  Niklas Carlsson & Erika Wahlberg\\
-  Måns af Klercker & Paulina Hermansson
+Manualgruppen\par
+\vspace{6pt}
+\begin{tabular}{@{\hspace{6pt}}p{0.5\textwidth}p{0.5\textwidth}@{}}
+  Per ``normano'' Bergqwist\\
+  {@}Jens Rosén\\
+  Lukas ``spydon'' Klingsbo\\
+  Aleksander ``Tan'' Lundqvist\\
+  Patrik ``Klutt'' Broman\\
+  Jakob ``KP'' Mattsson\\
+  Oskar ``osaka'' Ahlberg\\
+  Johan ``Johan'' Lundgren
 \end{tabular}\par
+\newpage
+Ett stort tack till alla de som donerat till skapandet av denna manual
+och ett extra stort tack till Pu som skapat alla illustrationer
+till kapitlena. 
+\vspace{10pt}
+\par
+\begin{tabular}{@{}p{0.5\textwidth}p{0.5\textwidth}@{}}
+  Christian Axelsson & Andrée Bylund\\
+  Niklas Carlsson & Jakob Engblom\\
+  Martin Frost & Paulina Hermansson\\
+  Joakim Hägglund & Måns af Klercker\\
+  Catarina Malmberg & Niklas Malmberg\\
+  Pär Mattsson & Hans Molin\\
+  Samuel Strand & Markus Säfström\\
+  Niclas Stensbäck & Erika Wahlberg\\
+  Jesper Wilhelmsson & Ingemar \fontsize{9pt}{0pt}\selectfont Åberg}
+\end{tabular}\par
+\begin{center}
+  \noindent\includegraphics[keepaspectratio,width=0.6\textwidth]{elements/punsch1.jpg}
+  \par
+  \noindent Den nedröstade kakbilden
+\end{center}
+\vfill
 %% \cleardoublepage
 %% \section{FÖRORD från v2.001}\par
 %% \vspace{10pt}
@@ -1543,6 +1531,19 @@ DV99\\{\footnotesize\textit{PS blurGel är bäst! DS}}
 \vspace{15pt}
 \input{songs/magical_trevor_1.tex}
 \newpage
+%% \textbf{
+%% \begin{verbatim}
+%%   Not Found
+%% \end{verbatim}
+%% }
+\begin{alltt}
+{\Large\textbf{Not Found}}
+{\footnotesize
+The requested PAGE was not found in this Manual.
+\noindent\makebox[\linewidth]{\rule{\linewidth}{0.4pt}}
+\textit{Manualen/3.0 (Solaris) Server at localhost Port 80}}
+\end{alltt}
+\newpage
 \input{songs/pop_tart.tex}
 \newpage
 \input{songs/magical_trevor_2.tex}
@@ -1566,7 +1567,7 @@ DV99\\{\footnotesize\textit{PS blurGel är bäst! DS}}
 \end{center}\par
 \vfill
 \null
-\chapterpageimage{Phulavisor}{Phulavisor}{elements/phula.jpg}
+\chapterpageimage{Phula visor}{Phula visor}{elements/phula.jpg}
 \input{songs/fido.tex}
 \vspace{15pt}
 \input{songs/eno.tex}
