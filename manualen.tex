@@ -25,6 +25,8 @@
 \usepackage{setspace}
 \usepackage{makeidx}
 \usepackage{overpic,textpos,hyperref}
+\usepackage{alltt}
+\renewcommand{\ttdefault}{txtt}
 
 \newgeometry{top=1cm,bottom=1cm,left=1cm,right=1cm,footskip=0pt,headsep=0.2cm}
 
@@ -77,9 +79,10 @@
         \hspace*{-0.5ex}\raisebox{.2ex}{: }}
 
 %% chapter and section styling %%
-\titleformat{\chapter}{}{}{0pt}{\centering\fontsize{30}{40}\rmfamily\textbf}
+\titleformat{\chapter}{}{}{0pt}{\vspace*{20pt}\centering\fontsize{30}{40}\rmfamily\textbf}
 \titleformat{\section}{}{}{0pt}{\fontsize{13}{15}\rmfamily\textbf}
 \titlespacing*{\section}{0pt}{0pt}{0pt}
+\titlespacing*{\chapter}{0pt}{0pt}{40pt}
 \titlecontents{chapter}[0em]{\addvspace{3pt}}{\contentslabel{}}{}
               {\titlerule*[0.3pc]{.}\hspace*{-4pt}\contentspage}
 
@@ -105,7 +108,7 @@
   \null
   \cleardoublepage
   \chapter[#1]{#2}
-  \vspace*{-45pt}
+  \vspace*{-35pt}
   \begin{center}
     \includegraphics[keepaspectratio,height=0.65\textheight]{#3}
   \end{center}
@@ -1522,6 +1525,19 @@ DV99\\{\footnotesize\textit{PS blurGel är bäst! DS}}
 \vspace{15pt}
 \input{songs/magical_trevor_1.tex}
 \newpage
+%% \textbf{
+%% \begin{verbatim}
+%%   Not Found
+%% \end{verbatim}
+%% }
+\begin{alltt}
+{\Large\textbf{Not Found}}
+{\footnotesize
+The requested PAGE was not found in this Manual.
+\noindent\makebox[\linewidth]{\rule{\linewidth}{0.4pt}}
+\textit{Manualen/3.0 (Solaris) Server at localhost Port 80}}
+\end{alltt}
+\newpage
 \input{songs/pop_tart.tex}
 \newpage
 \input{songs/magical_trevor_2.tex}
@@ -1545,7 +1561,7 @@ DV99\\{\footnotesize\textit{PS blurGel är bäst! DS}}
 \end{center}\par
 \vfill
 \null
-\chapterpageimage{Phulavisor}{Phulavisor}{elements/phula.jpg}
+\chapterpageimage{Phula visor}{Phula visor}{elements/phula.jpg}
 \input{songs/fido.tex}
 \vspace{15pt}
 \input{songs/eno.tex}
