@@ -26,6 +26,7 @@
 \usepackage{makeidx}
 \usepackage{overpic,textpos,hyperref}
 \usepackage{alltt}
+\usepackage{indentfirst}
 \renewcommand{\ttdefault}{txtt}
 
 \newgeometry{top=1cm,bottom=1cm,left=1cm,right=1cm,footskip=0pt,headsep=0.2cm}
@@ -85,10 +86,6 @@
 \titlespacing*{\chapter}{0pt}{0pt}{40pt}
 \titlecontents{chapter}[0em]{\addvspace{3pt}}{\contentslabel{}}{}
               {\titlerule*[0.3pc]{.}\hspace*{-4pt}\contentspage}
-
-%\newfontfamily\chapterfont[]{ChopinScript}
-
-%\addtokomafont{pagenumber}{\oldstylenums}
               
 %% Command for chapter page, will remove foot and head %%
 \newcommand{\chapterpage}[2]{
@@ -208,7 +205,6 @@
 }
 
 \begin{document}
-\setlength{\parindent}{0pt}
 \vspace*{6.5cm}
 \hspace*{0.9cm}
 \includegraphics[keepaspectratio,width=7cm]{elements/logo.pdf}
@@ -217,7 +213,7 @@
 \ohead{\textnormal{\textsc{\scriptsize\leftmark}}}
 \ofoot[\pagemark]{\textsc{\scriptsize\pagemark}}
 \clearpage
-%\section{Datavetare är skapande människor}\vspace{10pt}
+\index{ÃDatavetare är skapande människor@\uppercase{Datavetare är skapande människor}}
 {\small\begin{verbatim}
 Datavetare är skapande människor
 
@@ -265,38 +261,45 @@ egentligen''\\ BlurGel nr 0, 1995}}
 %\restoregeometry
 \cleardoublepage
 %\cfoot{\centering\includegraphics[keepaspectratio]{elements/footelement2.pdf}}
-\section{FÖRORD}\vspace{10pt}
-\hspace{10pt}Den Manual du nu håller i din hand är en del av ett
-stycke historia. Den första Manualen trycktes nämligen år 1994 och totalt
-har det tryckts fyra upplagor, inklusive Jubileumsmanualen som trycktes
-till trettioårsjubileet för datavetarutbildningen i Uppsala.\\
-\hspace*{10pt}Historiskt sett har Manualen producerats gemensamt av
-datavetarna i Uppsala, Linköping och Umeå. Alldeles nyligen upphörde
-dock Linköping med sin datavetarutbildning och Umeå verkar ha haft problem
-med sin mailserver, då vi inte fick några svar därifrån.\\
-\hspace*{10pt}Under 2014 och 2015 samlades en ädel grupp upsaliensisiska
-datavetare under ouppräkneligt många timmar av möten för att fastställa
+\section{FÖRORD}
+\vspace{10pt}
+Den Manual du nu håller i din hand är en del av ett stycke
+historia. Den första Manualen trycktes nämligen år 1994 och totalt har
+det tryckts fyra upplagor, inklusive Jubileumsmanualen som trycktes
+till trettioårsjubileet för datavetarutbildningen i Uppsala.
+
+Historiskt sett har Manualen producerats gemensamt av datavetarna i
+Uppsala, Linköping och Umeå. Alldeles nyligen upphörde dock Linköping
+med sin datavetarutbildning och Umeå verkar ha haft problem med sin
+mailserver, då vi inte fick några svar därifrån.
+
+Under 2014 och 2015 samlades en ädel grupp upsaliensisiska datavetare
+under ouppräkneligt många timmar av möten för att fastställa
 innehållet av den nya Manualen. Det resulterade i återupplivandet av
 många sånger ifrån gamla upplagor men ännu fler nya sånger som aldrig
-funnits i Manualen tidigare lades in, bland annat skapades ett helt nytt
-kapitel vid namn ``Interwebz''.\par
+funnits i Manualen tidigare lades in, bland annat skapades ett helt
+nytt kapitel vid namn ``Interwebz''.\par
 \vspace{10pt}
-\noindent\hspace*{10pt}Manualgruppen\par
-\vspace{10pt}
-\begin{tabular}{@{\hspace{6pt}}p{0.5\textwidth}p{0.5\textwidth}@{}}
-  Per ``normano'' Bergqwist\\
-  {@}Jens Rosén\\
-  Lukas ``spydon'' Klingsbo\\
-  Aleksander ``Tan'' Lundqvist\\
-  Patrik ``Klutt'' Broman\\
-  Jakob ``KP'' Mattsson\\
-  Oskar ``osaka'' Ahlberg\\
-  Johan ``Johan'' Lundgren
-\end{tabular}\par
+\noindent Uppsala, 2 Juli 2015\\
+Manualgruppen\\
+\begin{center}
+  \parbox{0.47\textwidth}{
+    \vspace*{-7pt}
+    Per ``normano'' Bergqwist\\
+    {@}Jens Rosén\\
+    Lukas ``spydon'' Klingsbo\\
+    Aleksander ``Tan'' Lundqvist\\
+    Patrik ``Klutt'' Broman\\
+    Jakob ``KP'' Mattsson\\
+    Oskar ``osaka'' Ahlberg\\
+    Johan ``Johan'' Lundgren}
+\end{center}
+\null
+\vspace*{-10pt}
 \newpage
-\noindent\hspace{10pt}Ett stort tack till alla de som donerat till
-skapandet av denna manual och ett extra stort tack till Pu som skapat
-alla illustrationer till kapitlena.\par
+Ett stort tack till alla de som donerat till skapandet av denna manual
+och ett extra stort tack till Pu som skapat alla illustrationer till
+kapitlena.\par
 \vspace{10pt}
 \begin{tabular}{@{}p{0.5\textwidth}p{0.5\textwidth}@{}}
   Christian Axelsson & Andrée Bylund\\
@@ -307,7 +310,7 @@ alla illustrationer till kapitlena.\par
   Pär Mattsson & Hans Molin\\
   Samuel Strand & Markus Säfström\\
   Niclas Stensbäck & Erika Wahlberg\\
-  Jesper Wilhelmsson & Ingemar \fontsize{9pt}{0pt}\selectfont Åberg}
+  Jesper Wilhelmsson & Ingemar {\fontsize{9pt}{0pt}\selectfont Å}berg
 \end{tabular}\par
 \vfill
 \begin{center}
@@ -317,9 +320,8 @@ alla illustrationer till kapitlena.\par
 \vfill
 \null
 \newpage
-\noindent\hspace{10pt}Vi vill även tacka alla som hjälpte till med
-skapandet av de äldre manualerna, utan ert arbete skulle denna bok
-inte vara här idag.\par
+Vi vill även tacka alla som hjälpte till med skapandet av de äldre
+manualerna, utan ert arbete skulle denna bok inte vara här idag.\par
 \vspace{10pt}
 \begin{tabular}{@{}p{0.5\textwidth}p{0.5\textwidth}@{}}
   Anders Jackson & Anders Jansson\\
@@ -335,137 +337,23 @@ inte vara här idag.\par
   Henrik Eriksson & Håkan Lindholm\\
   Ingela Anderton & Ingela Ljungkvist\\
   Jakob Engblom & Jan-Olof Flink\\
-  Jens Bohlin & Jesper Wilhelmsson\\
-  Joakim Lindqvist & Joakim Thörnkvist\\
+  Jens Bohlin & Jens Rosén\\
+  Jesper Wilhelmsson & Joakim Lindqvist\\
+  Joakim Thörnkvist & Johan Lundgren\\
   Jonas Högström & Kristiina Ausmees\\
   Lars Hägglund & Lars-Arne Mattson\\
-  Martin Davidson & Mats Hägglund\\
-  Mattias Hallberg & Micke Liljeblad\\
-  Måns Engmem & Måns af Klercker\\
-  NeNNe & Niclas Stensbäck\\
-  Olof Appelblad & Olof Dahlberg\\
-  Pär Mattsson & Sandra Nyström\\
-  Sara Ingmar
+  Lukas Klingsbo & Martin Davidson\\
+  Mats Hägglund & Mattias Hallberg\\
+  Micke Liljeblad & Måns Engmem\\
+  Måns af Klercker & NeNNe\\
+  Niclas Stensbäck & Olof Appelblad\\
+  Olof Dahlberg & Pär Mattsson\\
+  Sandra Nyström & Sara Ingmar
 \end{tabular}
-%% \cleardoublepage
-%% \section{FÖRORD från v2.001}\par
-%% \vspace{10pt}
-%% %\noindent{\large\textrm{\textbf{FÖRORD från v2.001}}\vspace*{10pt}}\\
-%% \hspace{10pt}Allt sedan Manualen v1.1 kom till världen har det
-%% funnits en skara människor som ägnat sina liv åt att vänta på dess
-%% efterföljare. Denna skaras oförtrutliga tillväxt utmynnande i att ett
-%% formaliserat uppdateringsarbete satte igång våren 1999. Den 4 december
-%% -99 samlades en liten men representativ skara från C i Linköping, DVP
-%% i Uppsala och C i Umeå för att samla alla tankar och idéer som
-%% framförts på den då flitigt utnyttjade mailinglistan
-%% \texttt{manual@acc.umu.se}. Efter detta möte trodde vi att arbetet
-%% skulle leda till en färdig Manual våren 2000. Så blev det dock inte på
-%% grund av en utdragen och högst osaklig debatt om en del låtar som
-%% redan var bortplockade. Nu, över ett år senare, är vi som har
-%% funderat, fipplat och till och med slitit(?) med denna nya bok
-%% lyckliga över att få presentera Manualen version 2.001\\ \indent En
-%% betydande samling sånger som Manualen kräver naturligtvis en avsevärd
-%% mängd arbete att sammanställa, faktum är att antalet välvilliga
-%% medhjälpare från alla berörda order förmodligen inte går att passa in
-%% i en nibble. Det stora antalet inblandade parter gör att en uppräkning
-%% är dömd att innehålla felaktigheter, dock gör vi nedan ett dj-ärvt
-%% försök samtidigt som vi hoppas att alla vi glömt kan förlåta oss i
-%% någon framtid.
-%% \newpage
-%% \indent Vilka var de tappra själarna som var med på mötet i Uppsala
-%% då?\par
-%% \vspace{10pt}
-%% \noindent
-%% \begin{tabular}{@{}p{0.5\textwidth}p{0.5\textwidth}@{}}
-%%   Lars-Arne Mattson & Anders Ramsell\\
-%%   Henrik Eriksson & Olof Dahlberg\\
-%%   Hans Molin & Björn Bergman\\
-%%   Jesper Wilhelmsson & Ingela Anderton\\
-%%   Daniel Gref & Mattias Hallberg\\
-%%   Daniel Holmgren & Andreas Hed
-%% \end{tabular}\par
-%% \vspace{10pt}
-%% %% \\
-%% %% Manualen finns också på nätet,\\ URL:
-%% %% \texttt{http://www.acc.umu.se/\raisebox{.4ex}\texttildelow
-%% %%   manualen/}\\
-%% \noindent Hoppas nu att ni är nöjda med
-%% resultatet.\\ \\ Uppsala den 24 december 2000 (God Jul!)\\ \\ Björn
-%% Bergman / Jesper Wilhelmsson / Andreas Hed\\ \\ De sista justeringarna
-%% skedde under den datavetenskapliga utbildningskonferensen i Umeå 2001.
-%% \cleardoublepage
-%% \section{FÖRORD från v1.0}\vspace{10pt}
-%% %\noindent{\large\textrm{\textbf{FÖRORD från v1.0}}\vspace*{10pt}}\\
-%% \hspace{10pt}Detta är en gemensam sångbok för samtliga datavetare
-%% i Sverige; C i Lindköping, DVP i Uppsala och C i Umeå. Vi har genom
-%% denna bok fått ytterligare en sak gemensamt.\\ \indent Att skapa en
-%% gemensam sångbok har diskuterats flerga gånger, jag minns att
-%% kontakter tog under 100-köret 1990 eller var det 1991?  Saker som
-%% händer under 100-kör är inget man minns, utan saker som man senare
-%% tror sig har hänt?! Den gången brakade arbetet samman efter några
-%% veckor. Men idén levde kvar och gav 3 (eller 4) år senare detta som
-%% resultat.\\ \indent Sångboken bygger på ``DVL:s Lilla blå v3.0\ss''
-%% som aldrig han bli tryckt, innan arbetet kom igång för att skapa denna
-%% bok. Dock skall sägas att denna bok är betydligt större än ``Lilla blå
-%% v3.0\ss'', omkring 200 sidor för att inte vara exakt.\\ \indent När
-%% \textit{manualen} trycks i december 1994 är boken den största sångbok
-%% som finns runt om i vårt rike! Ok Psalmboken är större, men inte lika
-%% roligt att ha på gasquer!\\ \indent Vi som varit ansvariga för denna
-%% bok, har försökt att i så stor utsträckning som möjligt att få med
-%% melodier, låtarnas ursprung, och hur man skall sjunga. Allt för att
-%% underlätta för folk som inte är i kontakt med lika mycket sånger som
-%% vissa av oss andra.\\ \indent Det är många som har hjälpt till med
-%% denna bok, inte enbart datavetare utan även personer från helt andra
-%% linjer och orter, jag vill rikta ett speciellt tack till Er.
-%% \newpage
-%% \indent Manualens generalgenomsjungning ägde rum på\\ Strålsnäs
-%% herrgård den 18 November 1994, då vi avnjöt en underbar
-%% rådjursmiddag. På denna sittning sjöng vi så mycket vi orkade och hade
-%% efter ca 4 timmar traverserat ca 40 sånger.\\ \indent Med på denna
-%% sångboksgenomsjungning och därav lika (o)ansvariga som jag till de
-%% eventuella felen var,\\ \textit{Micke Liljeblad, Mats Hägglund, Jakob
-%%   Engblom, Pär\\ Mattsson, Martin Davidson, Anders Jackson,
-%%   Björn\\ Knutsson, Måns Engmem, Måns af Klercker, Jonas\\ Högström,
-%%   Calle Englund, Andreas Gref} och sist jag själv.\\ \indent Innan jag
-%% kommer till alla som skall tackas vill jag bara nämna att en sångbok
-%% är till för att sjungas ur, detta betyder inte att man behöver
-%% sjunga. Följande personer är jag evigt(?)  tacksam till:\\
-
-%% \noindent
-%% \begin{tabular}{@{}p{0.5\textwidth}p{0.5\textwidth}@{}}
-%%   Anders Jansson & Anders Wilhelm\\
-%%   Bertil Spolander & Björn Knutsson\\
-%%   Björn Torkelsson & Erik Åhlin\\
-%%   Göran Svensson & Håkan Lindholm\\
-%%   Ingela Ljungkvist & Jan-Olof Flink\\
-%%   Jens Bohlin & Joakim Thörnkvist\\
-%%   Jonas Högström & Lars Hägglund\\
-%%   Måns af Klercker & Olof Appelblad\\
-%%   Pär Mattson
-%% \end{tabular}
-%% \newpage
-%% \indent Dessutom vill jag tacka alla som lusläst boken, sammt alla Ni
-%% som gjorde förhandsbeställningar. Det finns säkert många andra som jag
-%% missat och jag är precis lika tacksam till er som alla
-%% andra!\\
-%% %% \indent Om ni har några bidrag eller saker som kan vara värda
-%% %% att rätta till så skicka dessa till någon av festerierna nedan;\\
-
-%% %% \noindent
-%% %% \begin{tabular}{@{}p{0.3\textwidth}p{0.7\textwidth}@{}}
-%% %%   Piraya klubben & piraya@ts.umu.se\\
-%% %%   Klubbverket & dvl-klubbverket@student.docs.uu.se\\
-%% %%   CC & cc@cyd.liu.se
-%% %% \end{tabular}\\
-
-%% %% \indent Till sist, kom ihåg att hela sångboken och fellista finns på:
-%% %% \texttt{http://www.ts.umu.se/\raisebox{.4ex}\texttildelow manualen/}\\
-%% %% \\
-%% \noindent Umeå den 21 November
-%% 1994\\ \\ NeNNe
 \newpage
+\index{ÃTRAVERSERING@\uppercase{TRAVERSERING}}
 \section{TRAVERSERING}\vspace{10pt}
-\hspace{10pt}Genom hela denna bok gäller följande
+Genom hela denna bok gäller följande
 traverseringsregler. I sånger där en försångare eller dylikt skall
 sjunga ensam används fet text. Ifall något speciellt såsom en handling
 inträffar vid ett ord, så används (kursiv), där ordet för handling
@@ -473,18 +361,23 @@ eller beteende står inom ( ). En sådan handling gäller oftast maximalt
 raden ut. Ifall en längre förklaring behövs kursiveras
 texten. Beskrivningen finns sedan efter sångens slut. I denna
 beskrivning kan mycket annat matnyttigt finnas, läs den
-gärna.\\ \indent I en del sånger sjunges inte hela sången tillsammans,
+gärna.
+
+I en del sånger sjunges inte hela sången tillsammans,
 istället är delar av sången menat för ena gruppen och vice versa. I
 dessa sånger används {\Large\Male} för manligt kön och {\Large\Female}
 för kvinnligt kön, men du får givetvis sjunga vilken del du vill.
+
 \begin{leftborder}
-  \hspace{10pt}Då det ibland kan förekomma lokala variantioner på vissa sånger, så
+  
+  \hspace{15pt}Då det ibland kan förekomma lokala variantioner på vissa sånger, så
   används en  vertikal linje i högra kanten för att markera att detta
   är olika alternativ. Ibland betyder linjen att det är raderna som är
   alternativen, och ibland betyder linjen att det är olika
   versalternativ. Men den kloke läsaren förstår säkert när vad är vad.
 \end{leftborder}
-\hspace{15pt} För att göra allt ännu svårare så skall man oftast sjunga med stark
+
+För att göra allt ännu svårare så skall man oftast sjunga med stark
 stämma där VERSALER används, men observera att man inte alltid skall
 göra detta. Vem har sagt att det skall vara lätt?
 \newpage
@@ -649,6 +542,55 @@ DV99\\{\footnotesize\textit{PS blurGel är bäst! DS}}
 \input{songs/bittar_och_bajtar.tex}
 \newpage
 \input{songs/dvrecceskalen.tex}
+\newpage
+\index{ÃEn hälsning från historien@\uppercase{En hälsning från historien}}
+\section{En hälsning från historien}\vspace{10pt}
+\setlength{\parindent}{15pt}
+\noindent\hspace{15pt}Den 18 november 1994 samlades representanter för
+Sveriges tre magisterutbildningar i datavetenskap utanför Linköping
+(det legendariska 100-köret skulle hållas dagen efter) för
+genomsjungning av den nya gemensamma sångboken Manualen. Det var ett
+ambitiöst projekt, det skulle vara den största och mest kompletta
+samlingen av sånger, och för första gången hade vi samarbetat
+(mestadels lett från DV i Umeå) och framställt denna viktiga, samlande
+sak: en egen sångbok!
+
+Den versionen av Manualen skulle sedan komma
+att tryckas om, bli föremålet för en mindre skandal i Umeå, spridas
+vidare över landet men framför allt användas. Det sjungs mycket hos
+oss datavetare, och Manualen fanns och finns ständigt framme för att
+stödja sjungandet av både kända och okända sånger.
+
+Och nu är det dags igen. En ny Manualen-komitté
+har kört hela vägen in i kaklet och gjort en ny utgåva, så att nya
+generationer av Datavetare, i Uppsala och annorstädes kan på nytt
+sjunga Emacs-visan(?), O Gamla Klang och Calmarevisan både rätt och
+starkt. Tack och Grattis till dem!
+
+Av olika anledningar råkade det ligga en 10-15
+oanvända Manualer från 1.0 och 1.1-tryckningarna hemma hos mig, och
+när det Manualens 20-årsjubileum vankades i november 2014 så
+beslutades det snabbt att dessa a) skulle spridas till nya
+generationer samt b) inkomsten från denna spridning skulle gå direkt
+till nya Manualen. Så blev det. Tack till alla som slog två flugor i
+en smäll och både fick en liten och obetydlig del av historien i sin
+ägo, samt bidrog till den nya och betydliga framtidens
+sångböcker. Trevligt var det också.
+
+Från Manualen 1.0-komittén (Mig själv Måns,
+Nenne + andra): Grattis till den nya komittén samt till DIG! som just
+läser detta och uppenbarligen innehar denna nya Manual. Slit den med
+hälsan, och sjung mycket! Det är den värd!\par
+\vspace{10pt}
+\noindent Spånga 3 juli 2015\\
+Måns af Klercker, d93mkl\par
+\setlength{\parindent}{0pt}
+\vfill
+\begin{center}
+  \noindent\includegraphics[keepaspectratio,width=0.6\textwidth]{elements/consbox.pdf}
+\end{center}
+\vfill
+\null
 \newpage
 \input{songs/lanka_lilla_dator_dar.tex}
 \vspace{15pt}
