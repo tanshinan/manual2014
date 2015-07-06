@@ -30,7 +30,7 @@
 \renewcommand{\ttdefault}{txtt}
 \tracinggroups=1
 
-\newgeometry{top=1cm,bottom=1cm,left=1cm,right=1cm,footskip=0pt,headsep=0.2cm}
+\newgeometry{top=1cm,bottom=1cm,left=1cm,right=1cm,footskip=0pt,headsep=0.2cm,footskip=0.3cm}
 
 %\setlength{\emergencystretch}{2em}
 
@@ -86,7 +86,25 @@
 \titlespacing*{\section}{0pt}{0pt}{0pt}
 \titlespacing*{\chapter}{0pt}{0pt}{40pt}
 \titlecontents{chapter}[0em]{\addvspace{3pt}}{\contentslabel{}}{}{\titlerule*[0.3pc]{.}\hspace*{-4pt}\contentspage}
-              
+
+\makeatletter
+\def\emptypage@emptypage{%
+  \hbox{}%
+  \blankpage%
+  \newpage%    
+}%
+\def\cleardoublepage{%
+  \ohead{}\null
+  \if@twoside%
+  \ifodd\c@page%
+  % do nothing
+  \else%
+  \emptypage@emptypage%
+  \fi%
+  \fi%
+}%
+\makeatother
+
 %% Command for chapter page, will remove foot and head %%
 \newcommand{\chapterpage}[2]{
   \newpage
@@ -209,7 +227,7 @@
 \hspace*{0.9cm}
 \includegraphics[keepaspectratio,width=7cm]{elements/logo.pdf}
 \clearpage
-\noindent Denna fantasmagoriska Manual tillhör:
+\noindent Denna fantasmagoriska manual tillhör:
 \ohead{\textnormal{\textsc{\scriptsize\leftmark}}}
 \ofoot[\pagemark]{\textsc{\scriptsize\pagemark}}
 \clearpage
@@ -263,21 +281,21 @@ egentligen''\\ BlurGel nr 0, 1995}}
 %\cfoot{\centering\includegraphics[keepaspectratio]{elements/footelement2.pdf}}
 \section{FÖRORD}
 \vspace{10pt}
-Den Manual du nu håller i din hand är en del av ett stycke
-historia. Den första Manualen trycktes nämligen år 1994 och totalt har
+Den manual du nu håller i din hand är en del av ett stycke
+historia. Den första manualen trycktes nämligen år 1994 och totalt har
 det tryckts fyra upplagor, inklusive Jubileumsmanualen som trycktes
 till trettioårsjubileet för datavetarutbildningen i Uppsala.
 
-Historiskt sett har Manualen producerats gemensamt av datavetarna i
+Historiskt sett har manualen producerats gemensamt av datavetarna i
 Uppsala, Linköping och Umeå. Alldeles nyligen upphörde dock Linköping
 med sin datavetarutbildning och Umeå verkar ha haft problem med sin
 mailserver, då vi inte fick några svar därifrån.
 
 Under 2014 och 2015 samlades en ädel grupp upsaliensisiska datavetare
 under ouppräkneligt många timmar av möten för att fastställa
-innehållet av den nya Manualen. Det resulterade i återupplivandet av
+innehållet av den nya manualen. Det resulterade i återupplivandet av
 många sånger ifrån gamla upplagor men ännu fler nya sånger som aldrig
-funnits i Manualen tidigare lades in, bland annat skapades ett helt
+funnits i manualen tidigare lades in, bland annat skapades ett helt
 nytt kapitel vid namn ``Interwebz''.\par
 \vspace{10pt}
 \noindent Uppsala, 2 Juli 2015\\
@@ -428,6 +446,14 @@ Blott Sverige svenska krusbär har.}\par
 \input{songs/den_blomstertid_nu_kommer.tex}
 \vspace{15pt}
 \input{songs/har_ar_gudagott_att_vara.tex}
+\newpage
+\null
+\vfill
+\begin{center}
+  \noindent\includegraphics[keepaspectratio,width=0.6\textwidth]{elements/fulbild.pdf}
+\end{center}
+\vfill
+\null
 \chapterpageimage{Datavetarvisor}{Datavetarvisor}{elements/datavetar.jpg}
 \newpage
 \thispagestyle{empty}
@@ -1657,13 +1683,15 @@ The requested PAGE was not found in this Manual.
 \null
 \chapterpageimage{Register}{Register}{elements/register.jpg}
 \cfoot{}
-%\newgeometry{top=1cm,bottom=1.2cm,left=1cm,right=1cm,footskip=0pt,headsep=0.2cm}
+\newgeometry{top=1cm,bottom=1.2cm,left=1cm,right=1cm,footskip=0pt,headsep=0.2cm,footskip=0.5cm}
 \small
 \printindex
 \newpage
+\ohead{}
+\newpage
 \null
 \newpage
-\ohead{}
+\null
 \newpage
 \null
 \newpage
