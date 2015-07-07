@@ -88,19 +88,13 @@
 \titlecontents{chapter}[0em]{\addvspace{3pt}}{\contentslabel{}}{}{\titlerule*[0.3pc]{.}\hspace*{-4pt}\contentspage}
 
 \makeatletter
-\def\emptypage@emptypage{%
-  \hbox{}%
-  \blankpage%
-  \newpage%    
-}%
 \def\cleardoublepage{%
-  \ohead{}\null
-  \if@twoside%
   \ifodd\c@page%
-  % do nothing
+    % do nothing
   \else%
-  \emptypage@emptypage%
-  \fi%
+    \ohead{}%
+    \null%
+    \newpage%
   \fi%
 }%
 \makeatother
@@ -333,7 +327,7 @@ kapitlena.\par
 \vfill
 \begin{center}
   \noindent\includegraphics[keepaspectratio,width=0.6\textwidth]{elements/punsch1.jpg}\par
-  \noindent \footnotesize{Den nedröstade kakbilden}
+  \noindent\footnotesize{Den nedröstade kakbilden}
 \end{center}
 \vfill
 \null
@@ -984,15 +978,15 @@ Måns af Klercker, d93mkl\par
 \vspace{15pt}
 \input{songs/sudda_sudda.tex}
 \newpage
-\input{songs/rod_vitamin.tex}
-\vspace{15pt}
-\input{songs/flickan_vid_din_sida.tex}
-\newpage
 \input{songs/hadiska_tanke.tex}
 \vspace{15pt}
 \input{songs/bordsvisa.tex}
 \vspace{15pt}
 \input{songs/claes_palander.tex}
+\newpage
+\input{songs/rod_vitamin.tex}
+\vspace{15pt}
+\input{songs/flickan_vid_din_sida.tex}
 \newpage
 \input{songs/till_vinet.tex}
 \vspace{15pt}
