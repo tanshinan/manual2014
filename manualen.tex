@@ -26,7 +26,8 @@
 \usepackage{makeidx}
 \usepackage{overpic,textpos,hyperref}
 \usepackage{alltt}
-\usepackage{indentfirst}
+\usepackage{indentfirst,tabularx}
+\usepackage{longtable}
 \renewcommand{\ttdefault}{txtt}
 \tracinggroups=1
 
@@ -267,7 +268,7 @@ egentligen''\\ BlurGel nr 0, 1995}}
       v1.1: 1996-01-02 (1000 exemplar)\\
       v2.001: 2001-11-15 (1000 exemplar)\\
       vJub: 2011-11-11 (300 exemplar)\\
-      v3.0: 2015-??-?? (1200 exemplar)\\
+      v3.0: 2015-08-11 (1200 exemplar)\\
       Tryckeri: Boktryckarna\par
     }
 %\restoregeometry
@@ -362,6 +363,36 @@ manualerna, utan ert arbete skulle denna bok inte vara här idag.\par
   Olof Dahlberg & Pär Mattsson\\
   Sandra Nyström & Sara Ingmar
 \end{tabular}
+\newpage
+\index{ÃKLÄDKODER@\uppercase{KLÄDKODER}}
+\section{KLÄDKODER}\vspace{10pt}
+\noindent\begin{tabularx}{1.07\textwidth}{>{\hspace*{-7pt}\hsize=.3\hsize}XX}
+Frack & Frack, frackskjorta, vit väst, vit fluga och svarta
+lackskor. Eller långklänning, men man bör undvika svart och vit
+klänning.\\ \\
+
+Högtidsdräkt & Utöver frack och långklänning får även folkdräkt och
+militär högtidsdräkt bäras.\\ \\
+
+Mörk kostym & Mörkblå eller mörkgrå kostym, undvik svart. Vit skjorta,
+svarta lågskor och slips eller fluga, men endast svart eller vit slips
+får bäras på begravning. Alternativt knälång kjol eller klänning med
+täckta axlar.\\ \\
+
+Kavaj & Som ovan, men något mindre formellt. Gärna mönstrad kostym,
+men diskret. Något ljusare färg fungerar. Byxorna ska ha samma tyg som
+kavajen. Ljus och diskret skjorta. Bruna eller svarta skor. Slips
+eller fluga bör bäras. \\ \\
+
+Udda kavaj & Som ovan, men ytterligare lite mindre formellt. Mönster
+och ljusare färg kan lätta upp. Byxorna bör inte matcha kavajen. Jeans
+bör undvikas. Slips eller fluga behöver inte bäras. Sneakers är ok i
+nödfall.\\ \\
+
+Overall & Den minst strikta klädkoden där man bär overall eller
+motsvarande och allt annat är valfritt. Uppcabbad overall är old
+school.
+\end{tabularx}\par
 \newpage
 \index{ÃTRAVERSERING@\uppercase{TRAVERSERING}}
 \section{TRAVERSERING}\vspace{10pt}
@@ -1557,10 +1588,6 @@ Måns af Klercker, d93mkl\par
 \newpage
 \input{songs/trololo.tex}
 \newpage
-\input{songs/badger_song.tex}
-\newpage
-\input{songs/narwhals.tex}
-\newpage
 \begin{alltt}
 {\Large\textbf{Not Found}}
 {\footnotesize
@@ -1568,6 +1595,10 @@ The requested PAGE was not found in this Manual.
 \noindent\makebox[\linewidth]{\rule{\linewidth}{0.4pt}}
 \textit{Manualen/3.0 (Solaris) Server at localhost Port 80}}
 \end{alltt}
+\newpage
+\input{songs/badger_song.tex}
+\newpage
+\input{songs/narwhals.tex}
 \newpage
 \input{songs/pop_tart.tex}
 \newpage
@@ -1691,5 +1722,6 @@ The requested PAGE was not found in this Manual.
 \newpage
 \null
 \newpage
+\ofoot{}
 \null
 \end{document}
